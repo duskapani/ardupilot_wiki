@@ -181,7 +181,7 @@ Copter, Uçak ve Rover için ev konumu aracın arm edildiği konum olarak ayarla
 **Video: Kayıtlı Çoklu-waypoint Görevden yükleme**: https://www.youtube.com/watch?v=nBq8YHShkVU
 
 
-#### Talimatlar
+### Talimatlar
 
 Aşağıdaki ekran görüntüsünde, Copter görevi 20 metre irtifaya kadar oto takeoff ile başlar; sonra WP 2'ye giderken 100 metre irtifaya yükselir, daha sonra 10 saniye bekler; daha sonra uçak WP 3'e devam eder (yolda 50 metre irtifaya iner), kalkış noktasına döner. Varsayılan irtifa 100 metre olduğundan, kalkış noktasına geri dönüş 100 metrede olacaktır. Kalkış noktasına ulaştıktan sonra, uçak iniş yapar. Görev, kalkış pozisyonunun ev konumunda olduğunu varsayar.
 
@@ -196,7 +196,7 @@ Varsayılan Alt, yeni waypointler girerken varsayılan irtifadır. Aynı zamanda
 Görevinizi tamamladığınızda, **Write**'ı seçin, APM'ye gönderilir ve EEPROM'a kaydedilir. **Read**'i seçerek istediğiniz gibi olduğunu onaylayabilirsiniz.
 **Save WP File**'ı seçerek birden fazla görev dosyasını bilgisayarınıza kaydedebilir veya sağ tık menüsünden **Load WP File** ile dosyaları okuyabilirsiniz.
 
-#### İpuçları
+### İpuçları
 
 - <mark>Ön belleğe alma</mark>: Harita verilerini önbelleğe alabilirsiniz. Böylece internet olmadığı yerlerdede kullanabilirsiniz. Haritaya sağ tıklayıp **Map Tool -> Prefetch** seçeneğine tıklayın. Belli bir konumu indirmek için öncesinde **Alt** tuşuna basarak alanı kutu içine alın.
 
@@ -206,7 +206,7 @@ Görevinizi tamamladığınızda, **Write**'ı seçin, APM'ye gönderilir ve EEP
 
 - İki nokta arasındaki mesafeyi ölçmek için bir ucuna sağ tıklayıp **Measure Distance** seçin. Diğer ucuna sağ tıklayın ve tekrar **Measure Distance** seçeneğini seçin. Bir iletişim kutusunda gösterilecek.
 
-#### Auto grid (Otomatik Izgara)
+### Auto grid (Otomatik Izgara)
 
 Ayrıca Mission Planner'ın bir görev oluşturmasını sağlayabilirsiniz; bu da uçağın fotoğraf toplamak için bir alanda "çim biçme makinesi" şeklinde ileri geri gitmesi gereken harita görevleri gibi işlevler için kullanışlıdır.  
 
@@ -215,7 +215,7 @@ Bunu yapmak için sağ tık mensünde Polygon seçin ve istediğiniz alanın çe
 ![](MissionPlannerResimler/mp_auto_mission_grid.jpg)
 
 
-#### Görev komutları
+### Görev komutları
 
 Mission Planner, mevcut araç tipine uygun komutların filtrelenmiş bir listesini sunar ve kullanıcı tarafından sağlanan değerleri ilgilendiren parametreler için sütun başlıkları ekler. Bunlar, civardaki waypointlere ve loiterlere seyahat etmek için gezinme komutlarını, belirli eylemleri gerçekleştirmek için DO komutlarını (örn. fotoğraf çekmek) ve DO komutlarının ne zaman gerçekleşeceğini kontrol eden durum komutlarını içerir.
 
@@ -233,7 +233,7 @@ Mission Planner tam komut adlarının kısaltılmışını kullanır. Örneğin,
 
 Bu makalede, Auto moda geçildiğinde Plane tarafından desteklenen görev komutları açıklanmaktadır. Bu devam eden bir çalışmadır, tam olarak incelenmemiştir.
 
-#### Komut Türleri
+### Komut Türleri
 
 - Navigasyon komutları, kalkış, waypointlere gidip gelme, irtifa değiştirme ve iniş gibi araç hareketlerini kontrol eder. 
 
@@ -245,7 +245,7 @@ Görev sırasında tek seferde en fazla bir “Navigasyon” komutu ve bir “Do
 
 NOT: CONDITION ve DO komutları önceki NAV komutuyla ilişkilendirilir: UAV bu komutlar uygulanmadan önce yol noktasına ulaşırsa, bir sonraki NAV komutu yüklenir ve atlanırlar.
 
-#### Navigasyon komutları
+### Navigasyon komutları
 
 Navigasyon komutları, kalkış, iniş, araç hareket kontrolü için kullanılır. NAV komutları en yüksek önceliğe sahiptir. Bir NAV komutu yüklenince çalıştırılmayan DO_ ve CONDITION_ komutları atlanır.
 
@@ -273,7 +273,7 @@ Navigasyon komutları, kalkış, iniş, araç hareket kontrolü için kullanıl�
 ![](MissionPlannerResimler/MissionList_DoJump.png)
 Örnekte, araç #1 ve #2 waypointleri arasında toplam 3 kez ileri geri uçar.
 
-#### Koşul komutları
+### Koşul komutları
 
 Koşul komutları, _DO_ komutlarının yürütülmesini kontrol eder. Komutların zaman gecikmesine bağlı olarak çalıştırabilir. Gecikme zamanlayıcı tamamlanmadan önce araç bir sonraki waypoint'e ulaşırsa DO komutları tetiklenmez.
 
@@ -301,7 +301,7 @@ Koşul komutları, _DO_ komutlarının yürütülmesini kontrol eder. Komutları
 ![](MissionPlannerResimler/MissionList_ConditionDistance.png)
 Örnekte, Komut #4 geciktirilir, böylece araç yalnızca waypoint #5'in 50 m içinde olduğunda çalışır.
 
-#### DO komutları
+### DO komutları
 
 Bazı işlemleri yapmak için "DO" VEYA "Now" komutları bir kez çalıştırılır.
 
@@ -427,22 +427,22 @@ Yukarıdaki konfigurasyon, kamera deklanşörünün aracın hareket ettiği her 
 
 Bu makalede, ArduPilot’un kamera ve gimbal komutları açıklanmakta ve bunların kamera çekim görevlerini tanımlamak için Mission Planner'da nasıl kullanılabileceği açıklanmaktadır.
 
-##### Kamera komutları
+#### Kamera komutları
 - <mark>DO_SET_CAM_TRIGG_DIST</mark>:  Kamera deklanşörünü düzenli aralıklarla tetikler. Bu, en çok alan araştırmalarını desteklemek için kullanılır.
 - <mark>DO_DIGICAM_CONTROL</mark>:  Bu komut her çağırıldığında kamera deklanşörünü bir kez tetikleyin. 
  
-##### Kamera gimbal komutları
+#### Kamera gimbal komutları
 
 Kamera gimbal kullanılırsa, kamera konumunu (yaw, tilt, roll) ayarlayabilir veya belirli bir ilgi alanına (ROI) yönlendirebilirsiniz:
 - <mark>DO_SET_ROI</mark>:  Kamerayı belirtilen bir ilgi alanına doğru hedefleyin (konum, irtifa dahil).
 - <mark>DO_MOUNT_CONTROL </mark>:  Gimbalı belirtilen roll, pitch ve yaw ile yerleştirin.
 
-##### Servo ve röle komutları
+#### Servo ve röle komutları
 Servolar ve röle çıkışları donanıma bağlanabilir ve sırasıyla DO_SET_SERVO veya DO_SET_RELAY komutlarını kullanarak görevler sırasında etkinleştirilebilir.
 
 Bu çıkışlar için olası bir kullanım, deklanşör dışındaki kamera özelliklerini kontrol etmektir (örneğin, zoom seviyesini ayarlamak veya çekimi fotoğraftan videoya geçirmek).
 
-##### Otomatik görev türleri
+#### Otomatik görev türleri
 Mission Planner aşağıdaki Auto Waypoint seçeneklerini destekler. Bunlara erişmek için Flight Plan ekranını açın, haritaya sağ tıklayın ve Auto WP menüsü altındaki seçeneği seçin: 
 
 - **Create WP Circle** — Waypoint çemberi oluşturur.
@@ -452,7 +452,7 @@ Mission Planner aşağıdaki Auto Waypoint seçeneklerini destekler. Bunlara eri
 - **Survey (Gridv2)** — Yapım aşamasında! Bu dikdörtgen bir araştırma alanı oluşturmak için daha basit bir ızgara kontrolüdür.
 - **SimpleGrid** — Basit bir otomatik oluşturulan araştırma ızgarası. Kamera kontrolü tanımlanmaz, bu yüzden ayrı olarak eklenmelidir.
 
-#### Araştırma (grid) örneği
+### Araştırma (grid) örneği
 
 Mission Planner'in Survey(Grid) seçeneği, rastgele bir çokgeni örten wpleri otomatik olarak tanımlar ve aracın yolunda resimlerin düzenli aralıklarla çekilmesini sağlamak için DO_SET_CAM_TRIGG_DIST'i ilgili wplere ayarlar.
 
@@ -479,7 +479,7 @@ Bu test görevi yürütüldü. Birleştirilmek üzere 15 görüntü üretti. Bil
 
 Gelişmiş rehber için: http://ardupilot.org/rover/docs/common-pixhawk-auto-camera-trigger-without-chdk.html#common-pixhawk-auto-camera-trigger-without-chdk
 
-#### Kompozit resimler oluşturmak
+### Kompozit resimler oluşturmak
 
 Bunun için piyasada çok sayıda ücretsiz ve ücretli program bulunmaktadır:
 - [Pix4Dmapper](https://www.pix4d.com/)
@@ -492,7 +492,7 @@ Normalde uçak RTL moduna girdiğinde (genelde autopilot failsafe modu tetiklend
 
 Bu nedenle bir Rally Points tanımlanması durumunda Ev konumu yerine en yakın Rally Pointe ilerleyecektir. Uçak o konumda loiter yapacaktır.
 
-#### Rally Points Ayarlama
+### Rally Points Ayarlama
 
 1. Rally Point enlem ve boylamı. Rally Point'in yerini belirlemek için, Flight Plan haritasına sağ tıklayın ve menüde Rally Points > Set Rally Point seçin (bu SADECE Flight Plan ekranında çalışır, Flight Data ekranında çalışmaz):
 
@@ -514,7 +514,7 @@ Aşağıdaki MAVLink parametreleri Rally Point davranışını kontrol eder:
 - RALLY_LIMIT_KM
 - RALLY_TOTAL
 
-#### Örnek Uçuş
+### Örnek Uçuş
 
 ![](MissionPlannerResimler/mp_rally_demo.jpg)
 ![](MissionPlannerResimler/mp_rally_point_dialog.jpg)
@@ -542,7 +542,7 @@ Bölümler, Mission Planner penceresinin üst kısmındaki menüdeki bölümlerl
 
 ## Uçuş Verileri Ekranı (Flight Data Screen)
 
-#### GCS Uçuş Verileri Ekranı
+### GCS Uçuş Verileri Ekranı
 Ekran görüntüsü Mission Planner Yer Kontrol İstasyonunu "Heads-up Display (HUD)" görünümünü gösteriyor. Bir araca bağlandığınızda, bu ekran ArduPilot tarafından gönderilen telemetriyi gösterecektir.
 
 ![](MissionPlannerResimler/mp_hud_full.png)
@@ -568,7 +568,7 @@ HUD'un daha ayrıntılı görünümü aşağıda verilmiştir.
 15. Geçerli uçuş modu
 
 
-#### Uçuş Verileri ekranı kullanımı ipuçları
+### Uçuş Verileri ekranı kullanımı ipuçları
 
 - Harita, sadece GPS kilidiniz varsa veya bir uçuş simülatörü kullanıyorsanız geçerli konumu gösterir.
 - Yapay ufukların nasıl çalıştığını unutmayın: uçak sağa eğildiğinde, ufuk sola eğilir. (Sadece kafanı eğ ve ne demek istediğimi gör) Bu normal! Lütfen bunun ters olduğunu söylemeyin ;-)
@@ -585,7 +585,7 @@ HUD'un daha ayrıntılı görünümü aşağıda verilmiştir.
 - Pencerenin en altındaki Tuning kutusunu tiklerseniz ve grafiğe çift tıklarsanız, Status sekmesinde bulunan herhangi bir verinin grafiğini çizebilirsiniz. Bu gerçek zamanlı alt, attitude veya birçok seçeneğe sahip olabileceğiniz anlamına gelir.
 - Google Maps yerine özel görüntüler kullanabilirsiniz. Ctrl+F düğmesine basın. Bu, kendi ortofoto haritanızı yüklemenize izin verir. 
 
-#### Guided (Kılavuzlu) mod
+### Guided (Kılavuzlu) mod
 
 Profesyonel İHA'larda en sık kullanılan özelliklerden biri, gerçek zamanlı olarak tıklamalı görev kontrolüdür. Önceden planlanmış görevler veya manuel uçurmak yerine, operatörlerin haritaya tıklayıp "şuraya git" diyebilirler.
 
@@ -597,27 +597,27 @@ Not: Kılavuzlu ayrı bir uçuş modudur. Eğer guided moda girerseniz sürekli 
 
 Initial Setup'ta kullandığınız ekipmanlara bağlı olarak yapılması "gereken"leri içerir.
 
-#### Firmware Yükle
+### Firmware Yükle
 
 Otopilot bağlı DEĞİLSE menüde öğe görünür. Yeni bir otopilotunuz varsa veya otopilotta bulunan yazılımı güncellemek istiyorsanız yazılım yüklemelisiniz. 
 
 Ayrıntılar için: [Firmware'ı kur](#Firmware'ı-kur)
 
-#### 3DR Radyo
+### 3DR Radyo
 
 Otopilot bağlı değilse, bu menü öğesini görürsünüz. 
 (daha yazılmadı)
 
-#### Antenna Tracker
+### Antenna Tracker
 
 Otopilot bağlı değilse, bu menü öğesini görürsünüz. 
 (daha yazılmadı)
 
-#### Zorunlu Donanım
+### Zorunlu Donanım
 
 Otopilot bağlıysa, bu menü öğesini görürsünüz. Aracınızı çalıştırmadan önce tamamlamanız gerekenleri görmek için bu menü öğesine tıklayın.
 
-#### Keyfi Donanım
+### Keyfi Donanım
 
 Otopilot bağlıysa, bu menü öğesini görürsünüz. Aracınızı çalıştırmadan önce tamamlamak isteyebileceklerinizi görmek için bu menü öğesine tıklayın.
 
@@ -637,28 +637,28 @@ Nasıl kullanılacağına ilişkin talimatlar için [Simülasyon](http://ardupil
 
 Alt bölümler otopilotunuzun aracınızı nasıl kontrol ettiğini kontrol eden parametreleri yapılandırdığınız yerdir. Tuning, kontrol döngülerindeki parametrelerin ayarlanması anlamına gelir. Firmware kurduğunuzda çoğu sizin için ayarlanır ancak bazılarını sizin yapmanız gerekir.
 
-#### Planner
+### Planner
 Mission Planner'in nasıl çalıştığı ile ilgili seçeneklerin çoğunu ayarladığınız yerdir. Konuşmayı etkinleştirmek, logların kaydedildiği yer, kullanacağınız ölçü birimleri, vb.
 
-#### Basic Pids
+### Basic Pids
 Otopilot bağlıysa bu menü öğesini göreceksiniz. (daha yazılmadı)
 
-#### Flight Modes
+### Flight Modes
 Otopilot bağlıysa bu menü öğesini göreceksiniz. (daha yazılmadı)
 
-#### Standard Params
+### Standard Params
 Otopilot bağlıysa bu menü öğesini göreceksiniz. (daha yazılmadı)
 
-#### GeoFence
+### GeoFence
 Otopilot bağlıysa bu menü öğesini göreceksiniz. (daha yazılmadı)
 
-#### FailSafe
+### FailSafe
 Otopilot bağlıysa bu menü öğesini göreceksiniz. (daha yazılmadı)
 
-#### Advanced Params
+### Advanced Params
 Otopilot bağlıysa bu menü öğesini göreceksiniz. (daha yazılmadı)
 
-#### Full Parameter List
+### Full Parameter List
 Otopilot bağlıysa bu menü öğesini göreceksiniz.
 
 Bu ekranın sağ tarafındaki seçenekler: Aracınız için parametreleri kaydedebilirsiniz(save). Ayrıca, parametreleri kayıtlı dosyadaki parametrelerle karşılaştırabilirsiniz(compare). Farklı olan parametreleri gösteren bir ekran açılacak. Değişiklikleri otopilotunuzdaki hafızaya kopyalamak için sağ paneldeki Write Params düğmesine tıklamanız gerekir.
@@ -668,7 +668,7 @@ Bu makale, temel pusula kalibrasyonunun nasıl gerçekleştirileceği açıklanm
 
 NOT: Bu makale en yaygın yapılandırmayı kullandığınızı varsaymaktadır - ikiside uçağın önüne bakacak şekilde okla monte edilmiş pusula ve uçuş kontrolcüsü. Başka yapılandırma kullanıyorsanız [Gelişmiş Pusula Kurulumu](http://ardupilot.org/rover/docs/common-compass-setup-advanced.html#common-compass-setup-advanced)na bakın.
 
-#### İlk kalibrasyon adımları
+### İlk kalibrasyon adımları
 - **Initial Setup | Mandatory Hardware** altındaki **Compass** seçeneğini seçin.
 - Kartınız için en önemli yapılandırma bilgilerini otomatik olarak girmek için uçuş kontrolcüsünün konfigürasyonunu seçin:
     - Herhangi bir modern uçuş kontrolcüsü (Pixhawk, NAVIO2, vs.) için **Pixhawk/PX4** düğmesini seçin.
@@ -680,7 +680,7 @@ Normalde "General Compass Settings"nı veya belirli pusula değerleri (örn. "Co
 
 "inconsistent compasses" pre-arm mesajını korkun bir şekilde sık görüyorsanız ve harici pusulanın oryantasyonunun doğru olduğundan eminseniz Compass #2'yi (dahili pusula) devre dışı bırakmak isteyebilirsiniz.
 
-#### Onboard calibration - Yerleşik kalibrasyon
+### Onboard calibration - Yerleşik kalibrasyon
 
 Copter-3.4(ve üzeri) "Yerleşik Kalibrasyonu" destekler. Bu metodd ölçeklendirmeyide hesapladığından "Live Calibration"dan daha doğrudur.
 
@@ -699,7 +699,7 @@ Kalibrasyon başarısız olursa:
 - birden fazla denemeden sonra pusulayı kalibre edemiyorsanız, "Cancel" düğmesine basın ve "Fitness" açılır menüsünü Relaxed ayarına getirin ve tekrar deneyin
 - hala başarısız olursa, COMPASS_OFFS_MAX'ın 850 den 2000 e hatta 3000 e yükseltilmesi yardımcı olabilir.
 
-#### Çubuk hareketlerini kullanarak yerleşik kalibrasyon
+### Çubuk hareketlerini kullanarak yerleşik kalibrasyon
 - önce RC kalibrasyonu gerektirir
 - pusula kalibrasyonuna başlamak için 2 saniye boyunca throttle çubuğunu tam yukarı ve tam sağ yawda tutun
 - uçuş kontrolcünüze buzzer takılıysa, tek tonun ardından saniyede bir kez kısa bip sesi duymalısınız.
@@ -711,7 +711,7 @@ Kalibrasyon başarısız olursa:
 - kalibrasyonu herhangi bir zamanda iptal etmek için 2 saniye boyunca throttle çubuğunu tam yukarı ve tam sol yawda tutun.
 - birden fazla denemeden sonra pusulayı kalibre edemiyorsanız, çubukla kalibrasyonu iptal edip normal GCS üzerinden yapın
 
-#### Offboard kalibrasyon (Live Calibration)
+### Offboard kalibrasyon (Live Calibration)
 
 - **Live Calibration** düğmesine tıklayın
 Canlı kalibrasyon durumunu gösteren bir pencere açılmalıdır.
@@ -732,7 +732,7 @@ Bu makale, temel ivmeölçer kalibrasyonunun nasıl yapıldığını göstermekt
 
 NOT: Aracın konumunu tahmin etmek için EKF kullanıyorsanız ivmeölçer kalibrasyonu zorunludur.
 
-#### Kalibrasyon adımları
+### Kalibrasyon adımları
 
 1.  **Initial Setup | Mandatory Hardware** altından, sol menüden **Accel Calibration** seçin.
 
@@ -767,7 +767,7 @@ RC vericileri araç hareketini ve oryantasyonunu kontrol etmek için kullanılı
 
 Verici kontrollerinin/kanallarının her birinin kalibre edilmesi basit bir işlemdir - etkinleştirilmiş çubuklarının/switchlerinin her birini tam uçlara hareket ettirin ve maksimum, minimum konumları kaydedin.
 
-#### Verici yapılandırması
+### Verici yapılandırması
 
 İki ana verici konfigürasyonu vardır:
 - Mod 1: sol çubuk kontrolü pitch ve yaw, sağ çubuk kontrolü throttle ve roll.
@@ -775,7 +775,7 @@ Verici kontrollerinin/kanallarının her birinin kalibre edilmesi basit bir işl
 
 ![](MissionPlannerResimler/radio_setup_mode_1.png)
 
-#### Kanal eşleştirmeleri
+### Kanal eşleştirmeleri
 
 Kullanılmayan kanallar, ek elektronik ekipmanları kontrol etmek için eşleştirilebilir.
 
@@ -785,16 +785,16 @@ Kullanılmayan kanallar, ek elektronik ekipmanları kontrol etmek için eşleşt
 
 ## Önkoşullar
 
-#### Önce güvenlik
+### Önce güvenlik
 
 Güvenlik için, radyo kalibrasyonuna başlamadan önce pil bağlantısını kesmeli veya pervaneleri çıkarmalısınız.
 
-#### Trimleri ortalamak
+### Trimleri ortalamak
 RC kalibrasyonunu oluşturmadan önce manuel RC modunda trimleri ortalamalısınız. Trimler ortalanmamışsa, aracı kullandıktan sonra RC kalibrasyonunu tekrar yapmanız gerekebilir (sahada yapılması kolaydır).
 
 NOT: Tüm kontroller/çubuklar nötrken müdahalesiz seyat ederken, hareket eden araç yönünü/hızını/oryantasyonunu değiştirmezse trimler ortalanır.
 
-#### Otopilotu bağlayın ve alıcıyı açın
+### Otopilotu bağlayın ve alıcıyı açın
 
 Otopilotu USB üzerinden ağlayın ve RC vericinizi açın. Vericinin alıcıya bağlı olduğunu (alıcı sürekli yeşil renkte yanar) ve aracınız için doğru modeli kullanacak şekil ayarlandığından emin olun.
 
@@ -836,7 +836,7 @@ Mission Planner kalibrasyon verilerinin özetini gösterir. Normal değerler min
 
 Bu makale RC vericinizden en fazla 6 otopilot kontrol/uçuş modlarının nasıl ayarlanabileceğini gösterir.
 
-#### Uçuş modlarınınn yapılandırılması
+### Uçuş modlarınınn yapılandırılması
 Switch konumu ve uçuş modu arasındaki eşleştirme Mission Planner Flight Mode ekranında ayarlanır.
 
 Aşağıdakileri yaparak vericinin üzerinde bulunan uçuş modlarını ayarlayabilirsiniz:
@@ -849,25 +849,25 @@ Aşağıdakileri yaparak vericinin üzerinde bulunan uçuş modlarını ayarlaya
 * Bu switch konumuna mod seçmek için satırdaki açılır menüyü kullanın
 * Tamamladığınızda **Save Modes** düğmesine tıklayın
 
-#### Uçuş modu kanalını ayarlama
+### Uçuş modu kanalını ayarlama
 Uçuş modu kanalı, ArduPilot'un mod değişiklikleri için izlediği giriş radyo kanalıdır.
 
-#### Verici yapılandırması
+### Verici yapılandırması
 Bir modu bir switch konumuna eşleşmesini sağlamak için verici doğru aralıkta PWM sinyalleri yaymalıdır.
 
 Eğer 3 mod desteklemek istiyorsanız (üç konumlu switch kullanıyorsanız) vericiyi ilgili switch konumları için 1165, 1425 ve 1815 mikrosaniyelik PWM darbe genişlikleri üretecek şekilde yapılandırırsınız.
 
 Eğer 6 mod desteklemek istiyorsanız, vericinin yaklaşık 1165, 1295, 1425, 1555, 1685 ve 1815 milisaliyelik PWM genişlikleri yayması gerekir.
 
-#### Veri switch ayarlarını test edin
+### Veri switch ayarlarını test edin
 Modlar arasında geçiş yapın ve barların hareketini gözleyin. Aşağıdaki resimde, uçuş modu kanalının Radio 5 olarak ayarlandığını varsaymaktadır.
 
 ![](MissionPlannerResimler/mp_radio_calibration_ch5_pwm.png)
 
-#### Belirli RC donanımları için öğreticiler
+### Belirli RC donanımları için öğreticiler
 http://ardupilot.org/planner/docs/common-rc-transmitter-flight-mode-configuration.html#tutorials-for-specific-rc-hardware
 
-#### Spektrum DX8 (alternatif yöntem)
+### Spektrum DX8 (alternatif yöntem)
 http://ardupilot.org/planner/docs/common-rc-transmitter-flight-mode-configuration.html#spektrum-dx8-alternate-method
 
 ## Uçuş Planı (Flight Plan)
@@ -876,7 +876,7 @@ http://ardupilot.org/planner/docs/common-rc-transmitter-flight-mode-configuratio
 - Sağ taraf   : Eylemler paneli bulunur. Paneli açmak/kapatmak için sağ üst köşedeki yeşil [<<]/[>>] sembolüne tıklayın.
 - Waypoint Ayrıntısı: Alt kısımda Waypointler kısmını göreceksiniz. Her görev eylemi listeye girilir.
 
-#### Görev Planlama Detayları
+### Görev Planlama Detayları
 Görev planlama ile ilgili detayları burada bulabilirsiniz:
 - [Olaylar ve Waypointler ile Bir Görev Planlama](#Olaylar-ve-Waypointler-ile-Bir-Görev-Planlama)
 - [Mission Planner'da Python Scriptleri Kullanmak](http://ardupilot.org/planner/docs/using-python-scripts-in-mission-planner.html#using-python-scripts-in-mission-planner)
@@ -950,10 +950,11 @@ Menüde açıklanmış modlara özgü olmayan diğer özellikler:
 - Mission Planner, seçtiğiniz olaylar için sesli uyarıları verebilir, waypointleri vurgulamak veya düşük pil gibi. Sadece **Configuration | Planner | Speech | Enable Speech** gidin.
 - Mission Planner kaynak kodu, C# programlama becerisine sahip olanlar ve Microsoft Visual Studio'yu bilenler tarafından indirilebilir ve derlenebilir.
  
-#### Using Python Scripts in Mission Planner
+### Using Python Scripts in Mission Planner
+(devamı lazım olursa)
 
-#### Swarming (İHA SÜRÜLERİ KORDİNASYONU)
-
+### Swarming (İHA SÜRÜLERİ KORDİNASYONU)
+(devamı lazım olursa)
 
 
 ```python
