@@ -1,7 +1,7 @@
-## Otomatik Takeoff
+# Otomatik Takeoff
 Plane, otomatik kalkış başlatabilir. Aşağıdaki talimatlar ile nasıl yapılacağı öğretilecektir.
 
-### Temel Talimatlar
+## Temel Talimatlar
 Temel fikir otopilotun throttle ı maksimuma getirmesi ve belirlenen irtifaya ulaşana kadar tırmanmasıdır. Uçağın takeoff yapmasını sağlamak için, görevinize **NAV_TAKEOFF** komutu ekleyin. Bu komutun iki parametresi vardır - miminum pitch ve takeoff irtifası. Minimum pitch takeoff sırasında uçağın ne kadar dik tırmanacağını kontrol eder. Çoğu uçak için 10 ila 15 derece arası bir değer önerilir. Takeoff irtifası, takeoff eksiksiz olduğu kabul edildiğinde evden yüksekliği kontrol eder. Bunun uçağın kalkıştan sonra güvenle dönebileceği kadar yüksek olduğundna emin olun. 40 metre irtifa çoğu uçak için iyidir.
 
 Kalkış sırasında kanatlar **LEVEL_ROLL_LIMIT** derece dahilinde tutulacaktır. Bu, keskin bir roll kanatların yerden kalkarken piste vurmaması için keskin bir roll yapmasını önler.
@@ -11,7 +11,7 @@ Takeoff yönünün, otomatik kalkış komutu başlatıldığında uçağın baş
 
 Mümkün olduğunca rüzgara doğru fırlatmalısınız.
 
-### Pist kalkışı (CTOL)
+## Pist kalkışı (CTOL)
 
 Tekerlekli kalkışta veya konvansiyonel kalkış da denir.
 
@@ -39,7 +39,7 @@ Takeoff başladığında, otopilot uçak saniyede **TKOFF_TDRAG_SPD1** metre hı
 
 **TECS_PITCH_MAX** parametresi takeoff sırasında tırmanırken kullanılan maksimum pitch'i kontrol eder. Uçağın tam gazda tırmanmak için kullanabileceği bir değerle sınırlı olduğundan emin olun. 20 derecelik bir değer, çeşitli uçaklar için iyidir.
 
-### FBWA modunda Zemin Takeoff testi
+## FBWA modunda Zemin Takeoff testi
 
 FBWA uçuş modu kullanarak takeoff kodunu test etmek bazen yararlı olabilir. Bunu yapma şekliniz **FBWA_TDRAG_CHAN** parametresini bir switch için vericinizdeki bir RC giriş kanalına ayarlamaktır (genellikle buton anahtar). FBWA modunda takeoff için pistte beklerken RC kanalı high olduğunda, otopilot **TKOFF_TDRAG_ELEV** ve **TKOFF_TDRAG_SPD1** parametrelerini yapılandırıp yapılandırmadığınızı kontrol edecektir. Sıfır dışında bir değer verilmişse, elevator FBWA'da AUTO kalkış için kontrolcüyle aynı şekilde kontrol edilecek. Elevator, RC kanalı high olur olmaz **TKOFF_TDRAG_ELEV** değerine (taildragger için genelde %100) gider, ve uçak saniyede TKOFF_TDRAG_SPD1 m/s yer hızına ulaşana kadar orada kalacaktır.
 
