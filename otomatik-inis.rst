@@ -19,7 +19,7 @@ Anahtar Parametreler
 
 The key parameters that control automatic landing are:
 
--  `Python</>`_
+-  `Python`_
 -  'LAND_FLARE_ALT</>'_
 -  'LAND_FLARE_SEC'_
 -  'LAND_PITCH_CD'_
