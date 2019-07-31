@@ -13,18 +13,17 @@ To land the plane you need to add a :ref:`NAV_LAND <mav_cmd_nav_land>` command t
 In most cases, the altitude should be set to 0. 
 During landing, the autopilot will shut down the throttle and hold the current heading when the plane reaches the flare point, controlled by the parameters described below.
 
-.. _automatic-landing_key_parameters:
 
-Key Parameters
+Anahtar Parametreler
 --------------
 
 The key parameters that control automatic landing are:
 
--  :ref:`LAND_FLARE_ALT <LAND_FLARE_ALT>`
--  :ref:`LAND_FLARE_SEC <LAND_FLARE_SEC>`
--  :ref:`LAND_PITCH_CD <LAND_PITCH_CD>`
--  :ref:`TECS_LAND_ARSPD <TECS_LAND_ARSPD>`
--  :ref:`TECS_LAND_SPDWGT <TECS_LAND_SPDWGT>`
+-  `LAND_FLARE_ALT <LAND_FLARE_ALT>`
+-  `LAND_FLARE_SEC <LAND_FLARE_SEC>`
+-  `LAND_PITCH_CD <LAND_PITCH_CD>`
+-  `TECS_LAND_ARSPD <TECS_LAND_ARSPD>`
+-  `TECS_LAND_SPDWGT <TECS_LAND_SPDWGT>`
 
 The meaning and recommended value of each of these parameters is
 described below.
