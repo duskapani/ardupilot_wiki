@@ -25,11 +25,11 @@ Anahtar parametreler ise:
 * **TECS_PITCH_MAX**
 * **GROUND_STEER_ALT**
 
-Bu parametrelere ek olarak, zemin yönlendirme(ground steering) ayarını yapmanız gerekir, böylece uçak güvenli şekilde yönlendirilebilir. [Zemin yönlendirme kurulumu]() ile ilgili sayfaya bakın. Bu ayarın bir parçası olarak **GROUND_STEER_ALT** parametresini ayarlamanız gerekir.
+Bu parametrelere ek olarak, zemin yönlendirme(ground steering) ayarını yapmanız gerekir, böylece uçak güvenli şekilde yönlendirilebilir. Zemin yönlendirme kurulumu ile ilgili sayfaya bakın. Bu ayarın bir parçası olarak **GROUND_STEER_ALT** parametresini ayarlamanız gerekir.
 
 İlk iki parametre ağırlıklı olmak üzere taildragger içindir, ancak diğer uçakların burnunu takeoffta aşağıda tutmak için de kullanılabilir.
 
-[TKOFF_TDRAG_ELEV]() parametresi, pist üzerinde yönlendirmek için yeterli tutuş sağlamak üzere, taildragger kuyruğunu pistte sabit tutmak için kullanılır. Taildragger için bu varsayılan olarak 100 dür, yani kalkışın ilk aşamalarında %100 yukarı elevator uygulanır. Tricycle undercarriage uçak için, burun üzerine biraz daha fazla ağırlık gerektirdiği için -20 (20% aşağı elevator) değerinin yardımcı olacağını görebilirsiniz.
+**TKOFF_TDRAG_ELEV** parametresi, pist üzerinde yönlendirmek için yeterli tutuş sağlamak üzere, taildragger kuyruğunu pistte sabit tutmak için kullanılır. Taildragger için bu varsayılan olarak 100 dür, yani kalkışın ilk aşamalarında %100 yukarı elevator uygulanır. Tricycle undercarriage uçak için, burun üzerine biraz daha fazla ağırlık gerektirdiği için -20 (20% aşağı elevator) değerinin yardımcı olacağını görebilirsiniz.
 
 Takeoff başladığında, otopilot uçak saniyede **TKOFF_TDRAG_SPD1** metre hıza ulaşana kadar **TKOFF_TDRAG_ELEV** elevator (yüzde olarak) uygulayacak. **TKOFF_TDRAG_SPD1**'i takeoff hızının altındaki bir hıza, ancak uçak dümen kullanarak yönlendirilebileceği hızın üzerinde bir hıza ayarlamanız gerekir. Uçak **TKOFF_TDRAG_SPD1**'e ulaştığında, elevatorü serbest bırakacak ve pitch seviyesini tutmaya çalışmak için normal flight pitch controller kullanacaktır. Bu, taildragger uçakta kuyruğu yükseltme etkisine sahip olacaktır.
 
