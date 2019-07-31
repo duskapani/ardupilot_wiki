@@ -173,7 +173,7 @@ Bu bölüm Görev Planlaması hakkında makaleler içerir; ArduPilot AUTO moduna
 
 Bu sayfa tüm araç tipleri için genel waypoint kurulumunu açıklar.
 
-#### Ev konumu ayarlama
+### Ev konumu ayarlama
 
 Copter, Uçak ve Rover için ev konumu aracın arm edildiği konum olarak ayarlanır. Bu, RTL görevi yaptığınızda, arm edildiği yere geri dönmesi için uygun bir konuma yerleştirin veya alternatif dönüş noktası ayarlamak için toplanma noktası (rally point) kullanın.
 
