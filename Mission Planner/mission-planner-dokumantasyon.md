@@ -66,7 +66,6 @@
 
 
 # MISSION PLANNER GENEL BAKIŞ
-***
 
 ![](MissionPlannerResimler/mission_planner_screen_flight_plan.jpg "Logo Title Text 1")
 
