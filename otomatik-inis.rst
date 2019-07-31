@@ -1,5 +1,5 @@
 =================
-Automatic Landing
+Otomatik İniş
 =================
 
 This article explains how to land Plane as part of a mission plan and includes information about how a landing can be safely aborted.
