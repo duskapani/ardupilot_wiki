@@ -83,7 +83,7 @@ Mission Planner ile yapabileceğiniz birkaç şey:
  
 
 # FIRMWARE YÜKLEME
-***
+
 
 Bu talimatlar, Mission Planner yer istasyonunu kullanarak uçuş kontrolcüsüne son firmware'ın nasıl indirileceğini gösterecek.
 
@@ -129,7 +129,7 @@ Her şey yolunda giderse sağ altta "erase...", "program...", "doğrulanıyor...
 Firmware'in çalışıp çalışmadığını, Mission Planner Uçuş Verisi ekranına geçip Bağlan düğmesine basarak test edebilirsiniz. 
 
 # MISSION PLANNER'I OTOPİLOTA BAĞLAMA
----
+
 
 Bu makalede, Telemetri almak ve aracı kontrol etmek için Mission Planner'ın otopilota nasıl bağlanacağı açıklanmaktadır.
 
@@ -171,7 +171,7 @@ Ayrıca, otopilot kontrol kartınıza uygun ArduPilot firmware kurulu olduğunda
     
 
 # GÖREV PLANLAMASI
----
+
 
 Bu bölüm Görev Planlaması hakkında makaleler içerir; ArduPilot AUTO moduna ayarlandığında çalışacak otomatik görevler oluşturur.
 
@@ -531,7 +531,6 @@ Aşağıdaki MAVLink parametreleri Rally Point davranışını kontrol eder:
 ....
 
 # MISSION PLANNER ÖZELLİKLERİ/EKRANLARI
----
 
 Mission Planner Özellikleri aşağıda detaylandırılmıştır.
 
