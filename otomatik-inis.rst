@@ -19,11 +19,11 @@ Anahtar Parametreler
 
 The key parameters that control automatic landing are:
 
--  LAND_FLARE_ALT_
--  LAND_FLARE_SEC_
--  LAND_PITCH_CD_
--  TECS_LAND_ARSPD_
--  TECS_LAND_SPDWGT_
+-  'LAND_FLARE_ALT'_
+-  'LAND_FLARE_SEC'_
+-  'LAND_PITCH_CD'_
+-  'TECS_LAND_ARSPD'_
+-  'TECS_LAND_SPDWGT'_
 
 The meaning and recommended value of each of these parameters is
 described below.
