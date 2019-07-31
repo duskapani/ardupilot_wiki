@@ -71,7 +71,7 @@
 
 Açık kaynaklı Ardupilot projesi için tam özellikli yer kontrol istasyonu uygulamasıdır. Bu sayfa Mission Planner'in arkaplanı ve site organizasyonunu hakkında bilgi içerir.
 
-#### Mission Planner Nedir?
+## Mission Planner Nedir?
 
 Plane, Copter ve Rover için yer kontrol istasyonudur. Otonom aracınız için konfügürasyon aracı veya dinamik kontrol tamamlayıcı olarak kullanılabilir.
 
@@ -87,7 +87,7 @@ Mission Planner ile yapabileceğiniz birkaç şey:
 
 Bu talimatlar, Mission Planner yer istasyonunu kullanarak uçuş kontrolcüsüne son firmware'ın nasıl indirileceğini gösterecek.
 
-#### Uçuş kontrolcüsünü bilgisayara bağlayın
+## Uçuş kontrolcüsünü bilgisayara bağlayın
 
 Bilgisayara yer istasyonu kurduğunuzda uçuş kontrolcüsünü aşağıda gösterildiği gibi makro USB kablosu kullanarak bağlayın.
 
@@ -95,7 +95,7 @@ Bilgisayara yer istasyonu kurduğunuzda uçuş kontrolcüsünü aşağıda göst
 
 Windows, doğru sürücü yazılımını otomatik olarak algılayıp kurmalıdır.
 
-#### COM Port seçin
+## COM Port seçin
 
 > Com Port: Veri alış verişini sağlayan kablo girişi diyebiliriz.  
 > Baud Rate: Veri iletişim hızı.  
@@ -106,7 +106,7 @@ Veri iletişim hızını 115200 olarak ayarlayın. Ama hemen Connect'e basmayın
 
 ![](MissionPlannerResimler/Pixhawk_ConnectWithMP.png)
 
-#### Firmware'ı kur
+## Firmware'ı kur
 
 Aracınıza uyan ikonu Mission Planner’ın Başlangıç Ayarları | Firmware Kurma ekranında seçin. "Emin misiniz?" sorusuna Evet deyin.
 
@@ -124,7 +124,7 @@ Daha sonra "ChibiOS yüklensin mi?" sorusu gelebilir. Çoğu kullanıcı bunu na
 
 Her şey yolunda giderse sağ altta "erase...", "program...", "doğrulanıyor..." ve "Yükleme Tamamlandı" gibi bazı durumların yazıldığını göreceksiniz. Firmware karta başarıyla yüklendi.
 
-#### Test etme
+## Test etme
 
 Firmware'in çalışıp çalışmadığını, Mission Planner Uçuş Verisi ekranına geçip Bağlan düğmesine basarak test edebilirsiniz. 
 
@@ -133,7 +133,7 @@ Firmware'in çalışıp çalışmadığını, Mission Planner Uçuş Verisi ekra
 
 Bu makalede, Telemetri almak ve aracı kontrol etmek için Mission Planner'ın otopilota nasıl bağlanacağı açıklanmaktadır.
 
-#### Bağlantı kurma
+## Bağlantı kurma
 
 Bir bağlantı kurmak için önce kullanmak istediğiniz iletişim yöntemini/kanalını seçmeli, ardından fiziksel donanımı ve Windows aygıt sürücülerini kurmalısınız. PC ve otopilotu USB kabloları, Radyo Telemetriler, IP bağlantıları vs. kullanarak bağlayabilirsiniz.
 
@@ -148,6 +148,9 @@ Bir bağlantı kurmak için önce kullanmak istediğiniz iletişim yöntemini/ka
 <figure>
   <img align="right" src="MissionPlannerResimler/new-radio-laptop.jpg" width="400"/>
 </figure>
+
+
+
 
 Mission Planner'da ekranın sağ üst kısmındaki açılır kutular kullanılarak bağlantı ve veri hızı belirlenir.
 
