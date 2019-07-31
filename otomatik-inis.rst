@@ -2,9 +2,9 @@
 Otomatik İniş
 =================
 
-This article explains how to land Plane as part of a mission plan and includes information about how a landing can be safely aborted.
+Bu makale, uçağın güvenli bir şekilde nasıl indirilebileceği hakkında bilgiler içerir.
 
-Configuring for Automatic Landing
+Otomatik İniş Yapılandırması
 =================================
 
 Plane can automatically land an aircraft, as part of a mission plan.
