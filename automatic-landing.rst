@@ -1,5 +1,3 @@
-.. _automatic-landing:
-
 =================
 Automatic Landing
 =================
