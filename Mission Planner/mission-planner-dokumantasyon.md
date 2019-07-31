@@ -139,18 +139,9 @@ Bir bağlantı kurmak için önce kullanmak istediğiniz iletişim yöntemini/ka
 
 **NOT:** Bağlantı donanımınızın sürücüsünün Windows'ta bulunması gerekir, çünkü bağlantınızın COM portunu ve varsayılan veri hızını Mission Planner'a sağlar.
 
-<figure>
-  <img align="left" src="MissionPlannerResimler/pixhawk_usb_connection.jpg" width="400"/>
-</figure>
+![](MissionPlannerResimler/pixhawk_usb_connection.jpg)
 
-
-
-<figure>
-  <img align="right" src="MissionPlannerResimler/new-radio-laptop.jpg" width="400"/>
-</figure>
-
-
-
+![](MissionPlannerResimler/new-radio-laptop.jpg)
 
 Mission Planner'da ekranın sağ üst kısmındaki açılır kutular kullanılarak bağlantı ve veri hızı belirlenir.
 
