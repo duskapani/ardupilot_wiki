@@ -37,7 +37,7 @@ Takeoff başladığında, otopilot uçak saniyede [**TKOFF_TDRAG_SPD1**]() metre
 
 [**TKOFF_THR_SLEW**]() parametresi, takeoff sırasında throttle değişim hızını (saniye olarak yüzde olarak) kontrol eder. Bu, uçağınıza throttle'ı uygun bir hızda arttırmaya izin vermek için kullanılır. 20 değeri (saniyede %20 throtte değişimi) birçok taildragger için iyidir. Tricycle undercarriage uçağı, daha büyük bir throttle değişim hızının üstesinden gelebilir.
 
-[**TECS_PITCH_MAX** parametresi takeoff sırasında tırmanırken kullanılan maksimum pitch'i kontrol eder. Uçağın tam gazda tırmanmak için kullanabileceği bir değerle sınırlı olduğundan emin olun. 20 derecelik bir değer, çeşitli uçaklar için iyidir.
+[**TECS_PITCH_MAX**]() parametresi takeoff sırasında tırmanırken kullanılan maksimum pitch'i kontrol eder. Uçağın tam gazda tırmanmak için kullanabileceği bir değerle sınırlı olduğundan emin olun. 20 derecelik bir değer, çeşitli uçaklar için iyidir.
 
 ## FBWA modunda Zemin Takeoff testi
 
