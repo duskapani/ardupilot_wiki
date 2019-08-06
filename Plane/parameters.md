@@ -2,7 +2,7 @@
 
 ## ArduPlane Parametreleri
 
-# 2014, The year of [Blue](#)
+# 2014, The year of [Red](#)
 
 > **AUTOTUNE_LEVEL: autotune seviyesi**
 
