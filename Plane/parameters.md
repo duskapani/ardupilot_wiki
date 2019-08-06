@@ -2,13 +2,13 @@
 
 ## ArduPlane Parametreleri
 
-# 2014, The year of [Red](#)
+<span style="color: green"> Some green text </span>
 
 > **AUTOTUNE_LEVEL: autotune seviyesi**
 
 | Aralık | Artış |
 |:------:|:-----:|
-|  1-10  |   1   | asdasdasd
+|  1-10  |   1   |
 
 
 ```diff
