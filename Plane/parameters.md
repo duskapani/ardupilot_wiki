@@ -7,10 +7,9 @@
 ```
 | Aralık | Artış |
 |:------:|:-----:|
-|  1-10  |   1   |
+|  1-10  |   1   | asdasdasd
 
-asdasdasd
-asdasdasd
+
 ```diff
 - __FORMAT_VERSION:__
 
