@@ -42,8 +42,6 @@ td .topright {
 
 ## ADSB_ Parametreleri
 
-``` diff
-@@ -1,6 +1,6 @@
-
-axzcxzxc
+```markdown
+#### A Example for markdown-diff
 ```
