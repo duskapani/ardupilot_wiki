@@ -16,7 +16,9 @@
 
 ```
 
-Some text <table style="display:inline-table">
+<div>
+<div style="width: 70%;float:left">
+<table>
     <tr>
         <td>Yes <input type="radio" value="yes" /></td>
     </tr>
@@ -24,5 +26,8 @@ Some text <table style="display:inline-table">
         <td>No <input type="radio" value="no" /></td>
     </tr>
 </table>
+</div>
+<div style="width:30%"> Test Text</div>
+</div>
 
 ## ADSB_ Parametreleri
