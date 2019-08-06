@@ -21,8 +21,8 @@ Otomatik inişi kontrol eden temel parametreler:
 
 Bu parametrelerin her birinin anlamı ve önerilen değeri aşağıda açıklanmıştır.
 
-Palye Noktası Ayarlama
------------------------
+### Palye Noktası Ayarlama
+
 Flare: Palyeye geçmek
 
 “Palye”, otopilotun gazı kestiği, pitch'i yükselttiği ve zemine yavaş yavaş inmek için uçağı yavaşlattığı inişin son aşamasıdır. "Palye" için uygun zaman uçağın tipine bağlıdır, [LAND_FLARE_ALT]() ve [LAND_FLARE_SEC]() parametreleri tarafından kontrol edilir.
@@ -34,8 +34,8 @@ Palyenin ilk kontrolü [LAND_FLARE_SEC]() parametresidir. Bu, uçağın mevcut i
 Bu iki parametre için uygun değerler, otopilotun irtifayı nasıl hesapladığına bağlıdır. Eğer otopilotun iyi bir mesafe ölçeri (LIDAR gibi) varsa güvenli bir şekilde oldukça küçük sayılar seçebbilir ve zemine yakın palyeye geçebilir. Bu genellikle daha iyi bir iniş sağlar. 
 [LAND_FLARE_SEC]() için 1.5, [LAND_FLARE_ALT]() için 2, LIDAR ile başlamak için iyi bir seçimdir. İrtifa için barometre kullanıyorsanız, hatayı hesaba katmak için muhtemelen daha yüksek değerlere ihtiyacınız olacak.
 
-Süzülüş Açısını Kontrol Etme
----------------------------
+### Süzülüş Açısını Kontrol Etme
+
 glide slope: süzülüş açısı
 
 Palye noktasını ayarlamada bir başka önemli, faktör süzülüş açısıdır. Süzülüş açısı, son waypointten iniş noktasına olan mesafenin ve son waypoint ve iniş noktası arasındaki yükseklik farkının oranıdır. Örneğin, iniş noktası son waypointten 300 metre uzaktaysa ve son waypoint yerden 30 metre yüksekteyse, süzülüş açısı %10'dur.
@@ -45,8 +45,7 @@ Süzülüş açısı çok dikse, uçak çarpmayı önleyemek için zamanında pa
 Uçağınızın istenen süzülüş açısını tam olarak yapmadığını tespit ederseniz, o zaman öncelikle günlüklerinizde pitch ayarlarını kontrol edin, ve iniş sırasında birkaç derece içinde istenen ve ulaşılan pitch eşleştiğinden emin olun. Eşleşmemesi halinde, pitch ayarlarıyla ilgili belgelere gözatın (veya bi ihtimal AUTOTUNE yeniden çalıştırın). Talep edilen ve ulaşılan pitch eşleşirse, hava hızının doğruluğunu kontrol etmek için TECS günlüklerinizi kontrol etmelisiniz.
 
 
-İniş Hava Hızı
-----------------
+### İniş Hava Hızı
 
 landing approach: iniş yaklaşma hızı (süzülüş açısından gelen hız)
 stall speed: motorlar durmuş haldeyken iniş hızı
@@ -58,8 +57,8 @@ Otomatik iniş, hava hızı sensöründen büyük ölçüde destek alır. Hava h
 
 İnişi daha da iyileştirmek için, palyeden hemen önce hava hızını azaltmak için Ön-Palye(Pre-Flare) kullanabilirsiniz. Bu [LAND_PF_ALT]() veya [LAND_PF_SEC]()'e belirli bir irtifada veya tahmini bir saniyede ön-palye durumuna girmek üzere ayarlanmasıyla etkinleştirilir. Ön-Palye tetiklendiğinde istenen hava hızı [LAND_PF_ARSPD]() olur. Bu değer [TECS_LAND_ARSPD]()'den düşük, ancak stall speedden yüksek olmalıdır. Bu reverse thrust olduğu durumlarda faydalıdır. Bununla birlikte, bazı uçaklar stall landing gerçekleştirebilir bu nedenle düşük bir sayıya (1) ayarlamak, uçağa palyeye geçmeden önce mümkün olduğunca hava hızı kadar gaz boşaltır. 
 
-Yaklaşma kontrolü
-------------------------
+### Yaklaşma kontrolü
+
 landing approach: iniş yaklaşması
 
 İniş yaklaşması sırasında otopilotun istenen hava hızını ([TECS_LAND_ARSPD]() ile belirlenen) ve istenen süzülüş açısı ve iniş pozisyonu (önceki waypoint ve son waypoint noktası tarafından belirlenen) dengelemesi gerekir. Varsayılan yapılandırma bu iki talebi dengelemeye çalışır, ancak bazı uçaklarda diğerine öncelik vermek isteyebilirsiniz.
@@ -73,8 +72,8 @@ Bir planör (veya motorsuz herhangi bir uçağı) iniş yaptırıyorsanız, [TEC
 In most cases a value of -1 gives the best result. This special value will auto-adjust the value during the landing, scaling it from your normal TECS_SPDWEIGHT value down to zero at the point of landing. So up in the sky during approach you maintain good airspeed but by the time you land the emphasis is on a more accurate landing.
 
 
-Palyeye geçiş kontrolü
----------------------
+### Palyeye geçiş kontrolü
+
 flare: palyeye geçmek
 TECS: toplam enerji kontrol sistemi
 
@@ -90,8 +89,8 @@ TECS kontrolcüsü iniş hızını kontrol etmeye çalıştığında uçağom ge
 
 TECS_LAND_DAMP parametresi palye sırasındaki pitch kontrolü için bir 	sönüm katsayısıdır. Daha büyük bir sayı, pitch talebinin daha yavaş değişmesine neden olur. Bu parametre palye gerçekleştiğinde ani adım değişiklikleriyle ilgili sorunları azaltmak için kullanılabilir.
 
-Palye sonrası
----------------
+### Palye sonrası
+
 
 Uçak palyeye geçtikten sonra hareket etmeye devam eder, ancak sıfır gazda. Navigasyon yönü, iniş noktasından son waypointe doğru tahmin yürütülen çizgidir. Navigasyon roll'ünün kanadı çarpmasını önlemek için LEVEL_ROLL_LIMIT ile sınırlı olacağına, bu nedenle önemli bir çapraz rüzgar varsa uçağın yolda düzgün olarak devam edemez.
 
@@ -99,8 +98,7 @@ Uçağınız sürekli uzun iniş yapıyorsa (çeşitli nedenlerden dolayı olabi
 
 Uçak LAND_DISARMDELAY saniye boyunca hareket etmeyi kestiğinde (varsayılan 20 saniye) motoru disarm eder. İsteğe bağlı olarak, LAND_THE_NEUTRL ayarlayarak LAND_DISARMDELAY tetiklendiğinde servo hareketini devre dışı bırakabilirsiniz.
 
-Uzaklıkölçer kullanımı
--------------------
+### Uzaklıkölçer kullanımı
 
 Uçağınıza bir uzaklıkölçer taktıysanız daha düzgün bir landing kontrolü için kullanabilirsiniz. Uzaklıkölçerin inişte kullanılmasına izin vermek için, RNGFND_LANDING parametresini 1 olarak ayarlamanız gerekir.
 
@@ -109,8 +107,8 @@ Uçağınıza bir uzaklıkölçer taktıysanız daha düzgün bir landing kontro
 
 Ayrıca, daha uzun menzilli uzaklıkölçeriniz varsa, o zaman uzaklıkölçerin minimum menzilini sıfırın üstünde ayarlamak iyi bir fikirdir. Örneğin, PulsedLight Lidar'ın 40 metreden fazla menzili vardır ve yanlış okuma yaptığında, 1 metreden daha az aralıkları okumaya meyillidir. RNGFND_MIN_CM parametresinin 150 ye ayarlanması, 1.5 metrenin altındaki tüm uzaklıkölçer değerlerini gözardı eder ve Lidar'ın iniş için sağlamlığını büyük ölçüde geliştirir.
 
-İnişi iyileştirmek
----------------------
+### İnişi iyileştirmek
+
 
 İyi bir inişin anahtarı, yerden ne kadar uzakta olduğunu bilen otopilottur. Varsayılan kurulumda, irtifayı tespit edebilecek tek sensör barometredir. Ne yazıkkı barometreler üç ana hatadan muzdariptir:
 
@@ -128,8 +126,7 @@ Lidar takılı değilse, otomatik-iniş ile barometrik hata sorunlarını en aza
 
 Ayrıca gövde üzerine inen uçaklarla, yüzeysel pitch ile iniş ayarlamak ve palyeyi biraz daha yüksek irtifaya ayarlamak için iyi çalışır. Bu, yalnızca motorlar durmuş haldeyken iniş hızının yeterince düşük olması durumunda işe yarar; süzülme bir süre güvenilir şekilde çalışacaktır. 
 
-DO_LAND_START kullanımı
-===================
+## DO_LAND_START kullanımı
 
 Bazen RTL'in bir parçası olarak otomatik inişi tetiklemek yararlı olabilir. Bunu yapmak için iki şey yapmanız gerekir:
 
@@ -145,8 +142,8 @@ Tam davranış RTL_AUTOLAND değerine bağlıdır:
 
 İsteğe bağlı olarak, görevinize birden fazl DO_LAND_START öğesi ekleyebilirsiniz. Bu yapılırsa, DO_LAND_START görev öğelerinin enlem/boylamları iniş kullanılarak iniş sıralaması seçilir.  Geçerli konuma en yakın DO_LAND_START kullanılır. Farklı rüzgar koşulları veya farklı alanlar için birden fazla iniş diziniz varsa, bu faydalı olabilir.
 
-Otomatik-iniş nasıl iptal edilir
-============================
+## Otomatik-iniş nasıl iptal edilir
+
 İniş sıralamasını güvenli ve kontrollü bir şekilde iptal etmenize izin veren bir iniş iptal mekanizması bulunmaktadır. Özel iptal durumu, görevin bir parçası olarak önceden programlanabilir veya varsayılan iptal mekanizması kullanılabilir. Bu özelliği etkinleştirmek için LAND_ABORT_THR = 1 ayarlayın.
 
 Bu özellik üç adımdan oluşur:
@@ -155,16 +152,16 @@ Bu özellik üç adımdan oluşur:
 2. İptal sırasındaki davranış
 3. İptal tamamlandıktan sonra görev durumu
 
-Adım 1) İniş iptali tetikleyicileri
----------------------------
+### Adım 1) İniş iptali tetikleyicileri
+
 Otomatik iniş iptalini tetiklemenin üç yolu vardır. Hepsi sadece AUTO modda iken ve mevcutta bir LAND waypoint görev öğesi yürütülüyorsa çalışır:
 
 * __YKİ kullanarak MAV_CMD_DO_GO_AROND komutunu gönderin.__ MP'ın FlightData ekranındaki Eylemler sekmesinde "Abort Landing" düğmesi bulunur.
 * __RC Throttle girişi >90%.__ Bu AUTO modda iken iptali tetikleyecektir. Throttle'ı tetiklemek için sadece kısa bir süre high olması gerekir. Low'a çekmeyi unutmayın!
 * __Mod değişimi.__ İnsan pilotlu iniş iptali için AUTO moddan, örneğin MANUEL/STABILIZE/FBWA moduna geçebilir ve istediğiniz gibi güvenle uçağı yönlendirebilirsiniz. Bu yöntemi kullanmak, Adım 2 yi atlayacaktır, çünkü elle yapılır. AUTO'ya geri dönmeniz durumunda görev aşağıdaki Adım 3 açıklandığı gibi devam edecektir.
 
-Adım 2) İniş iptali uçuş davranışı
-----------------------------------
+### Adım 2) İniş iptali uçuş davranışı
+
 Varsayılan iptal davranışı oto-takeoff simüle etmektir: pitch en az 10 derece arttırın ve throttle'ı TKOFF_THR_MAX değerine ayarlayın ve 30m hedef irtifaya ulaşana kadar doğrultuyu sabit tutun. Özelleştirilmiş bir davranışa izin vermek için pitch ve irtifayı geçersiz kılmak mümkündür.
 
 - Pitch minimum. Bu görevde şimdiye kadar yürütülen bir NAV_TAKEOFF varsa, aynı adım burada tekrar kullanılacaktır.
@@ -172,8 +169,8 @@ Varsayılan iptal davranışı oto-takeoff simüle etmektir: pitch en az 10 dere
   
 Bu adım, iptal tetikleme mod değişikliği ile yapılırsa atlanır, çünkü pilotun manuel olarak devraldığı ve uçağı seçtikleri thorttle ve pitch ile güvenli bir irtifaya uçurduğu varsayılır.
 
-Adım 3) İniş iptali tamamlandıktan sonra görev durumu
---------------------------------------------------------
+### Adım 3) İniş iptali tamamlandıktan sonra görev durumu
+
 İptal edilen bir iniş tamamlandığında, ya hedef irtifaya ulaşarak ya da tekrar AUTO moduna geçerek görev dizini değişmiş olacaktır ve artık NAV_LAND komutunu yürütme kalkar. Görev dizini bu üç seçenekten biri olacak ve sırayla kontrol edilecektir:
 
 - NAV_LAND görev öğesini param1 = 0 veya 1 olan CONTINUE_AND_CHANGE_ALT görev öğesini izlerse, görev indeksi bir kez artırılır ve normal şekilde çalıştırılır. Bunu, özel planlı görev davranışları için iptal sonrası görev planlaması izleyebilir.
@@ -181,8 +178,7 @@ Adım 3) İniş iptali tamamlandıktan sonra görev durumu
 - Aksi halde görev indeksi NAV_LAND'tan önceki indeks olacak şekilde bir azaltılır. Bu aynı iniş yaklaşımını tekrarlamasını sağlayacaktır.
 
 
-Ters İticili İniş (Reverse-Thrust Landing)
-======================
+## Ters İticili İniş (Reverse-Thrust Landing)
 
 Bazı ESC'ler yönü ters çevirmeye izin verir. Pervane üzerinde ters çevirme kullanıldığında, hava hızınızı azaltmak için kullanılabilecek bir negatif itme meydana getirecektir. Dik iniş(steep landing) yaklaşması sırasında, bu yöntem çok daha yumuşak ve hassas bir şekilde iniş yapmanıza izin veren sabit ve düşük hava hızını korumak için kullanılabilir. Bu özelliği kullanmak için, doğru bir yükseklik için havahızı sensörü ve uzaklıkölçer kullanılması şiddetle tavsiye edilir.
 
@@ -191,8 +187,8 @@ Aşağıdaki video, 15 derecelik bir eğimle otomatik iniş paan Skywalker X8 ö
 https://www.youtube.com/watch?v=kdw8vjbttNo
 
 
-Anahtar Parametreler
---------------
+### Anahtar Parametreler
+
 
 Bölüm 1.1'de belirtilenlere ek olarak ters iticili inişi kontrol eden temel parametreler şunlardır:
 
@@ -205,8 +201,7 @@ Bölüm 1.1'de belirtilenlere ek olarak ters iticili inişi kontrol eden temel p
 - THR_MIN
 
 
-ESC (Elektronik Hız Kontrolcüsü)
----------------------------------
+### ESC (Elektronik Hız Kontrolcüsü)
 
 Donanım seçimi ve programlama
 ++++++++++++++++++++++++++++++++++
@@ -227,15 +222,13 @@ ESC'nizi nötr noktasını değiştirerek ters itme için yapılandırın. Birç
 1. Minimum PWM 1000, ortası 1500 ve maksimum 2000.
 2. THR_MIN'i -100 gibi negatif bir değere. Daha sonra RC3_TRIM'i (veya RCMAP_THROTTLE üzerinden kısmak üzere eşlendiği RCx'İ) ESC'nizin orta değerine ayarlayın.
 
-Maksimum süzülüş açısı belirleme
---------------------------------------
+### Maksimum süzülüş açısı belirleme
 
 Dik bir iniş yaklaşması için sınırlama, istenen hava hızını ne kadar iyi koruyabileceğinizdir. Bu, uçağınızın ters itme (motor + destek itme kabiliyeti) yaratma kabiliyeti ve yavaşlamaya karşı direnciyle (uçak kütlesi) belirlenir. Çoğu durumda aşırı diklik gereksizdir, ancak mümkündür. Aşırı büyüklükte bir motor ve hafif bir uçakla 60 dereceye kadar dik gelebilirsiniz.
 
 En dik yalşma açınızı belirlemek için, TECS_APPR_SMAX'ı sizi sınırlandırmayacak kadar yüksek ayarlayın (örn. 99). Ardından, normal yaklaşıma göre daha dik bir görev planlayın(15 dereceyi deneyin ve daha da yükseltin). Hava hızınızı yaklaşırken izleyin - uçak mevcut ters throttle menzilinin %75 ini aşmadan TECS_LAND_ARSPD'i koruyabilmelidir. Aksi halde, uçağınızın negatif itme-kütle oranı için çok dik geliyorsunuz. 
 
-Ön palye ayarlama
-------------------------
+### Ön palye ayarlama
 
 Bir uzaklıkölçer ve havahızı sensörleri takılıyken, ön palye noktasında doğru hava hızı ve irtifa okuması olacaktır. Bu bize momentumumuz hakkında iyi bir fikir verir ve nihai patlamaya karşı kararlı “başlangıç koşulları” sağlar. LAND_PF_ALT (veya LAND_PF_SEC) 'yi oldukça yüksek bir noktaya ayarlayın (örneğin 10 m) ve oraya adapte edin. 
 
@@ -246,8 +239,7 @@ LAND_PF_ALT'a ulaşıldığında hava hızı talebi anında TECS_LAND_ARSPD'den 
 Örnek, TECS_LAND_ARSPD = 15, LAND_PF_ARSPD = 12, LAND_PF_ALT = 12, LAND_FLARE_ALT = 2. Eğiminize, uçak kütlesine ve motor+pervanenin itme kabiliyetine bağlı olarak, uçağın 10m den 2m ye düşerken hava hızını 15m/s den 12m/s düşürmesini beklemelisiniz. Bunlar, 2m irtifanın altında yumuşak ve yavaş bir palyeye geçiş için ayarlanacak kritik paragraflardır.
 
 
-Palye
------
+### Palye
 
 Artık palyeyi sabit ve tahmin edilebilir bir hava hızıyla başlattığınıza göre palyeyi kontrol etmek çok daha kolaydır. Palyenizi önceden oto-iniş için ters itme olmadan ayarladıysanız, yeniden ayarlamak isteyeceksiniz. Çok daha yavaş geldiğinizi fark edeceksiniz, ve ayarlaması daha kolay olacaktır.
 
