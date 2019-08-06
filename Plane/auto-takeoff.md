@@ -1,4 +1,4 @@
-# Otomatik Takeoff
+# OTOMATİK TAKEOFF
 Plane, otomatik kalkış başlatabilir. Aşağıdaki talimatlar ile nasıl yapılacağı öğretilecektir.
 
 ## Temel Talimatlar
