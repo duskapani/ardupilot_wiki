@@ -1,18 +1,18 @@
-Otomatik İniş
-=================
+# Otomatik İniş
+---
 
 Bu makale, Plane'da uçağın güvenli olarak indirilmesini sağlayacak bilgiler içerir.
 
-Otomatik İniş Yapılandırması
-=================================
+## Otomatik İniş Yapılandırması
+---
 
 Plane, görev planının bir parçası olarak uçağı otomatik olarak indirebilir.
 
 Uçağı indirmek için, görevin sonuna istediğiniz konma noktasının enlem, boylam ve irtifasını belirten bir [NAV_LAND]() komutu eklemeniz gerekir. Çoğu durumda, irtifa 0 olarak ayarlanmalıdır. İniş sırasında, otopilot uçak palye noktasına ulaştığında -aşağıda açıklanan parametrelerle kontrol edilir- gazı kesecek ve mevcut doğrultuyu koruyacaktır.
 
 
-Anahtar Parametreler
---------------
+### Anahtar Parametreler
+---
 
 Otomatik inişi kontrol eden temel parametreler:
 
