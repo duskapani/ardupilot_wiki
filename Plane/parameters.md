@@ -17,32 +17,27 @@
 ```
 
 <table>
-<tr>
-  <td>Abc</td>
-  <td>Defg<span> some label </span></td>
-</tr>
-<tr>
-  <td>Hijkl</td>
-  <td>Defg<span> some label </span></td>
-</tr>
+    <tr>
+    <td>Table Data come here
+        <div class="topright">Next Code</div>
+    </td>
+    </tr>
 </table>
 
-table {
-  border:1px solid black;
-}
-
+<style type="text/css">
 td {
+  position: relative;
   width: 200px;
-  height: 50px;
-  border:1px solid gray;
-  position: relative; 
+  height: 200px;
+  background: yellow;
 }
 
-td span {
-  position: absolute; 
-  right: 0;
+td .topright { 
+  position: absolute;
   top: 0;
-  background: gray;
+  right: 0;
+  background: green;
 }
+</style>
 
 ## ADSB_ Parametreleri
