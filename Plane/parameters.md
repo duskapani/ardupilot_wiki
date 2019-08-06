@@ -16,23 +16,15 @@
 
 ```
 
-<table style="width:100%">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td> 
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>94</td>
-  </tr>
+<table style="width: 250px;float: left;">
+    <tr>
+        <td>Yes <input type="radio" value="yes" /></td>
+    </tr>
+    <tr>
+        <td>No <input type="radio" value="no" /></td>
+    </tr>
 </table>
-<p style="text-align:center;">Learn for free</p>
+
+Some text
 
 ## ADSB_ Parametreleri
