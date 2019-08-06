@@ -3,6 +3,7 @@
 ## ArduPlane Parametreleri
 
 <span style="color: green"> Some green text </span>
+`git status`
 
 > **AUTOTUNE_LEVEL: autotune seviyesi**
 
