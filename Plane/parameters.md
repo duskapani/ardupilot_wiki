@@ -3,4 +3,4 @@
 ## ArduPlane Parametreleri
 __FORMAT_VERSION:__
 
-<span style="color:orange;">Word up</span>
+<font color="red">This is some text!</font>
