@@ -33,8 +33,7 @@
     <td>94</td>
   </tr>
 </table>
-asdasd
-asdasd
-sadds
+
+<align="right">asdasdsa</align>
 
 ## ADSB_ Parametreleri
