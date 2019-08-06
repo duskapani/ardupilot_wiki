@@ -1,0 +1,3 @@
+# PARAMETRE LİSTESİ
+
+## ArduPlane Parametreleri
