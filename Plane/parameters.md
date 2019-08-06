@@ -2,9 +2,8 @@
 
 ## ArduPlane Parametreleri
 
-```diff
 'AUTOTUNE_LEVEL: autotune seviyesi'
-```
+
 | Aralık | Artış |
 |:------:|:-----:|
 |  1-10  |   1   | asdasdasd
