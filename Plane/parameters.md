@@ -33,7 +33,6 @@
     <td>94</td>
   </tr>
 </table>
-
- <p style="text-align:center;">Learn for free</p>
+<p style="text-align:center;">Learn for free</p>
 
 ## ADSB_ Parametreleri
