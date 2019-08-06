@@ -15,12 +15,6 @@
 |  1-10  |   1   |
 
 
-```diff
-- __FORMAT_VERSION:__
-
-
-```
-
 <table>
     <tr>
     <td>Table Data come here
@@ -44,7 +38,3 @@ td .topright {
   background: green;
 }
 </style>
-
-## ADSB_ Parametreleri
-
-> #### A Example for markdown-diff
