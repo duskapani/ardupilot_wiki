@@ -5,11 +5,11 @@
 
 ```diff
 - __FORMAT_VERSION:__
-'''diff
+```diff
 asdasdasd
 sadasd
 asda
-'''
+```
 
 ```
 
