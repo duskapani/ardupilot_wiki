@@ -8,6 +8,7 @@
 | Aralık | Artış |
 |:------:|:-----:|
 |  1-10  |   1   |
+
 asdasdasd
 asdasdasd
 ```diff
