@@ -1,10 +1,8 @@
 # Otomatik İniş
----
 
 Bu makale, Plane'da uçağın güvenli olarak indirilmesini sağlayacak bilgiler içerir.
 
 ## Otomatik İniş Yapılandırması
----
 
 Plane, görev planının bir parçası olarak uçağı otomatik olarak indirebilir.
 
@@ -12,7 +10,6 @@ Uçağı indirmek için, görevin sonuna istediğiniz konma noktasının enlem, 
 
 
 ### Anahtar Parametreler
----
 
 Otomatik inişi kontrol eden temel parametreler:
 
