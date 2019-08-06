@@ -5,6 +5,7 @@
 
 ```diff
 - AUTOTUNE_LEVEL: autotune seviyesi
+```
 
 | aaa | bbbb |
 |-----|------|
@@ -13,7 +14,6 @@
 |     |      |
 
 
-```
 ```diff
 - __FORMAT_VERSION:__
 
