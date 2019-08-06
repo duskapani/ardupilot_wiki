@@ -6,8 +6,8 @@
 - AUTOTUNE_LEVEL: autotune seviyesi
 ```
 | Aralık | Artış |
-|-----|------|
-| 1-10 | 1  |
+|:------:|:-----:|
+|  1-10  |   1   |
 
 ```diff
 - __FORMAT_VERSION:__
