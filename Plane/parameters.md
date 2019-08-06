@@ -9,7 +9,8 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 |:------:|:-----:|
 |  1-10  |   1   |
 
-> **AUTOTUNE_LEVEL: autotune seviyesi**  
+> **AUTOTUNE_LEVEL: autotune seviyesi** 
+
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  
 
 | Aralık | Artış |
