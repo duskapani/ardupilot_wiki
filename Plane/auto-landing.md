@@ -1,4 +1,4 @@
-# Otomatik İniş
+# OTOMATİK İNİŞ
 
 Bu makale, Plane'da uçağın güvenli olarak indirilmesini sağlayacak bilgiler içerir.
 
