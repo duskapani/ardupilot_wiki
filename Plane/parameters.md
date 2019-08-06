@@ -1,6 +1,7 @@
 # PARAMETRE LİSTESİ
 > tune: kanal ayarı
 > smoothing out: kolaylaştırmak
+> pusher prop: itici pervane
 ## ArduPlane Parametreleri
 
 **`AUTOTUNE_LEVEL: autotune düzeyi`**  
@@ -42,3 +43,11 @@ Süzülüş eğimini yeniden oluşturmadan (rebuilding) önce uçağın olabilec
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
 |0-100   |   1   | metre |
+
+**`TKOFF_THR_MINSPD: Takeoff throttle minimum hızı`** 
+
+Otomatik takeoff'ta throttle'ı bastırmayan/önlemeyen hız kontrolü tarafından kullanılan m/s cinsinden minimum GPS yer hızı. Bu, motorun uçağın mancınığı terk etmesinden sonra devreye alınmasını istediğiniz mancınık fırlatmalarında kullanılabilir, ancak GPS ölçümleriyle ilgili hatalar nedeniyle mancınık başlatmalarında TKOFF_THR_MINACC ve TKOFF_THR_DELAY parametrelerinin kullanılması tercih edilir. İtici pervaneyle elden kalkışlarda, vaktinden önce motorun çalışmasına karşı ek koruma sağlamak için bu parametrenin 4m/s den daha az olmayan bir değere ayarlanması şiddetle tavsiye edilir. GPS süratinin gerçek sürati yaklaşık 0.5 saniye geciktireceğini unutmayın. Zemin hızı kontrolü, TKOFF_THR_DELAY parametresi tarafından ertelenir.
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-30    | 0.1   | m/s   |
