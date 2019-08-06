@@ -34,6 +34,6 @@
   </tr>
 </table>
 
-<align="right">asdasdsa</align>
+ <p style="text-align:center;">Learn for free</p>
 
 ## ADSB_ Parametreleri
