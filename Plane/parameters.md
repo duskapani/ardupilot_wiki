@@ -120,3 +120,39 @@ Otomatik kalkışta uygulanacak flap miktarı.
 | Aralık | Birim |
 |:------:|:-----:|
 |0-100   | yüzde |
+
+LEVEL_ROLL_LIMIT: Level flight roll limit
+ALT_CTRL_ALG: Altitude control algorithm
+WP_RADIUS: Waypoint Radius
+WP_MAX_RADIUS: Waypoint Maximum Radius
+WP_LOITER_RAD: Waypoint Loiter Radius
+RTL_RADIUS: RTL loiter radius
+FENCE_ACTION: Action on geofence breach
+FENCE_MINALT: Fence Minimum Altitude
+FENCE_MAXALT: Fence Maximum Altitude
+FENCE_RETALT: Fence Return Altitude
+FENCE_AUTOENABLE: Fence automatic enable
+FENCE_RET_RALLY: Fence Return to Rally
+ARSPD_FBW_MIN: Minimum Airspeed
+ARSPD_FBW_MAX: Maximum Airspeed
+TERRAIN_FOLLOW: Use terrain following
+THR_MIN: Minimum Throttle
+THR_MAX: Maximum Throttle
+TKOFF_THR_MAX: Maximum Throttle for takeoff
+THR_SLEWRATE: Throttle slew rate
+FLAP_SLEWRATE: Flap slew rate
+THR_SUPP_MAN: Throttle suppress manual passthru
+THR_FAILSAFE: Throttle and RC Failsafe Enable
+TRIM_THROTTLE: Throttle cruise percentage
+THROTTLE_NUDGE: Throttle nudge enable
+LIM_ROLL_CD: Maximum Bank Angle
+LIM_PITCH_MAX: Maximum Pitch Angle
+LIM_PITCH_MIN: Minimum Pitch Angle
+GROUND_STEER_DPS: Ground steer rate
+RUDDER_ONLY: Rudder only aircraft
+HOME_RESET_ALT: Home reset altitude threshold
+TKOFF_ACCEL_CNT: Takeoff throttle acceleration count
+TKOFF_TIMEOUT: Takeoff timeout
+
+
+
