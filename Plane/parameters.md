@@ -6,6 +6,7 @@
 > hand launch: elden kalkış
 > velocity: hız
 > ground speed: yer sürati
+> airspeed: hava sürati
 ## ArduPlane Parametreleri
 
 **`AUTOTUNE_LEVEL: autotune düzeyi`**  
@@ -90,23 +91,31 @@ Bu parametre, kuyruğu zeminde tutmayı bırakacak ve zemindeki dümen kontrolü
 
 **`TKOFF_ROTATE_SPD: Takeoff dönüş hızı`**
 
+Bu parametre, görevde belirlenen tırmanma mesafesini ayarlayarak uçağın "döneceği" hava süratini belirler. TKOFF_ROTATE_SPD sıfır ise, takeoff başlar başlamaz tırmanış pich kullanılacaktır. El ve mancınık fırlatmaları için TKOFF_ROTATE_SPD sıfır olmalıdır. Tüm zemin kalkışları için TKOFF_ROTATE_SPD stall hızının üstünde, genellikle %10 ila %30 arasında ayarlanmalıdır.
+
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
 |0-30    | 0.1   | m/s  |
 
 **`TKOFF_THR_SLEW: Takeoff throttle değişim hızı`**
 
+Bu parametre otomatik takeoff'ta throttle değişim hızını ayarlar. Sıfır olduğunda, kalkış sırasında THR_SLEWRATE parametresi kullanılır. Roll takeofflar için, zemin dümen kontrolünü iyileştirebilecek daha yavaş bir ivmelenme sağlamak üzere takeoff için daha düşük değişim hızı ayarlamak iyi bir fikirdir. Değer saniyede yüzde throttle değişimidir, bu nedenle 20 değeri, throttle'ı kalkışta 5 saniyenin üzerinde arttıracağı anlamına gelir. 20 'nin altındaki değerler, uçağın çok az throttle kullanarak tırmanmaya çalışmasına neden olabileceğinden önerilmez. -1 değeri, kalkışta dönüş hızı sınırının olmadığı anlamına gelir.
+
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
 |-1-127    | 1   | saniye başına yüzden  |
 
-**`TKOFF_PLIM_SEC: Takeoff pitch limit reduction`**
+**`TKOFF_PLIM_SEC: Takeoff pitch limit düşürme`**
+
+Bu parametre, otomatik takeoff'un minimum pitch sınırını hedef irtifaya ulaşmadan birkaç saniye önce azaltır. Bu, uçuş kontrolcüsünün hedef yüksekliğe ulaşmadan birkaç saniye önce dengelemeye başlamasına izin vererek hedeften sapmayı azaltır. Sıfır olarak ayarlandığında, görev pitch minimumu yol boyunca hedef irtifaya zorlanır, aksi takdirde, pitch minimumu yaklaşma bölümünde yavaşça sıfıra düşer. Bu pitch_min değeridir, talep(demand) değildir. Uçuş kontrolcüsünün kalkış işlemini tamamlamak için irtifa kazanmaya devam etmesi gerekir, ancak bu parametre ile olmak istediğinden daha fazlasına zorlanmaz.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
 |0-10    | 0.5   | saniye|
 
 **`TKOFF_FLAP_PCNT: Takeoff flap yüzdesi`**
+
+Otomatik kalkışta uygulanacak flap miktarı.
 
 | Aralık | Birim |
 |:------:|:-----:|
