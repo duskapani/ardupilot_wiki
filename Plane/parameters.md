@@ -2,6 +2,9 @@
 > tune: kanal ayarı
 > smoothing out: kolaylaştırmak
 > pusher prop: itici pervane
+> forward acceleration: ileri ivme
+> hand launch: elden kalkış
+> velocity: hız
 ## ArduPlane Parametreleri
 
 **`AUTOTUNE_LEVEL: autotune düzeyi`**  
@@ -51,3 +54,53 @@ Otomatik takeoff'ta throttle'ı bastırmayan/önlemeyen hız kontrolü tarafınd
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
 |0-30    | 0.1   | m/s   |
+
+**`TKOFF_THR_MINACC: Takeoff throttle minimum ivme`**  
+
+Otomatik takeoffta yer hız kontrolü arm etmeden önce m/s/s cinsinden minimum ileri ivme. Bu, elden kalkışlarda kullanılmak içindir. 0 olması, ivme testini devre dışı bırakır, Bu GPS hız atlamalarının motorun çalıştırılmasına izin verebilecek yer hız kontrolünü her zaman arm edeceği anlamına gelir. Elden kalkışlarda ve bungee kalkışlarda 15 civarında ayarlanmalıdır. Ayrıca tam "arm için sallanma" kontrolü için TKOFF_ACCEL_CNT parametresine bakın.
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-30    | 0.1   | m/s2  |
+
+**`TKOFF_THR_DELAY: Takeoff throttle gecikmesi`**
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-127    | 1   | desisaniye  |
+
+**`TKOFF_TDRAG_ELEV: Takeoff taildragger elevator`**
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|-100-100    | 1   | yüzde  |
+
+**`TKOFF_TDRAG_SPD1: Takeoff tail dragger hız1`**
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-30    | 0.1   | m/s  |
+
+**`TKOFF_ROTATE_SPD: Takeoff dönüş hızı`**
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-30    | 0.1   | m/s  |
+
+**`TKOFF_THR_SLEW: Takeoff throttle değişim hızı`**
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|-1-127    | 1   | saniye başına yüzden  |
+
+**`TKOFF_PLIM_SEC: Takeoff pitch limit reduction`**
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`TKOFF_FLAP_PCNT: Takeoff flap yüzdesi`**
+
+| Aralık | Birim |
+|:------:|:-----:|
+|0-100   | yüzde |
