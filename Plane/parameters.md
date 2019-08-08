@@ -108,8 +108,7 @@ Bu parametre otomatik takeoff'ta throttle değişim hızını ayarlar. Sıfır o
 
 **`TKOFF_PLIM_SEC: Takeoff pitch limit düşürme`**
 
-Bu parametre, otomatik takeoff'un minimum pitch sınırını hedef irtifaya ulaşmadan birkaç saniye önce azaltır. Bu, uçuş kontrolcüsünün hedef yüksekliğe ulaşmadan birkaç saniye önce dengelemeye başlamasına izin vererek hedeften sapmayı azaltır. Sıfır olarak ayarlandığında, görev pitch minimumu yol boyunca hedef irtifaya zorlanır, aksi takdirde, pitch minimumu yaklaşma bölümünde yavaşça sıfıra dü
-**`şer. Bu pitch_min değeridir, talep(demand) değildir. Uçuş kontrolcüsünün kalkış işlemini tamamlamak için irtifa kazanmaya devam etmesi gerekir, ancak bu parametre ile olmak istediğinden daha fazlasına zorlanmaz.
+Bu parametre, otomatik takeoff'un minimum pitch sınırını hedef irtifaya ulaşmadan birkaç saniye önce azaltır. Bu, uçuş kontrolcüsünün hedef yüksekliğe ulaşmadan birkaç saniye önce dengelemeye başlamasına izin vererek hedeften sapmayı azaltır. Sıfır olarak ayarlandığında, görev pitch minimumu yol boyunca hedef irtifaya zorlanır, aksi takdirde, pitch minimumu yaklaşma bölümünde yavaşça sıfıra düşer. Bu pitch_min değeridir, talep(demand) değildir. Uçuş kontrolcüsünün kalkış işlemini tamamlamak için irtifa kazanmaya devam etmesi gerekir, ancak bu parametre ile olmak istediğinden daha fazlasına zorlanmaz.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
@@ -124,101 +123,39 @@ Otomatik kalkışta uygulanacak flap miktarı.
 |0-100   | yüzde |
 
 
-**`LEVEL_ROLL_LIMIT: Level flight roll limit`**
+**`LEVEL_ROLL_LIMIT: Yatay uçuş roll sınırı`**
 
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`ALT_CTRL_ALG: Altitude control algorithm`**
-
-
+Bu, inişin son aşamalarında ve otomatik takeoff sırasında olduğu gibi, yatay uçuş istenen uçuş modları sırasında derece cinsinden maksimum yatış açısını kontrol eder. Kalkış veya iniş sırasında kanatların piste çarpmasını önlemek için küçük bir açı (5 derece gibi) olmalıdır. Bunu sıfıra ayarlamak, otomatik kalkış ve son iniş yaklaşmasında rota tutumunu tamamen devre dışı bırakacaktır.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
 |0-10    | 0.5   | saniye|
 
-**`WP_RADIUS: Waypoint Radius`**
 
+**`WP_MAX_RADIUS: Waypoint maksimum yarıçap`**
 
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`WP_MAX_RADIUS: Waypoint Maximum Radius`**
-
-
+Tamamlanmış sayılan waypoint için bir waypointe maksimum uzaklığını ayarlar. Bu, normalde bir waypointin tamamlandığını düşünmek için kullanılan "bitiş çizgisini geç" mantığını geçersiz kılar. Normal AUTO davranış için bu parametre sıfıra ayarlanmalıdır. Sıfır olmayan bir değerin kullanılması, yalnızca uçağın verilen yarıçap içine yaklaşması kritik olduğunda ve tamamlanana kadar etrafta dolaşılması gerektiğinde önerilir.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|0 - 32767	   | 1   | metre|
 
-**`WP_LOITER_RAD: Waypoint Loiter Radius`**`**
+**`WP_LOITER_RAD: Waypoint loiter yarıçapı`**
 
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`RTL_RADIUS: RTL loiter radius`**
-
-
+Waypoint merkezinden uzaklığı tanımlar, uçak loiter sırasında sürdürür. Bu değer negatifse, varsayılan loiter saatin tersi yönünde olur.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|-32767 - 32767	    | 1   | metre|
 
-**`FENCE_ACTION: Action on geofence breach`**
+**`RTL_RADIUS: RTL loiter yarıçapı`**
 
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`FENCE_MINALT: Fence Minimum Altitude`**
-
-
+RTL modundayken loiter dairesinin yarıçapını tanımlar. Eğer bu sıfır ise, WP_LOITER_RAD kullanılır. Yarıçap negatifse, saatin tersi yönünde yapılır. Eğer pozitifse, saat yönünde loiter yapılır.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|-32767 - 32767	    | 1   | metre|
 
-**`FENCE_MAXALT: Fence Maximum Altitude`**
-
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`FENCE_RETALT: Fence Return Altitude`**
-
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`FENCE_AUTOENABLE: Fence automatic enable`**
-
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`FENCE_RET_RALLY: Fence Return to Rally`**
-
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
 
 **`ARSPD_FBW_MIN: Minimum hava sürati`**
 
@@ -230,7 +167,7 @@ Otomatik throttle modlarında talep edilen minimum hava sürati. Uçuş stall h�
 
 **`ARSPD_FBW_MAX: Maksimum hava sürati`**
 
-Otomatik throttle modlarında talep edilen maksimum hava sürati. Hassas TECS irtifa kontrolü sağlamak için THR_MAX'taki seviye uçuş hızından biraz daha düşük, ARSPD_FBW_MAX'ın en az %50 üzerine ayarlanmalıdır.
+Otomatik throttle modlarında talep edilen maksimum hava sürati. Hassas TECS irtifa kontrolü sağlamak için THR_MAX'taki yatay uçuş hızından biraz daha düşük, ARSPD_FBW_MAX'ın en az %50 üzerine ayarlanmalıdır.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
