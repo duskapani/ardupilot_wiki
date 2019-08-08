@@ -7,6 +7,7 @@
 > velocity: hız
 > ground speed: yer sürati
 > airspeed: hava sürati
+> slew rate: yetişme hızı
 ## ArduPlane Parametreleri
 
 **`AUTOTUNE_LEVEL: autotune düzeyi`**  
@@ -219,151 +220,112 @@ Otomatik kalkışta uygulanacak flap miktarı.
 |:------:|:-----:|:-----:|
 |0-10    | 0.5   | saniye|
 
-**`ARSPD_FBW_MIN: Minimum Airspeed`**
+**`ARSPD_FBW_MIN: Minimum hava sürati`**
 
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`ARSPD_FBW_MAX: Maximum Airspeed`**
-
-
+Otomatik throttle modlarında talep edilen minimum hava sürati. Uçuş stall hızından %20 daha yükseğe ayarlanmalıdır.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|5 - 100    | 1   | m/s|
+
+**`ARSPD_FBW_MAX: Maksimum hava sürati`**
+
+Otomatik throttle modlarında talep edilen maksimum hava sürati. Hassas TECS irtifa kontrolü sağlamak için THR_MAX'taki seviye uçuş hızından biraz daha düşük, ARSPD_FBW_MAX'ın en az %50 üzerine ayarlanmalıdır.
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|5 - 100   | 1  | m/s|
 
 **`TERRAIN_FOLLOW: Use terrain following`**
 
+Bu, CRUISE modu, FBWB modu, RTL ve ralli noktaları için araziyi takip eder. Bu seçeneği kullanmak için, ayrıca YKİ'den arazi verilerini almayı sağlayan TERRAIN_ENABLE değerini 1'e ayarlamanız ve uçağa arazi verileri göndermeyi destekleyek YKİ kullanmanız gerekir. Arazi takibi etkinleştirildiğinde CRUISE ve FBWB modu, ev konumundan yükseklikten ziyade zeminden yüksekliği tutar. RTL'de, kalkış yerine dönüş irtifası, arazinin üstündeki yükseklik olarak kabul edilir. Rally noktası irtifaları arazinin üstündeki yükseklik olarak alınır. Bu seçenek, ev konumunun üstündeki yüksekliği mi yoksa arazinin üstündeki yüksekliği mi olduğu konusunda waypoint bayrağı taşıyan görev öğelerini etkilemez. Görevlerde arazi takibi kullanmak için görevi oluştururken waypoint türünü arazi yüksekliği waypointi olarak ayarlayabilecek bir yer istasyonuna ihtiyacınız vardır.
 
+| Değer | Anlamı |
+|:------:|:-----:|
+|0    | Pasif  |
+|1    | Etkin  |
 
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+**`THR_MIN: Minimum throttle`**
 
-**`THR_MIN: Minimum Throttle`**
-
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`THR_MAX: Maximum Throttle`**
-
-
+THR_PASS_STAB ayarlanmadığı sürece, manuel hariç tüm modlarda kullanılan minimum thorttle yüzdesi. Negatif değerler, donanım destekliyorsa ters itme yapar.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|-100-100    | 1   | yüzde|
 
-**`TKOFF_THR_MAX: Maximum Throttle for takeoff`**
+**`THR_MAX: Maksimum throttle`**
 
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`THR_SLEWRATE: Throttle slew rate`**
-
-
+Otomatik throttle modlarında kullanılan maksimum throttle yüzdesi.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|0-100    | 1   | yüzde|
 
-**`FLAP_SLEWRATE: Flap slew rate`**
+**`TKOFF_THR_MAX: Takeoff için maksimum throttle`**
 
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`THR_SUPP_MAN: Throttle suppress manual passthru`**
-
-
+Otomatik kalkış sırasında maksimum throttle ayarı. Eğer sıfırsa, THR_MAX kalkış içinde kulalnılır.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|0-100   | 1   | yüzde|
 
-**`THR_FAILSAFE: Throttle and RC Failsafe Enable`**
+**`THR_SLEWRATE: Throttle yetişme hızı`**
 
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`TRIM_THROTTLE: Throttle cruise percentage`**
-
-
+Throttle'daki maksimum saniye başına yüzde değişimi. Döngü başına 1 mikrosend servo artışına dayalı alt limit. Ulaşılabilir minimum değeri belirlemek için SCHED_LOOP_RATE değerini yaklaşık 10'a böl.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|0-127    | 1   | saniye başına yüzde|
 
-**`THROTTLE_NUDGE: Throttle nudge enable`**
+**`FLAP_SLEWRATE: Flap yetişme hızı`**
 
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`LIM_ROLL_CD: Maximum Bank Angle`**
-
-
+Flap çıkışındaki maksimum saniye başına yüzde değişimi. 25 ayarlamak, flap'in bir asniyede tam flap aralığının %25'ten daha fazla değiştirilmemesi anlamına gelir. 0 değeri, hız sınırlaması olmaması anlamına gelir.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|0-100    | 1  | saniye başına yüzde|
 
-**`LIM_PITCH_MAX: Maximum Pitch Angle`**
+**`LIM_ROLL_CD: Maksimum yatış açısı`**
 
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`LIM_PITCH_MIN: Minimum Pitch Angle`**
-
-
+Stabilize limitleri olan modlarda kumanda edilen maksimum yatış açısı. Daha keskin dönüşler için bu değeri arttırın, ancak ivmeli stall'ları önlemek için azaltın.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|0 - 9000	    | 1  | santi derece|
 
-**`GROUND_STEER_DPS: Ground steer rate`**
+**`LIM_PITCH_MAX: Maksimum pitch açısı`**
 
-
-
-| Aralık | Artış | Birim |
-|:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
-
-**`RUDDER_ONLY: Rudder only aircraft`**
-
-
+Stabilize limitlere sahip modlarda kumanda edilen maksimum pitch down açısı.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
-|0-10    | 0.5   | saniye|
+|0 - 9000	    | 1  | santi derece|
 
-**`HOME_RESET_ALT: Home reset altitude threshold`**
+**`LIM_PITCH_MIN: Minimum pitch açısı`**
 
-Uçak, ev waypointinin bu irtifası içinde olduğunda, disarm durumda iken, otomatik olarak ev konumunu güncelleyecektir. Sürekli olarak sıfırlamak için 0 olarak ayarlayın.
+Stabilize limitlere sahip modlarda kumanda edilen minimum pitch down açısı.
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|-9000 - 0	    | 1  |  santi derece|
+
+**`GROUND_STEER_DPS: Yer dümen hızı`**
+
+Tam rudder için saniye başına derece cinsinden yer dümen hızı.
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|10 - 360   | 1   | derece/saniye|
+
+**`HOME_RESET_ALT: Ev konumu ayarlama irtifa eşiği`**
+
+Uçak, ev waypointinin bu irtifası içinde olduğunda, disarm durumda iken, otomatik olarak ev konumunu güncelleyecektir. Sürekli olarak yeniden ayarlamak için 0 olarak ayarlayın.
 
 | Aralık | Değerler | Birim |
 |:------:|:-----:|:-----:|
 |-1-127  | -1: Sıfırlama, 0: Her zaman sıfırla   | metre|
 
-**`TKOFF_ACCEL_CNT: Takeoff throttle acceleration count`**
+**`TKOFF_ACCEL_CNT: Takeoff throttle ivme sayısı`**
 Bu, TKOFF_THR_MINACC ile arm etmek için gereken ivme olaylarının sayısıdır. Varsayılan değer olan 1, TKOFF_THR_MINACC'ın üstünde tek bir ileri ivmenin devreye gireceği anlamına gelir. Bunu 1'den daha yükseğe ayarlarak arm için daha fazla ileri/geri hareketi talep edebilirsiniz.
 
 
