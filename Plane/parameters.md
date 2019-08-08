@@ -107,7 +107,8 @@ Bu parametre otomatik takeoff'ta throttle değişim hızını ayarlar. Sıfır o
 
 **`TKOFF_PLIM_SEC: Takeoff pitch limit düşürme`**
 
-Bu parametre, otomatik takeoff'un minimum pitch sınırını hedef irtifaya ulaşmadan birkaç saniye önce azaltır. Bu, uçuş kontrolcüsünün hedef yüksekliğe ulaşmadan birkaç saniye önce dengelemeye başlamasına izin vererek hedeften sapmayı azaltır. Sıfır olarak ayarlandığında, görev pitch minimumu yol boyunca hedef irtifaya zorlanır, aksi takdirde, pitch minimumu yaklaşma bölümünde yavaşça sıfıra düşer. Bu pitch_min değeridir, talep(demand) değildir. Uçuş kontrolcüsünün kalkış işlemini tamamlamak için irtifa kazanmaya devam etmesi gerekir, ancak bu parametre ile olmak istediğinden daha fazlasına zorlanmaz.
+Bu parametre, otomatik takeoff'un minimum pitch sınırını hedef irtifaya ulaşmadan birkaç saniye önce azaltır. Bu, uçuş kontrolcüsünün hedef yüksekliğe ulaşmadan birkaç saniye önce dengelemeye başlamasına izin vererek hedeften sapmayı azaltır. Sıfır olarak ayarlandığında, görev pitch minimumu yol boyunca hedef irtifaya zorlanır, aksi takdirde, pitch minimumu yaklaşma bölümünde yavaşça sıfıra dü
+**`şer. Bu pitch_min değeridir, talep(demand) değildir. Uçuş kontrolcüsünün kalkış işlemini tamamlamak için irtifa kazanmaya devam etmesi gerekir, ancak bu parametre ile olmak istediğinden daha fazlasına zorlanmaz.
 
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
@@ -121,38 +122,259 @@ Otomatik kalkışta uygulanacak flap miktarı.
 |:------:|:-----:|
 |0-100   | yüzde |
 
-LEVEL_ROLL_LIMIT: Level flight roll limit
-ALT_CTRL_ALG: Altitude control algorithm
-WP_RADIUS: Waypoint Radius
-WP_MAX_RADIUS: Waypoint Maximum Radius
-WP_LOITER_RAD: Waypoint Loiter Radius
-RTL_RADIUS: RTL loiter radius
-FENCE_ACTION: Action on geofence breach
-FENCE_MINALT: Fence Minimum Altitude
-FENCE_MAXALT: Fence Maximum Altitude
-FENCE_RETALT: Fence Return Altitude
-FENCE_AUTOENABLE: Fence automatic enable
-FENCE_RET_RALLY: Fence Return to Rally
-ARSPD_FBW_MIN: Minimum Airspeed
-ARSPD_FBW_MAX: Maximum Airspeed
-TERRAIN_FOLLOW: Use terrain following
-THR_MIN: Minimum Throttle
-THR_MAX: Maximum Throttle
-TKOFF_THR_MAX: Maximum Throttle for takeoff
-THR_SLEWRATE: Throttle slew rate
-FLAP_SLEWRATE: Flap slew rate
-THR_SUPP_MAN: Throttle suppress manual passthru
-THR_FAILSAFE: Throttle and RC Failsafe Enable
-TRIM_THROTTLE: Throttle cruise percentage
-THROTTLE_NUDGE: Throttle nudge enable
-LIM_ROLL_CD: Maximum Bank Angle
-LIM_PITCH_MAX: Maximum Pitch Angle
-LIM_PITCH_MIN: Minimum Pitch Angle
-GROUND_STEER_DPS: Ground steer rate
-RUDDER_ONLY: Rudder only aircraft
-HOME_RESET_ALT: Home reset altitude threshold
-TKOFF_ACCEL_CNT: Takeoff throttle acceleration count
-TKOFF_TIMEOUT: Takeoff timeout
+
+**`LEVEL_ROLL_LIMIT: Level flight roll limit`**
 
 
 
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`ALT_CTRL_ALG: Altitude control algorithm`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`WP_RADIUS: Waypoint Radius`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`WP_MAX_RADIUS: Waypoint Maximum Radius`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`WP_LOITER_RAD: Waypoint Loiter Radius`**`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`RTL_RADIUS: RTL loiter radius`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`FENCE_ACTION: Action on geofence breach`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`FENCE_MINALT: Fence Minimum Altitude`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`FENCE_MAXALT: Fence Maximum Altitude`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`FENCE_RETALT: Fence Return Altitude`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`FENCE_AUTOENABLE: Fence automatic enable`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`FENCE_RET_RALLY: Fence Return to Rally`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`ARSPD_FBW_MIN: Minimum Airspeed`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`ARSPD_FBW_MAX: Maximum Airspeed`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`TERRAIN_FOLLOW: Use terrain following`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`THR_MIN: Minimum Throttle`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`THR_MAX: Maximum Throttle`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`TKOFF_THR_MAX: Maximum Throttle for takeoff`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`THR_SLEWRATE: Throttle slew rate`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`FLAP_SLEWRATE: Flap slew rate`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`THR_SUPP_MAN: Throttle suppress manual passthru`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`THR_FAILSAFE: Throttle and RC Failsafe Enable`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`TRIM_THROTTLE: Throttle cruise percentage`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`THROTTLE_NUDGE: Throttle nudge enable`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`LIM_ROLL_CD: Maximum Bank Angle`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`LIM_PITCH_MAX: Maximum Pitch Angle`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`LIM_PITCH_MIN: Minimum Pitch Angle`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`GROUND_STEER_DPS: Ground steer rate`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`RUDDER_ONLY: Rudder only aircraft`**
+
+
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-10    | 0.5   | saniye|
+
+**`HOME_RESET_ALT: Home reset altitude threshold`**
+
+Uçak, ev waypointinin bu irtifası içinde olduğunda, disarm durumda iken, otomatik olarak ev konumunu güncelleyecektir. Sürekli olarak sıfırlamak için 0 olarak ayarlayın.
+
+| Aralık | Değerler | Birim |
+|:------:|:-----:|:-----:|
+|-1-127  | -1: Sıfırlama, 0: Her zaman sıfırla   | metre|
+
+**`TKOFF_ACCEL_CNT: Takeoff throttle acceleration count`**
+Bu, TKOFF_THR_MINACC ile arm etmek için gereken ivme olaylarının sayısıdır. Varsayılan değer olan 1, TKOFF_THR_MINACC'ın üstünde tek bir ileri ivmenin devreye gireceği anlamına gelir. Bunu 1'den daha yükseğe ayarlarak arm için daha fazla ileri/geri hareketi talep edebilirsiniz.
+
+
+| Aralık |
+|:------:|
+|1-10    |
+
+**`TKOFF_TIMEOUT: Takeoff zaman aşımı`**
+
+Bu otomatik kalkış için zaman aşımıdır. Eğer bu sıfır değilse ve uçak bu süre içinde en az 4 m/s'lik bir yer hızına ulaşmazsa, kalkış iptal edilir ve araç disarm edilir. Değer sıfır ise, zaman aşımı geçerli olmaz.
+
+| Aralık | Artış | Birim |
+|:------:|:-----:|:-----:|
+|0-120   | 1     | saniye|
