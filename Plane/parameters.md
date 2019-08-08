@@ -260,7 +260,7 @@ Uçak, ev waypointinin bu irtifası içinde olduğunda, disarm durumda iken, oto
 
 | Aralık | Değerler | Birim |
 |:------:|:-----:|:-----:|
-|-1-127  | -1: Sıfırlama, 0: Her zaman sıfırla   | metre|
+|-1-127  | -1: Yeniden ayarlama, 0: Her zaman yeniden ayarla   | metre|
 
 **`TKOFF_ACCEL_CNT: Takeoff throttle ivme sayısı`**
 Bu, TKOFF_THR_MINACC ile arm etmek için gereken ivme olaylarının sayısıdır. Varsayılan değer olan 1, TKOFF_THR_MINACC'ın üstünde tek bir ileri ivmenin devreye gireceği anlamına gelir. Bunu 1'den daha yükseğe ayarlarak arm için daha fazla ileri/geri hareketi talep edebilirsiniz.
