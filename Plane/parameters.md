@@ -1,13 +1,13 @@
 # PARAMETRE LİSTESİ
-> tune: kanal ayarı
-> smoothing out: kolaylaştırmak
-> pusher prop: itici pervane
-> forward acceleration: ileri ivme
-> hand launch: elden kalkış
-> velocity: hız
-> ground speed: yer sürati
-> airspeed: hava sürati
-> slew rate: yetişme hızı
+> tune: kanal ayarı  
+> smoothing out: kolaylaştırmak  
+> pusher prop: itici pervane  
+> forward acceleration: ileri ivme  
+> hand launch: elden kalkış  
+> velocity: hız  
+> ground speed: yer sürati  
+> airspeed: hava sürati  
+> slew rate: yetişme hızı  
 ## ArduPlane Parametreleri
 
 **`AUTOTUNE_LEVEL: autotune düzeyi`**  
