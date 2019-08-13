@@ -591,7 +591,7 @@ Profesyonel İHA'larda en sık kullanılan özelliklerden biri, gerçek zamanlı
 
 Haritada bir yere tıklarak "Fly To Here"i seçin. İHA oraya uçacak ve siz başka komut verene kadar loiter yapacak. Biz buna "Guided Mode" diyoruz.
 
-Not: Kılavuzlu ayrı bir uçuş modudur. Eğer guided moda girerseniz sürekli bekler. Ya başka Guided waypointe gidebilir ya da başka bir uçuş moduna geçebilirsiniz.
+Not: Kılavuzlu ayrı bir uçuş modudur. Eğer guided moda girerseniz mod değiştirene kadar bu modda kalırsınız. Yani bir yere uç derseniz orada loiter yapar. Ya başka Guided waypointe gidebilir ya da başka bir uçuş moduna geçebilirsiniz. Autoyu seçerseniz göreviniz kaldığı yerden devam eder.
 
 ## Başlangıç Ayarları (Initial Setup)
 
