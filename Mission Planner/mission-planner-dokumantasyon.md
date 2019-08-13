@@ -189,7 +189,7 @@ Aşağıdaki ekran görüntüsünde, Copter görevi 20 metre irtifaya kadar oto 
 
 Waypointleri ve diğer komutları girebilirsiniz (daha fazla bilgi için Görev komutları bölümüne bakın). Satırlardaki açılır menüden istediğiniz komutu seçin. Sütun başlıkları, hangi komutun ne gerektirdiğini size göstermek için değişecektir. Haritaya tıklayarak Latitude ve Longitude girilebilir. İrtifa(altitude), kalkış yüksekliğine/ev konumuna göre değişir, bu nedenle 100m ayarlarsanız 100m üstünüzden uçacak.
 
-Varsayılan Alt, yeni waypointler girerken varsayılan irtifadır. Aynı zamanda **Hold Default ALT** seçtiyseniz RTL modunun uçacağı irtifadır; seçmediyse uçağınız RTL'i açtığınız zamanki irtifayı korumaya çalışacaktır.
+**Default Alt**, yeni waypointler girerken varsayılan irtifadır. Aynı zamanda **Hold Default ALT** seçtiyseniz RTL modunun uçacağı irtifadır; seçmediyse uçağınız RTL'i açtığınız zamanki irtifayı korumaya çalışacaktır.
 
 **Verify height** Mission Planner'ın her waypointde istediğiniz irtifayı ayarlamak için Google Earth topoloji verilerini kullanacağı anlamına gelir. 
 
