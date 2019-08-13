@@ -762,12 +762,50 @@ Video: https://vimeo.com/56224615
 
 ## Kumanda Kalibrasyonu (Radio Control)
 
-RC vericileri araç hareketini ve oryantasyonunu kontrol etmek için kullanılır. Bu kontrol sinyallerinin her biri verici verici çubuğuna/switchlerine ve sırayla bağlı alıcıdan otopilot kanallarına eşlenir.
+RC vericileri, uçuş modunun ayarlanmasını, araç hareketini ve oryantasyonunu kontrol etmesini ve yardımcı işlevleri açıp kapatmasını sağlar (örn. iniş takımlarını alçaltma yükseltme).
 
 
-Verici kontrollerinin/kanallarının her birinin kalibre edilmesi basit bir işlemdir - etkinleştirilmiş çubuklarının/switchlerinin her birini tam uçlara hareket ettirin ve maksimum, minimum konumları kaydedin.
+RC Kalibrasyonu, her RC giriş kanalının mininmum, maksimum ve "trim" değerlerini yakalamayı içerir, böylece ArduPilot girişi doğru şekilde yorumlayabilir.
 
-### Verici yapılandırması
+### Vericinin Kurulumunu Kontrol Edin
+
+- Bataryanın çıkarılmış olduğundan emin olun (bu önemlidir, RC kalibrasyon işlemi sırasında araç yanlışlıkla arm edilebilir).
+- RC alıcının uçuş kontrolcüsüne bağlı olduğundan emin olun.
+- RC vericinizi açın ve "trim tabs" varsa ortada olduklarına emin olun.
+- Uçuş kontrolcüsünü bir USB kablı ile PC'ye bağlayın.
+- MP'dan "Connect" düğmesine basın ve **INITIAL SETUP | Mandatory Hardware | Radio Calibration** ekranına gidin.
+- ArduPilot'un Verici/Alıcıdan girdi aldığını gösteren birkaç yeşil bar görünmelidir. Barlar görünmezse alıcının LED'ini kontrol edin:
+	- Işık yoksa otopilota yanlış bağlandığını gösteriyor olabilir. Baş aşağı yerleştirilmiş olabilecek konnektörlere bakın.
+	- Kırmızı veya yanıp sönen bir LED, RC vericinizin/alıcınızın bağlı olması gerektiğini gösteriyor olabilir. Talimatlar için RC ekipmanınızla verilen kılavuza bakın.
+![](MissionPlannerResimler/mp_radio_calibration.png)
+- Vericideki kanal eşleşmesini kontrol edin (örn. Vericideki elemanların hareket ettirilecek hangi yeşil barların hareket ettiğini gözlemleyerek hangi giriş kanallarının kontrol edildiğine göz atın). Verici ArduPilot ile ilk kez kullanılıyorsa, vericinin kanal eşlemesinin değştirilmesi gerekebilir ve normalde bunun dahili yapılandırma menüsünü kullanarak vericinin üzerinde değiştirilmesi gerekir.
+	- Vericinin Mod1 veya Mod2 olduğunu belirleyin (aşağıya bakın).
+	- Roll çubuğu kanal 1'i kontrol etmeli
+	- Pitch  çubuğu kanal 2'i kontrol etmeli
+	- Throttle çubuğu kanal 3'i kontrol etmeli
+	- Yaw çubuğu kanal 4'i kontrol etmeli
+	- Kanal 8'i kontrol etmek için 3 konumlu bir switch (uçuş modlarını kontrol etmek için) ayarlanmalıdır. Bu kanal FLTMODE_CH veya MODE_CH parametresi ayarlanarak hareket ettirilebilir.
+- Vericinin roll, pitch, throttle ve yaw çubuklarını hareket ettirerek yeşil çubukların doğru yönde hareket etmesini sağlayın:
+	- throttle, roll, yaw kanalları için; yeşil barlar vericinin fiziksel çubuğuyla aynı yönde hareket etmelidir.
+	- pitch için; yeşil bar vericinin fiziksel çubuğunun tersi yönde hareket etmelidir.
+	- eğer yeşil barların biri yanlış yönde hareket ediyorsa, vericideki kanalı ters çevirin(reverse). Vericideki kanalı tersine çevirmek mümkün değilse, ArduPilot'taki "Reversed" işaretleyerek kanalı tersine çevirebilirsiniz. Eğer onay kutusu görünmüyorsa, doğrudan RCx_REVERSED parametresini değiştirerek kanalı tersine çevirmek mümkündür (burada "x" 1-4 girdi kanallarını ifade eder).
+![](MissionPlannerResimler/mp_radio_calibration.png)
+
+### Kalibrasyon
+
+- **INITIAL SETUP | Mandatory Hardware | Radio Calibration** ekranına açın.
+- Sağ alttaki yeşil "Calibrate Radio" düğmesine tıklayın
+- Radyo kontrol ekipmanının açık olduğunu, bataryanın bağlı olmadığını ve pervanelerin takılı olmadığını kontrol edip "OK" tıklayın.
+![](MissionPlannerResimler/mp_calibrate_radio.jpg)
+- Vericinin kontrol çubukları, düğmeleri ve switchlerini sınırlarına hareket ettirin. Şimdiye kadar görünen min ve max değerler göstermek için barlarda kırmızı çizgiler görünecek.
+![](MissionPlannerResimler/mp_radio_calibration_click_when_done.jpg)
+- **Click when Done** tıklayın.
+- “Ensure all your sticks are centered and throttle is down and click ok to continue” uyarısı gelecek. Throttle'ı sıfıra getirip "OK"a tıklayın.
+- Mission Planner, kalibrasyon verilerinin bir özetini gösterecek. Normal değerler min için 1100, max için 1900 civarındadır.
+![](MissionPlannerResimler/radi-calib-results.png)
+
+
+### Mod1 ve Mod2 Vericiler
 
 İki ana verici konfigürasyonu vardır:
 - Mod 1: sol çubuk kontrolü pitch ve yaw, sağ çubuk kontrolü throttle ve roll.
@@ -782,55 +820,6 @@ Kullanılmayan kanallar, ek elektronik ekipmanları kontrol etmek için eşleşt
 - Varsayılan kanal eşleşmeleri, [RCMAP Giriş Kanalı Eşleme](http://ardupilot.org/rover/docs/common-rcmap.html#common-rcmap) bölümündeki talimatlar kullanılarak değiştirilebilir.
 
 - Uçuş modunu kalibre ettikten sonra, her switch konumunda hangi araç modlarının etkinleştirileceğini belirlemek için RC Verici Uçuş Modu Yapılandırmasındaki talimatları kullanabilirsiniz.
-
-## Önkoşullar
-
-### Önce güvenlik
-
-Güvenlik için, radyo kalibrasyonuna başlamadan önce pil bağlantısını kesmeli veya pervaneleri çıkarmalısınız.
-
-### Trimleri ortalamak
-RC kalibrasyonunu oluşturmadan önce manuel RC modunda trimleri ortalamalısınız. Trimler ortalanmamışsa, aracı kullandıktan sonra RC kalibrasyonunu tekrar yapmanız gerekebilir (sahada yapılması kolaydır).
-
-NOT: Tüm kontroller/çubuklar nötrken müdahalesiz seyat ederken, hareket eden araç yönünü/hızını/oryantasyonunu değiştirmezse trimler ortalanır.
-
-### Otopilotu bağlayın ve alıcıyı açın
-
-Otopilotu USB üzerinden ağlayın ve RC vericinizi açın. Vericinin alıcıya bağlı olduğunu (alıcı sürekli yeşil renkte yanar) ve aracınız için doğru modeli kullanacak şekil ayarlandığından emin olun.
-
-**INITIAL SETUP | Mandatory Hardware | Radio Calibration** ekranını açın. RC alıcınız(Rx) ve vericiniz (Tx) bağlıysa, verici çubuklarını hareket ettirirken yeşil barların hareket ettiğini görmelisiniz.
-
-![](MissionPlannerResimler/mp_radio_calibration_plane.jpg)
-
-Barlar hareket etmiyorsa alıcı üzerindeki LED'e bakın:
-- ışık yok - otopilota yanlış bir şekilde bağlandığını gösterebilir(baş aşağı takılmış konnektörleri arayın)
-- kırmızı veya yanıp sönen yeşil ışık - RC vericinizin/alıcınızın bağlı olması gerektiğini belirtebilir(talimatlar için RC ekipman ile verilen kılavuza bakın)
-- yoğun yeşil ışık - otopilotu Mission Planner'a bağlıyken tekrar kontrol edin hala hareket yoksa, **Calibrate Radio** düğmesine basmayı deneyin.
-
-## Kalibrasyon adımları
-
-1. **INITIAL SETUP | Mandatory Hardware | Radio Calibration** ekranına açın.
-
-2. Pencerenin sağ alt köşesindeki yeşil **Calibrate Radio** düğmesine basın.
-
-Mission Planner, radyo kontrol ekipmanının açık olduğunu, pilin bağlı olmadığını ve pervanelerin takılı olmadığını kontrol etmenizi isteyen bir mesaj görüntülenecek. **OK** tıklayın.
-
-![](MissionPlannerResimler/mp_calibrate_radio.jpg)
-
-3. Vericinizdeki kontrol çubuklarını ve açma/kapama düğmelerini ilerleme sınırlarına getirin ve sonuçları radyo kalibrasyon barları üzerinde izleyin. Maksimum ve minimum değerleri göstermek için kalibrasyon çubukları üzerinde kırmızı çizgiler görünecek:
-
-![](MissionPlannerResimler/mp_radio_calibration_click_when_done.jpg)
-
-<mark>NOT: Yeşil barlar verici çubuklarıyla aynı yönde hareket etmelidir. (çubuk hareketi ile zıt olan Pitch hariç - düşük değer ileri, yüksek değerler geri) Yanlış yönde hareket ediyorsa, bunları RC vericinizin kanalını tersine çevirme işlevini kullanarak ters çevirin (rehber için RC donanımınızın el kitabına bakın).</mark>
-
-
-Ayrıca, araç modunu kontrol etmek için seçtiğiniz kanalı ve otomatik pilota bağladığınız diğer kanalları da kalibre etmelisiniz.
-
-4. Gerekli tüm kanallar minimum ve maksimum konumlara ayarlandığında **Click when Done** seçin.
-
-Mission Planner kalibrasyon verilerinin özetini gösterir. Normal değerler minnmumlar için 1100, maksimumlar için 1900 civarı.
-
-5. Vericinizi kapatın ve bağlıysa bataryayı çıkarın.
 
 ## RC Verici Uçuş Modu Yapılandırması
 
