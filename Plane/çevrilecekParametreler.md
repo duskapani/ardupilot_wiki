@@ -1717,960 +1717,960 @@ Q_P_ANGLE_MAX: Position Control Angle Max
 
 # Q_WP_ Parameters
 
-Q_WP_SPEED: Waypoint Horizontal Speed Target
-Q_WP_RADIUS: Waypoint Radius
-Q_WP_SPEED_UP: Waypoint Climb Speed Target
-Q_WP_SPEED_DN: Waypoint Descent Speed Target
-Q_WP_ACCEL: Waypoint Acceleration
-Q_WP_ACCEL_Z: Waypoint Vertical Acceleration
-Q_WP_RFND_USE: Waypoint missions use rangefinder for terrain following
+Q_WP_SPEED: Waypoint Horizontal Speed Target  
+Q_WP_RADIUS: Waypoint Radius  
+Q_WP_SPEED_UP: Waypoint Climb Speed Target  
+Q_WP_SPEED_DN: Waypoint Descent Speed Target  
+Q_WP_ACCEL: Waypoint Acceleration  
+Q_WP_ACCEL_Z: Waypoint Vertical Acceleration  
+Q_WP_RFND_USE: Waypoint missions use rangefinder for terrain following  
 
 
 # RALLY_ Parameters
 
-RALLY_TOTAL: Rally Total
-RALLY_LIMIT_KM: Rally Limit
-RALLY_INCL_HOME: Rally Include Home
+RALLY_TOTAL: Rally Total  
+RALLY_LIMIT_KM: Rally Limit  
+RALLY_INCL_HOME: Rally Include Home  
 
 
 # RC Parameters
 
-RC_OVERRIDE_TIME: RC override timeout
-RC_OPTIONS: RC options
+RC_OVERRIDE_TIME: RC override timeout  
+RC_OPTIONS: RC options  
 
 
 # RC10_ Parameters
 
-RC10_MIN: RC min PWM
-RC10_TRIM: RC trim PWM
-RC10_MAX: RC max PWM
-RC10_REVERSED: RC reversed
-RC10_DZ: RC dead-zone
-RC10_OPTION: RC input option
+RC10_MIN: RC min PWM  
+RC10_TRIM: RC trim PWM  
+RC10_MAX: RC max PWM  
+RC10_REVERSED: RC reversed  
+RC10_DZ: RC dead-zone  
+RC10_OPTION: RC input option  
 
 
 # RC11_ Parameters
 
-RC11_MIN: RC min PWM
-RC11_TRIM: RC trim PWM
-RC11_MAX: RC max PWM
-RC11_REVERSED: RC reversed
-RC11_DZ: RC dead-zone
-RC11_OPTION: RC input option
+RC11_MIN: RC min PWM  
+RC11_TRIM: RC trim PWM  
+RC11_MAX: RC max PWM  
+RC11_REVERSED: RC reversed  
+RC11_DZ: RC dead-zone  
+RC11_OPTION: RC input option  
 
 
 # RC12_ Parameters
 
-RC12_MIN: RC min PWM
-RC12_TRIM: RC trim PWM
-RC12_MAX: RC max PWM
-RC12_REVERSED: RC reversed
-RC12_DZ: RC dead-zone
-RC12_OPTION: RC input option
+RC12_MIN: RC min PWM  
+RC12_TRIM: RC trim PWM  
+RC12_MAX: RC max PWM  
+RC12_REVERSED: RC reversed  
+RC12_DZ: RC dead-zone  
+RC12_OPTION: RC input option  
 
 
 # RC13_ Parameters
 
-RC13_MIN: RC min PWM
-RC13_TRIM: RC trim PWM
-RC13_MAX: RC max PWM
-RC13_REVERSED: RC reversed
-RC13_DZ: RC dead-zone
-RC13_OPTION: RC input option
+RC13_MIN: RC min PWM  
+RC13_TRIM: RC trim PWM  
+RC13_MAX: RC max PWM  
+RC13_REVERSED: RC reversed  
+RC13_DZ: RC dead-zone  
+RC13_OPTION: RC input option  
 
 
 # RC14_ Parameters
 
-RC14_MIN: RC min PWM
-RC14_TRIM: RC trim PWM
-RC14_MAX: RC max PWM
-RC14_REVERSED: RC reversed
-RC14_DZ: RC dead-zone
-RC14_OPTION: RC input option
+RC14_MIN: RC min PWM  
+RC14_TRIM: RC trim PWM  
+RC14_MAX: RC max PWM  
+RC14_REVERSED: RC reversed  
+RC14_DZ: RC dead-zone  
+RC14_OPTION: RC input option  
 
 
 # RC15_ Parameters
 
-RC15_MIN: RC min PWM
-RC15_TRIM: RC trim PWM
-RC15_MAX: RC max PWM
-RC15_REVERSED: RC reversed
-RC15_DZ: RC dead-zone
-RC15_OPTION: RC input option
+RC15_MIN: RC min PWM  
+RC15_TRIM: RC trim PWM  
+RC15_MAX: RC max PWM  
+RC15_REVERSED: RC reversed  
+RC15_DZ: RC dead-zone  
+RC15_OPTION: RC input option  
 
 
 # RC16_ Parameters
 
-RC16_MIN: RC min PWM
-RC16_TRIM: RC trim PWM
-RC16_MAX: RC max PWM
-RC16_REVERSED: RC reversed
-RC16_DZ: RC dead-zone
-RC16_OPTION: RC input option
+RC16_MIN: RC min PWM  
+RC16_TRIM: RC trim PWM  
+RC16_MAX: RC max PWM  
+RC16_REVERSED: RC reversed  
+RC16_DZ: RC dead-zone  
+RC16_OPTION: RC input option  
 
 
 # RC1_ Parameters
 
-RC1_MIN: RC min PWM
-RC1_TRIM: RC trim PWM
-RC1_MAX: RC max PWM
-RC1_REVERSED: RC reversed
-RC1_DZ: RC dead-zone
-RC1_OPTION: RC input option
+RC1_MIN: RC min PWM  
+RC1_TRIM: RC trim PWM  
+RC1_MAX: RC max PWM  
+RC1_REVERSED: RC reversed  
+RC1_DZ: RC dead-zone  
+RC1_OPTION: RC input option  
 
 
 # RC2_ Parameters
 
-RC2_MIN: RC min PWM
-RC2_TRIM: RC trim PWM
-RC2_MAX: RC max PWM
-RC2_REVERSED: RC reversed
-RC2_DZ: RC dead-zone
-RC2_OPTION: RC input option
+RC2_MIN: RC min PWM  
+RC2_TRIM: RC trim PWM  
+RC2_MAX: RC max PWM  
+RC2_REVERSED: RC reversed  
+RC2_DZ: RC dead-zone  
+RC2_OPTION: RC input option  
 
 
 # RC3_ Parameters
 
-RC3_MIN: RC min PWM
-RC3_TRIM: RC trim PWM
-RC3_MAX: RC max PWM
-RC3_REVERSED: RC reversed
-RC3_DZ: RC dead-zone
-RC3_OPTION: RC input option
+RC3_MIN: RC min PWM  
+RC3_TRIM: RC trim PWM  
+RC3_MAX: RC max PWM  
+RC3_REVERSED: RC reversed  
+RC3_DZ: RC dead-zone  
+RC3_OPTION: RC input option  
 
 
 # RC4_ Parameters
 
-RC4_MIN: RC min PWM
-RC4_TRIM: RC trim PWM
-RC4_MAX: RC max PWM
-RC4_REVERSED: RC reversed
-RC4_DZ: RC dead-zone
-RC4_OPTION: RC input option
+RC4_MIN: RC min PWM  
+RC4_TRIM: RC trim PWM  
+RC4_MAX: RC max PWM  
+RC4_REVERSED: RC reversed  
+RC4_DZ: RC dead-zone  
+RC4_OPTION: RC input option  
 
 
 # RC5_ Parameters
 
-RC5_MIN: RC min PWM
-RC5_TRIM: RC trim PWM
-RC5_MAX: RC max PWM
-RC5_REVERSED: RC reversed
-RC5_DZ: RC dead-zone
-RC5_OPTION: RC input option
+RC5_MIN: RC min PWM  
+RC5_TRIM: RC trim PWM  
+RC5_MAX: RC max PWM  
+RC5_REVERSED: RC reversed  
+RC5_DZ: RC dead-zone  
+RC5_OPTION: RC input option  
 
 
 # RC6_ Parameters
 
-RC6_MIN: RC min PWM
-RC6_TRIM: RC trim PWM
-RC6_MAX: RC max PWM
-RC6_REVERSED: RC reversed
-RC6_DZ: RC dead-zone
-RC6_OPTION: RC input option
+RC6_MIN: RC min PWM  
+RC6_TRIM: RC trim PWM  
+RC6_MAX: RC max PWM  
+RC6_REVERSED: RC reversed  
+RC6_DZ: RC dead-zone  
+RC6_OPTION: RC input option  
 
 
 # RC7_ Parameters
 
-RC7_MIN: RC min PWM
-RC7_TRIM: RC trim PWM
-RC7_MAX: RC max PWM
-RC7_REVERSED: RC reversed
-RC7_DZ: RC dead-zone
-RC7_OPTION: RC input option
+RC7_MIN: RC min PWM  
+RC7_TRIM: RC trim PWM  
+RC7_MAX: RC max PWM  
+RC7_REVERSED: RC reversed  
+RC7_DZ: RC dead-zone  
+RC7_OPTION: RC input option  
 
 
 # RC8_ Parameters
 
-RC8_MIN: RC min PWM
-RC8_TRIM: RC trim PWM
-RC8_MAX: RC max PWM
-RC8_REVERSED: RC reversed
-RC8_DZ: RC dead-zone
-RC8_OPTION: RC input option
+RC8_MIN: RC min PWM  
+RC8_TRIM: RC trim PWM  
+RC8_MAX: RC max PWM  
+RC8_REVERSED: RC reversed  
+RC8_DZ: RC dead-zone  
+RC8_OPTION: RC input option  
 
 
 # RC9_ Parameters
 
-RC9_MIN: RC min PWM
-RC9_TRIM: RC trim PWM
-RC9_MAX: RC max PWM
-RC9_REVERSED: RC reversed
-RC9_DZ: RC dead-zone
-RC9_OPTION: RC input option
+RC9_MIN: RC min PWM  
+RC9_TRIM: RC trim PWM  
+RC9_MAX: RC max PWM  
+RC9_REVERSED: RC reversed  
+RC9_DZ: RC dead-zone  
+RC9_OPTION: RC input option  
 
 
 # RCMAP_ Parameters
 
-RCMAP_ROLL: Roll channel
-RCMAP_PITCH: Pitch channel
-RCMAP_THROTTLE: Throttle channel
-RCMAP_YAW: Yaw channel
-RCMAP_FORWARD: Forward channel
-RCMAP_LATERAL: Lateral channel
+RCMAP_ROLL: Roll channel  
+RCMAP_PITCH: Pitch channel  
+RCMAP_THROTTLE: Throttle channel  
+RCMAP_YAW: Yaw channel  
+RCMAP_FORWARD: Forward channel  
+RCMAP_LATERAL: Lateral channel  
 
 
 # RELAY_ Parameters
 
-RELAY_PIN: First Relay Pin
-RELAY_PIN2: Second Relay Pin
-RELAY_PIN3: Third Relay Pin
-RELAY_PIN4: Fourth Relay Pin
-RELAY_DEFAULT: Default relay state
-RELAY_PIN5: Fifth Relay Pin
-RELAY_PIN6: Sixth Relay Pin
+RELAY_PIN: First Relay Pin  
+RELAY_PIN2: Second Relay Pin  
+RELAY_PIN3: Third Relay Pin  
+RELAY_PIN4: Fourth Relay Pin  
+RELAY_DEFAULT: Default relay state  
+RELAY_PIN5: Fifth Relay Pin  
+RELAY_PIN6: Sixth Relay Pin  
 
 
 # RLL2SRV_ Parameters
 
-RLL2SRV_TCONST: Roll Time Constant
-RLL2SRV_P: Proportional Gain
-RLL2SRV_D: Damping Gain
-RLL2SRV_I: Integrator Gain
-RLL2SRV_RMAX: Maximum Roll Rate
-RLL2SRV_IMAX: Integrator limit
-RLL2SRV_FF: Feed forward Gain
+RLL2SRV_TCONST: Roll Time Constant  
+RLL2SRV_P: Proportional Gain  
+RLL2SRV_D: Damping Gain  
+RLL2SRV_I: Integrator Gain  
+RLL2SRV_RMAX: Maximum Roll Rate  
+RLL2SRV_IMAX: Integrator limit  
+RLL2SRV_FF: Feed forward Gain  
 
 
 # RNGFND1_ Parameters
 
-RNGFND1_TYPE: Rangefinder type
-RNGFND1_PIN: Rangefinder pin
-RNGFND1_SCALING: Rangefinder scaling
-RNGFND1_OFFSET: rangefinder offset
-RNGFND1_FUNCTION: Rangefinder function
-RNGFND1_MIN_CM: Rangefinder minimum distance
-RNGFND1_MAX_CM: Rangefinder maximum distance
-RNGFND1_STOP_PIN: Rangefinder stop pin
-RNGFND1_SETTLE: Rangefinder settle time
-RNGFND1_RMETRIC: Ratiometric
-RNGFND1_PWRRNG: Powersave range
-RNGFND1_GNDCLEAR: Distance (in cm) from the range finder to the ground
-RNGFND1_ADDR: Bus address of sensor
-RNGFND1_POS_X:  X position offset
-RNGFND1_POS_Y: Y position offset
-RNGFND1_POS_Z: Z position offset
-RNGFND1_ORIENT: Rangefinder orientation
+RNGFND1_TYPE: Rangefinder type  
+RNGFND1_PIN: Rangefinder pin  
+RNGFND1_SCALING: Rangefinder scaling  
+RNGFND1_OFFSET: rangefinder offset  
+RNGFND1_FUNCTION: Rangefinder function  
+RNGFND1_MIN_CM: Rangefinder minimum distance  
+RNGFND1_MAX_CM: Rangefinder maximum distance  
+RNGFND1_STOP_PIN: Rangefinder stop pin  
+RNGFND1_SETTLE: Rangefinder settle time  
+RNGFND1_RMETRIC: Ratiometric  
+RNGFND1_PWRRNG: Powersave range  
+RNGFND1_GNDCLEAR: Distance (in cm) from the range finder to the ground  
+RNGFND1_ADDR: Bus address of sensor  
+RNGFND1_POS_X:  X position offset  
+RNGFND1_POS_Y: Y position offset  
+RNGFND1_POS_Z: Z position offset  
+RNGFND1_ORIENT: Rangefinder orientation  
 
 
 # RNGFND1_ Parameters
 
-RNGFND1_WSP_MAVG: Moving Average Range
-RNGFND1_WSP_MEDF: Moving Median Filter
-RNGFND1_WSP_FRQ: Frequency
-RNGFND1_WSP_AVG: Multi-pulse averages
-RNGFND1_WSP_THR: Sensitivity threshold
-RNGFND1_WSP_BAUD: Baud rate
+RNGFND1_WSP_MAVG: Moving Average Range  
+RNGFND1_WSP_MEDF: Moving Median Filter  
+RNGFND1_WSP_FRQ: Frequency  
+RNGFND1_WSP_AVG: Multi-pulse averages  
+RNGFND1_WSP_THR: Sensitivity threshold  
+RNGFND1_WSP_BAUD: Baud rate  
 
 
 # RNGFND2_ Parameters
 
-RNGFND2_TYPE: Rangefinder type
-RNGFND2_PIN: Rangefinder pin
-RNGFND2_SCALING: Rangefinder scaling
-RNGFND2_OFFSET: rangefinder offset
-RNGFND2_FUNCTION: Rangefinder function
-RNGFND2_MIN_CM: Rangefinder minimum distance
-RNGFND2_MAX_CM: Rangefinder maximum distance
-RNGFND2_STOP_PIN: Rangefinder stop pin
-RNGFND2_SETTLE: Rangefinder settle time
-RNGFND2_RMETRIC: Ratiometric
-RNGFND2_PWRRNG: Powersave range
-RNGFND2_GNDCLEAR: Distance (in cm) from the range finder to the ground
-RNGFND2_ADDR: Bus address of sensor
-RNGFND2_POS_X:  X position offset
-RNGFND2_POS_Y: Y position offset
-RNGFND2_POS_Z: Z position offset
-RNGFND2_ORIENT: Rangefinder orientation
+RNGFND2_TYPE: Rangefinder type  
+RNGFND2_PIN: Rangefinder pin  
+RNGFND2_SCALING: Rangefinder scaling  
+RNGFND2_OFFSET: rangefinder offset  
+RNGFND2_FUNCTION: Rangefinder function  
+RNGFND2_MIN_CM: Rangefinder minimum distance  
+RNGFND2_MAX_CM: Rangefinder maximum distance  
+RNGFND2_STOP_PIN: Rangefinder stop pin  
+RNGFND2_SETTLE: Rangefinder settle time  
+RNGFND2_RMETRIC: Ratiometric  
+RNGFND2_PWRRNG: Powersave range  
+RNGFND2_GNDCLEAR: Distance (in cm) from the range finder to the ground  
+RNGFND2_ADDR: Bus address of sensor  
+RNGFND2_POS_X:  X position offset  
+RNGFND2_POS_Y: Y position offset  
+RNGFND2_POS_Z: Z position offset  
+RNGFND2_ORIENT: Rangefinder orientation  
 
 
 # RNGFND2_ Parameters
 
-RNGFND2_WSP_MAVG: Moving Average Range
-RNGFND2_WSP_MEDF: Moving Median Filter
-RNGFND2_WSP_FRQ: Frequency
-RNGFND2_WSP_AVG: Multi-pulse averages
-RNGFND2_WSP_THR: Sensitivity threshold
-RNGFND2_WSP_BAUD: Baud rate
+RNGFND2_WSP_MAVG: Moving Average Range  
+RNGFND2_WSP_MEDF: Moving Median Filter  
+RNGFND2_WSP_FRQ: Frequency  
+RNGFND2_WSP_AVG: Multi-pulse averages  
+RNGFND2_WSP_THR: Sensitivity threshold  
+RNGFND2_WSP_BAUD: Baud rate  
 
 
 # RNGFND3_ Parameters
 
-RNGFND3_TYPE: Rangefinder type
-RNGFND3_PIN: Rangefinder pin
-RNGFND3_SCALING: Rangefinder scaling
-RNGFND3_OFFSET: rangefinder offset
-RNGFND3_FUNCTION: Rangefinder function
-RNGFND3_MIN_CM: Rangefinder minimum distance
-RNGFND3_MAX_CM: Rangefinder maximum distance
-RNGFND3_STOP_PIN: Rangefinder stop pin
-RNGFND3_SETTLE: Rangefinder settle time
-RNGFND3_RMETRIC: Ratiometric
-RNGFND3_PWRRNG: Powersave range
-RNGFND3_GNDCLEAR: Distance (in cm) from the range finder to the ground
-RNGFND3_ADDR: Bus address of sensor
-RNGFND3_POS_X:  X position offset
-RNGFND3_POS_Y: Y position offset
-RNGFND3_POS_Z: Z position offset
-RNGFND3_ORIENT: Rangefinder orientation
+RNGFND3_TYPE: Rangefinder type  
+RNGFND3_PIN: Rangefinder pin  
+RNGFND3_SCALING: Rangefinder scaling  
+RNGFND3_OFFSET: rangefinder offset  
+RNGFND3_FUNCTION: Rangefinder function  
+RNGFND3_MIN_CM: Rangefinder minimum distance  
+RNGFND3_MAX_CM: Rangefinder maximum distance  
+RNGFND3_STOP_PIN: Rangefinder stop pin  
+RNGFND3_SETTLE: Rangefinder settle time  
+RNGFND3_RMETRIC: Ratiometric  
+RNGFND3_PWRRNG: Powersave range  
+RNGFND3_GNDCLEAR: Distance (in cm) from the range finder to the ground  
+RNGFND3_ADDR: Bus address of sensor  
+RNGFND3_POS_X:  X position offset  
+RNGFND3_POS_Y: Y position offset  
+RNGFND3_POS_Z: Z position offset  
+RNGFND3_ORIENT: Rangefinder orientation  
 
 
 # RNGFND3_ Parameters
 
-RNGFND3_WSP_MAVG: Moving Average Range
-RNGFND3_WSP_MEDF: Moving Median Filter
-RNGFND3_WSP_FRQ: Frequency
-RNGFND3_WSP_AVG: Multi-pulse averages
-RNGFND3_WSP_THR: Sensitivity threshold
-RNGFND3_WSP_BAUD: Baud rate
+RNGFND3_WSP_MAVG: Moving Average Range  
+RNGFND3_WSP_MEDF: Moving Median Filter  
+RNGFND3_WSP_FRQ: Frequency  
+RNGFND3_WSP_AVG: Multi-pulse averages  
+RNGFND3_WSP_THR: Sensitivity threshold  
+RNGFND3_WSP_BAUD: Baud rate  
 
 
 # RNGFND4_ Parameters
 
-RNGFND4_TYPE: Rangefinder type
-RNGFND4_PIN: Rangefinder pin
-RNGFND4_SCALING: Rangefinder scaling
-RNGFND4_OFFSET: rangefinder offset
-RNGFND4_FUNCTION: Rangefinder function
-RNGFND4_MIN_CM: Rangefinder minimum distance
-RNGFND4_MAX_CM: Rangefinder maximum distance
-RNGFND4_STOP_PIN: Rangefinder stop pin
-RNGFND4_SETTLE: Rangefinder settle time
-RNGFND4_RMETRIC: Ratiometric
-RNGFND4_PWRRNG: Powersave range
-RNGFND4_GNDCLEAR: Distance (in cm) from the range finder to the ground
-RNGFND4_ADDR: Bus address of sensor
-RNGFND4_POS_X:  X position offset
-RNGFND4_POS_Y: Y position offset
-RNGFND4_POS_Z: Z position offset
-RNGFND4_ORIENT: Rangefinder orientation
+RNGFND4_TYPE: Rangefinder type  
+RNGFND4_PIN: Rangefinder pin  
+RNGFND4_SCALING: Rangefinder scaling  
+RNGFND4_OFFSET: rangefinder offset  
+RNGFND4_FUNCTION: Rangefinder function  
+RNGFND4_MIN_CM: Rangefinder minimum distance  
+RNGFND4_MAX_CM: Rangefinder maximum distance  
+RNGFND4_STOP_PIN: Rangefinder stop pin  
+RNGFND4_SETTLE: Rangefinder settle time  
+RNGFND4_RMETRIC: Ratiometric  
+RNGFND4_PWRRNG: Powersave range  
+RNGFND4_GNDCLEAR: Distance (in cm) from the range finder to the ground  
+RNGFND4_ADDR: Bus address of sensor  
+RNGFND4_POS_X:  X position offset  
+RNGFND4_POS_Y: Y position offset  
+RNGFND4_POS_Z: Z position offset  
+RNGFND4_ORIENT: Rangefinder orientation  
 
 
 # RNGFND4_ Parameters
 
-RNGFND4_WSP_MAVG: Moving Average Range
-RNGFND4_WSP_MEDF: Moving Median Filter
-RNGFND4_WSP_FRQ: Frequency
-RNGFND4_WSP_AVG: Multi-pulse averages
-RNGFND4_WSP_THR: Sensitivity threshold
-RNGFND4_WSP_BAUD: Baud rate
+RNGFND4_WSP_MAVG: Moving Average Range  
+RNGFND4_WSP_MEDF: Moving Median Filter  
+RNGFND4_WSP_FRQ: Frequency  
+RNGFND4_WSP_AVG: Multi-pulse averages  
+RNGFND4_WSP_THR: Sensitivity threshold  
+RNGFND4_WSP_BAUD: Baud rate  
 
 
 # RNGFND5_ Parameters
 
-RNGFND5_TYPE: Rangefinder type
-RNGFND5_PIN: Rangefinder pin
-RNGFND5_SCALING: Rangefinder scaling
-RNGFND5_OFFSET: rangefinder offset
-RNGFND5_FUNCTION: Rangefinder function
-RNGFND5_MIN_CM: Rangefinder minimum distance
-RNGFND5_MAX_CM: Rangefinder maximum distance
-RNGFND5_STOP_PIN: Rangefinder stop pin
-RNGFND5_SETTLE: Rangefinder settle time
-RNGFND5_RMETRIC: Ratiometric
-RNGFND5_PWRRNG: Powersave range
-RNGFND5_GNDCLEAR: Distance (in cm) from the range finder to the ground
-RNGFND5_ADDR: Bus address of sensor
-RNGFND5_POS_X:  X position offset
-RNGFND5_POS_Y: Y position offset
-RNGFND5_POS_Z: Z position offset
-RNGFND5_ORIENT: Rangefinder orientation
+RNGFND5_TYPE: Rangefinder type  
+RNGFND5_PIN: Rangefinder pin  
+RNGFND5_SCALING: Rangefinder scaling  
+RNGFND5_OFFSET: rangefinder offset  
+RNGFND5_FUNCTION: Rangefinder function  
+RNGFND5_MIN_CM: Rangefinder minimum distance  
+RNGFND5_MAX_CM: Rangefinder maximum distance  
+RNGFND5_STOP_PIN: Rangefinder stop pin  
+RNGFND5_SETTLE: Rangefinder settle time  
+RNGFND5_RMETRIC: Ratiometric  
+RNGFND5_PWRRNG: Powersave range  
+RNGFND5_GNDCLEAR: Distance (in cm) from the range finder to the ground  
+RNGFND5_ADDR: Bus address of sensor  
+RNGFND5_POS_X:  X position offset  
+RNGFND5_POS_Y: Y position offset  
+RNGFND5_POS_Z: Z position offset  
+RNGFND5_ORIENT: Rangefinder orientation  
 
 
 # RNGFND5_ Parameters
 
-RNGFND5_WSP_MAVG: Moving Average Range
-RNGFND5_WSP_MEDF: Moving Median Filter
-RNGFND5_WSP_FRQ: Frequency
-RNGFND5_WSP_AVG: Multi-pulse averages
-RNGFND5_WSP_THR: Sensitivity threshold
-RNGFND5_WSP_BAUD: Baud rate
+RNGFND5_WSP_MAVG: Moving Average Range  
+RNGFND5_WSP_MEDF: Moving Median Filter  
+RNGFND5_WSP_FRQ: Frequency  
+RNGFND5_WSP_AVG: Multi-pulse averages  
+RNGFND5_WSP_THR: Sensitivity threshold  
+RNGFND5_WSP_BAUD: Baud rate  
 
 
 # RNGFND6_ Parameters
 
-RNGFND6_TYPE: Rangefinder type
-RNGFND6_PIN: Rangefinder pin
-RNGFND6_SCALING: Rangefinder scaling
-RNGFND6_OFFSET: rangefinder offset
-RNGFND6_FUNCTION: Rangefinder function
-RNGFND6_MIN_CM: Rangefinder minimum distance
-RNGFND6_MAX_CM: Rangefinder maximum distance
-RNGFND6_STOP_PIN: Rangefinder stop pin
-RNGFND6_SETTLE: Rangefinder settle time
-RNGFND6_RMETRIC: Ratiometric
-RNGFND6_PWRRNG: Powersave range
-RNGFND6_GNDCLEAR: Distance (in cm) from the range finder to the ground
-RNGFND6_ADDR: Bus address of sensor
-RNGFND6_POS_X:  X position offset
-RNGFND6_POS_Y: Y position offset
-RNGFND6_POS_Z: Z position offset
-RNGFND6_ORIENT: Rangefinder orientation
+RNGFND6_TYPE: Rangefinder type  
+RNGFND6_PIN: Rangefinder pin  
+RNGFND6_SCALING: Rangefinder scaling  
+RNGFND6_OFFSET: rangefinder offset  
+RNGFND6_FUNCTION: Rangefinder function  
+RNGFND6_MIN_CM: Rangefinder minimum distance  
+RNGFND6_MAX_CM: Rangefinder maximum distance  
+RNGFND6_STOP_PIN: Rangefinder stop pin  
+RNGFND6_SETTLE: Rangefinder settle time  
+RNGFND6_RMETRIC: Ratiometric  
+RNGFND6_PWRRNG: Powersave range  
+RNGFND6_GNDCLEAR: Distance (in cm) from the range finder to the ground  
+RNGFND6_ADDR: Bus address of sensor  
+RNGFND6_POS_X:  X position offset  
+RNGFND6_POS_Y: Y position offset  
+RNGFND6_POS_Z: Z position offset  
+RNGFND6_ORIENT: Rangefinder orientation  
 
 
 # RNGFND6_ Parameters
 
-RNGFND6_WSP_MAVG: Moving Average Range
-RNGFND6_WSP_MEDF: Moving Median Filter
-RNGFND6_WSP_FRQ: Frequency
-RNGFND6_WSP_AVG: Multi-pulse averages
-RNGFND6_WSP_THR: Sensitivity threshold
-RNGFND6_WSP_BAUD: Baud rate
+RNGFND6_WSP_MAVG: Moving Average Range  
+RNGFND6_WSP_MEDF: Moving Median Filter  
+RNGFND6_WSP_FRQ: Frequency  
+RNGFND6_WSP_AVG: Multi-pulse averages  
+RNGFND6_WSP_THR: Sensitivity threshold  
+RNGFND6_WSP_BAUD: Baud rate  
 
 
 # RNGFND7_ Parameters
 
-RNGFND7_TYPE: Rangefinder type
-RNGFND7_PIN: Rangefinder pin
-RNGFND7_SCALING: Rangefinder scaling
-RNGFND7_OFFSET: rangefinder offset
-RNGFND7_FUNCTION: Rangefinder function
-RNGFND7_MIN_CM: Rangefinder minimum distance
-RNGFND7_MAX_CM: Rangefinder maximum distance
-RNGFND7_STOP_PIN: Rangefinder stop pin
-RNGFND7_SETTLE: Rangefinder settle time
-RNGFND7_RMETRIC: Ratiometric
-RNGFND7_PWRRNG: Powersave range
-RNGFND7_GNDCLEAR: Distance (in cm) from the range finder to the ground
-RNGFND7_ADDR: Bus address of sensor
-RNGFND7_POS_X:  X position offset
-RNGFND7_POS_Y: Y position offset
-RNGFND7_POS_Z: Z position offset
-RNGFND7_ORIENT: Rangefinder orientation
+RNGFND7_TYPE: Rangefinder type  
+RNGFND7_PIN: Rangefinder pin  
+RNGFND7_SCALING: Rangefinder scaling  
+RNGFND7_OFFSET: rangefinder offset  
+RNGFND7_FUNCTION: Rangefinder function  
+RNGFND7_MIN_CM: Rangefinder minimum distance  
+RNGFND7_MAX_CM: Rangefinder maximum distance  
+RNGFND7_STOP_PIN: Rangefinder stop pin  
+RNGFND7_SETTLE: Rangefinder settle time  
+RNGFND7_RMETRIC: Ratiometric  
+RNGFND7_PWRRNG: Powersave range  
+RNGFND7_GNDCLEAR: Distance (in cm) from the range finder to the ground  
+RNGFND7_ADDR: Bus address of sensor  
+RNGFND7_POS_X:  X position offset  
+RNGFND7_POS_Y: Y position offset  
+RNGFND7_POS_Z: Z position offset  
+RNGFND7_ORIENT: Rangefinder orientation  
 
 
 # RNGFND7_ Parameters
 
-RNGFND7_WSP_MAVG: Moving Average Range
-RNGFND7_WSP_MEDF: Moving Median Filter
-RNGFND7_WSP_FRQ: Frequency
-RNGFND7_WSP_AVG: Multi-pulse averages
-RNGFND7_WSP_THR: Sensitivity threshold
-RNGFND7_WSP_BAUD: Baud rate
+RNGFND7_WSP_MAVG: Moving Average Range  
+RNGFND7_WSP_MEDF: Moving Median Filter  
+RNGFND7_WSP_FRQ: Frequency  
+RNGFND7_WSP_AVG: Multi-pulse averages  
+RNGFND7_WSP_THR: Sensitivity threshold  
+RNGFND7_WSP_BAUD: Baud rate  
 
 
 # RNGFND8_ Parameters
 
-RNGFND8_TYPE: Rangefinder type
-RNGFND8_PIN: Rangefinder pin
-RNGFND8_SCALING: Rangefinder scaling
-RNGFND8_OFFSET: rangefinder offset
-RNGFND8_FUNCTION: Rangefinder function
-RNGFND8_MIN_CM: Rangefinder minimum distance
-RNGFND8_MAX_CM: Rangefinder maximum distance
-RNGFND8_STOP_PIN: Rangefinder stop pin
-RNGFND8_SETTLE: Rangefinder settle time
-RNGFND8_RMETRIC: Ratiometric
-RNGFND8_PWRRNG: Powersave range
-RNGFND8_GNDCLEAR: Distance (in cm) from the range finder to the ground
-RNGFND8_ADDR: Bus address of sensor
-RNGFND8_POS_X:  X position offset
-RNGFND8_POS_Y: Y position offset
-RNGFND8_POS_Z: Z position offset
-RNGFND8_ORIENT: Rangefinder orientation
+RNGFND8_TYPE: Rangefinder type  
+RNGFND8_PIN: Rangefinder pin  
+RNGFND8_SCALING: Rangefinder scaling  
+RNGFND8_OFFSET: rangefinder offset  
+RNGFND8_FUNCTION: Rangefinder function  
+RNGFND8_MIN_CM: Rangefinder minimum distance  
+RNGFND8_MAX_CM: Rangefinder maximum distance  
+RNGFND8_STOP_PIN: Rangefinder stop pin  
+RNGFND8_SETTLE: Rangefinder settle time  
+RNGFND8_RMETRIC: Ratiometric  
+RNGFND8_PWRRNG: Powersave range  
+RNGFND8_GNDCLEAR: Distance (in cm) from the range finder to the ground  
+RNGFND8_ADDR: Bus address of sensor  
+RNGFND8_POS_X:  X position offset  
+RNGFND8_POS_Y: Y position offset  
+RNGFND8_POS_Z: Z position offset  
+RNGFND8_ORIENT: Rangefinder orientation  
 
 
 # RNGFND8_ Parameters
 
-RNGFND8_WSP_MAVG: Moving Average Range
-RNGFND8_WSP_MEDF: Moving Median Filter
-RNGFND8_WSP_FRQ: Frequency
-RNGFND8_WSP_AVG: Multi-pulse averages
-RNGFND8_WSP_THR: Sensitivity threshold
-RNGFND8_WSP_BAUD: Baud rate
+RNGFND8_WSP_MAVG: Moving Average Range  
+RNGFND8_WSP_MEDF: Moving Median Filter  
+RNGFND8_WSP_FRQ: Frequency  
+RNGFND8_WSP_AVG: Multi-pulse averages  
+RNGFND8_WSP_THR: Sensitivity threshold  
+RNGFND8_WSP_BAUD: Baud rate  
 
 
 # RNGFND9_ Parameters
 
-RNGFND9_TYPE: Rangefinder type
-RNGFND9_PIN: Rangefinder pin
-RNGFND9_SCALING: Rangefinder scaling
-RNGFND9_OFFSET: rangefinder offset
-RNGFND9_FUNCTION: Rangefinder function
-RNGFND9_MIN_CM: Rangefinder minimum distance
-RNGFND9_MAX_CM: Rangefinder maximum distance
-RNGFND9_STOP_PIN: Rangefinder stop pin
-RNGFND9_SETTLE: Rangefinder settle time
-RNGFND9_RMETRIC: Ratiometric
-RNGFND9_PWRRNG: Powersave range
-RNGFND9_GNDCLEAR: Distance (in cm) from the range finder to the ground
-RNGFND9_ADDR: Bus address of sensor
-RNGFND9_POS_X:  X position offset
-RNGFND9_POS_Y: Y position offset
-RNGFND9_POS_Z: Z position offset
-RNGFND9_ORIENT: Rangefinder orientation
+RNGFND9_TYPE: Rangefinder type  
+RNGFND9_PIN: Rangefinder pin  
+RNGFND9_SCALING: Rangefinder scaling  
+RNGFND9_OFFSET: rangefinder offset  
+RNGFND9_FUNCTION: Rangefinder function  
+RNGFND9_MIN_CM: Rangefinder minimum distance  
+RNGFND9_MAX_CM: Rangefinder maximum distance  
+RNGFND9_STOP_PIN: Rangefinder stop pin  
+RNGFND9_SETTLE: Rangefinder settle time  
+RNGFND9_RMETRIC: Ratiometric  
+RNGFND9_PWRRNG: Powersave range  
+RNGFND9_GNDCLEAR: Distance (in cm) from the range finder to the ground  
+RNGFND9_ADDR: Bus address of sensor  
+RNGFND9_POS_X:  X position offset  
+RNGFND9_POS_Y: Y position offset  
+RNGFND9_POS_Z: Z position offset  
+RNGFND9_ORIENT: Rangefinder orientation  
 
 
 # RNGFND9_ Parameters
 
-RNGFND9_WSP_MAVG: Moving Average Range
-RNGFND9_WSP_MEDF: Moving Median Filter
-RNGFND9_WSP_FRQ: Frequency
-RNGFND9_WSP_AVG: Multi-pulse averages
-RNGFND9_WSP_THR: Sensitivity threshold
-RNGFND9_WSP_BAUD: Baud rate
+RNGFND9_WSP_MAVG: Moving Average Range  
+RNGFND9_WSP_MEDF: Moving Median Filter  
+RNGFND9_WSP_FRQ: Frequency  
+RNGFND9_WSP_AVG: Multi-pulse averages  
+RNGFND9_WSP_THR: Sensitivity threshold  
+RNGFND9_WSP_BAUD: Baud rate  
 
 
 # RNGFNDA_ Parameters
 
-RNGFNDA_TYPE: Rangefinder type
-RNGFNDA_PIN: Rangefinder pin
-RNGFNDA_SCALING: Rangefinder scaling
-RNGFNDA_OFFSET: rangefinder offset
-RNGFNDA_FUNCTION: Rangefinder function
-RNGFNDA_MIN_CM: Rangefinder minimum distance
-RNGFNDA_MAX_CM: Rangefinder maximum distance
-RNGFNDA_STOP_PIN: Rangefinder stop pin
-RNGFNDA_SETTLE: Rangefinder settle time
-RNGFNDA_RMETRIC: Ratiometric
-RNGFNDA_PWRRNG: Powersave range
-RNGFNDA_GNDCLEAR: Distance (in cm) from the range finder to the ground
-RNGFNDA_ADDR: Bus address of sensor
-RNGFNDA_POS_X:  X position offset
-RNGFNDA_POS_Y: Y position offset
-RNGFNDA_POS_Z: Z position offset
-RNGFNDA_ORIENT: Rangefinder orientation
+RNGFNDA_TYPE: Rangefinder type  
+RNGFNDA_PIN: Rangefinder pin  
+RNGFNDA_SCALING: Rangefinder scaling  
+RNGFNDA_OFFSET: rangefinder offset  
+RNGFNDA_FUNCTION: Rangefinder function  
+RNGFNDA_MIN_CM: Rangefinder minimum distance  
+RNGFNDA_MAX_CM: Rangefinder maximum distance  
+RNGFNDA_STOP_PIN: Rangefinder stop pin  
+RNGFNDA_SETTLE: Rangefinder settle time  
+RNGFNDA_RMETRIC: Ratiometric  
+RNGFNDA_PWRRNG: Powersave range  
+RNGFNDA_GNDCLEAR: Distance (in cm) from the range finder to the ground  
+RNGFNDA_ADDR: Bus address of sensor  
+RNGFNDA_POS_X:  X position offset  
+RNGFNDA_POS_Y: Y position offset  
+RNGFNDA_POS_Z: Z position offset  
+RNGFNDA_ORIENT: Rangefinder orientation  
 
 
 # RNGFNDA_ Parameters
 
-RNGFNDA_WSP_MAVG: Moving Average Range
-RNGFNDA_WSP_MEDF: Moving Median Filter
-RNGFNDA_WSP_FRQ: Frequency
-RNGFNDA_WSP_AVG: Multi-pulse averages
-RNGFNDA_WSP_THR: Sensitivity threshold
-RNGFNDA_WSP_BAUD: Baud rate
+RNGFNDA_WSP_MAVG: Moving Average Range  
+RNGFNDA_WSP_MEDF: Moving Median Filter  
+RNGFNDA_WSP_FRQ: Frequency  
+RNGFNDA_WSP_AVG: Multi-pulse averages  
+RNGFNDA_WSP_THR: Sensitivity threshold  
+RNGFNDA_WSP_BAUD: Baud rate  
 
 
 # RPM Parameters
 
-RPM_TYPE: RPM type
-RPM_SCALING: RPM scaling
-RPM_MAX: Maximum RPM
-RPM_MIN: Minimum RPM
-RPM_MIN_QUAL: Minimum Quality
-RPM_PIN: Input pin number
-RPM2_TYPE: Second RPM type
-RPM2_SCALING: RPM scaling
-RPM2_PIN: RPM2 input pin number
+RPM_TYPE: RPM type  
+RPM_SCALING: RPM scaling  
+RPM_MAX: Maximum RPM  
+RPM_MIN: Minimum RPM  
+RPM_MIN_QUAL: Minimum Quality  
+RPM_PIN: Input pin number  
+RPM2_TYPE: Second RPM type  
+RPM2_SCALING: RPM scaling  
+RPM2_PIN: RPM2 input pin number  
 
 
 # RSSI_ Parameters
 
-RSSI_TYPE: RSSI Type
-RSSI_ANA_PIN: Receiver RSSI sensing pin
-RSSI_PIN_LOW: RSSI pin’s lowest voltage
-RSSI_PIN_HIGH: RSSI pin’s highest voltage
-RSSI_CHANNEL: Receiver RSSI channel number
-RSSI_CHAN_LOW: RSSI PWM low value
-RSSI_CHAN_HIGH: Receiver RSSI PWM high value
+RSSI_TYPE: RSSI Type  
+RSSI_ANA_PIN: Receiver RSSI sensing pin  
+RSSI_PIN_LOW: RSSI pin’s lowest voltage  
+RSSI_PIN_HIGH: RSSI pin’s highest voltage  
+RSSI_CHANNEL: Receiver RSSI channel number  
+RSSI_CHAN_LOW: RSSI PWM low value  
+RSSI_CHAN_HIGH: Receiver RSSI PWM high value  
 
 
 # SCHED_ Parameters
 
-SCHED_DEBUG: Scheduler debug level
-SCHED_LOOP_RATE: Scheduling main loop rate
+SCHED_DEBUG: Scheduler debug level  
+SCHED_LOOP_RATE: Scheduling main loop rate  
 
 
 # SCR_ Parameters
 
-SCR_ENABLE: Enable Scripting
-SCR_VM_I_COUNT: Scripting Virtual Machine Instruction Count
-SCR_HEAP_SIZE: Scripting Heap Size
+SCR_ENABLE: Enable Scripting  
+SCR_VM_I_COUNT: Scripting Virtual Machine Instruction Count  
+SCR_HEAP_SIZE: Scripting Heap Size  
 
 
 # SERIAL Parameters
 
-SERIAL0_BAUD: Serial0 baud rate
-SERIAL0_PROTOCOL: Console protocol selection
-SERIAL1_PROTOCOL: Telem1 protocol selection
-SERIAL1_BAUD: Telem1 Baud Rate
-SERIAL2_PROTOCOL: Telemetry 2 protocol selection
-SERIAL2_BAUD: Telemetry 2 Baud Rate
-SERIAL3_PROTOCOL: Serial 3 (GPS) protocol selection
-SERIAL3_BAUD: Serial 3 (GPS) Baud Rate
-SERIAL4_PROTOCOL: Serial4 protocol selection
-SERIAL4_BAUD: Serial 4 Baud Rate
-SERIAL5_PROTOCOL: Serial5 protocol selection
-SERIAL5_BAUD: Serial 5 Baud Rate
-SERIAL6_PROTOCOL: Serial6 protocol selection
-SERIAL6_BAUD: Serial 6 Baud Rate
-SERIAL1_OPTIONS: Telem1 options
-SERIAL2_OPTIONS: Telem2 options
-SERIAL3_OPTIONS: Serial3 options
-SERIAL4_OPTIONS: Serial4 options
-SERIAL5_OPTIONS: Serial5 options
-SERIAL6_OPTIONS: Serial6 options
-SERIAL_PASS1: Serial passthru first port
-SERIAL_PASS2: Serial passthru second port
-SERIAL_PASSTIMO: Serial passthru timeout
-SERIAL7_PROTOCOL: Serial7 protocol selection
-SERIAL7_BAUD: Serial 7 Baud Rate
-SERIAL7_OPTIONS: Serial7 options
+SERIAL0_BAUD: Serial0 baud rate  
+SERIAL0_PROTOCOL: Console protocol selection  
+SERIAL1_PROTOCOL: Telem1 protocol selection  
+SERIAL1_BAUD: Telem1 Baud Rate  
+SERIAL2_PROTOCOL: Telemetry 2 protocol selection  
+SERIAL2_BAUD: Telemetry 2 Baud Rate  
+SERIAL3_PROTOCOL: Serial 3 (GPS) protocol selection  
+SERIAL3_BAUD: Serial 3 (GPS) Baud Rate  
+SERIAL4_PROTOCOL: Serial4 protocol selection  
+SERIAL4_BAUD: Serial 4 Baud Rate  
+SERIAL5_PROTOCOL: Serial5 protocol selection  
+SERIAL5_BAUD: Serial 5 Baud Rate  
+SERIAL6_PROTOCOL: Serial6 protocol selection  
+SERIAL6_BAUD: Serial 6 Baud Rate  
+SERIAL1_OPTIONS: Telem1 options  
+SERIAL2_OPTIONS: Telem2 options  
+SERIAL3_OPTIONS: Serial3 options  
+SERIAL4_OPTIONS: Serial4 options  
+SERIAL5_OPTIONS: Serial5 options  
+SERIAL6_OPTIONS: Serial6 options  
+SERIAL_PASS1: Serial passthru first port  
+SERIAL_PASS2: Serial passthru second port  
+SERIAL_PASSTIMO: Serial passthru timeout  
+SERIAL7_PROTOCOL: Serial7 protocol selection  
+SERIAL7_BAUD: Serial 7 Baud Rate  
+SERIAL7_OPTIONS: Serial7 options  
 
 
 # SERVO Parameters
 
-SERVO_AUTO_TRIM: Automatic servo trim
-SERVO_RATE: Servo default output rate
+SERVO_AUTO_TRIM: Automatic servo trim  
+SERVO_RATE: Servo default output rate  
 
 
 # SERVO10_ Parameters
 
-SERVO10_MIN: Minimum PWM
-SERVO10_MAX: Maximum PWM
-SERVO10_TRIM: Trim PWM
-SERVO10_REVERSED: Servo reverse
-SERVO10_FUNCTION: Servo output function
+SERVO10_MIN: Minimum PWM  
+SERVO10_MAX: Maximum PWM  
+SERVO10_TRIM: Trim PWM  
+SERVO10_REVERSED: Servo reverse  
+SERVO10_FUNCTION: Servo output function  
 
 
 # SERVO11_ Parameters
 
-SERVO11_MIN: Minimum PWM
-SERVO11_MAX: Maximum PWM
-SERVO11_TRIM: Trim PWM
-SERVO11_REVERSED: Servo reverse
-SERVO11_FUNCTION: Servo output function
+SERVO11_MIN: Minimum PWM  
+SERVO11_MAX: Maximum PWM  
+SERVO11_TRIM: Trim PWM  
+SERVO11_REVERSED: Servo reverse  
+SERVO11_FUNCTION: Servo output function  
 
 
 # SERVO12_ Parameters
 
-SERVO12_MIN: Minimum PWM
-SERVO12_MAX: Maximum PWM
-SERVO12_TRIM: Trim PWM
-SERVO12_REVERSED: Servo reverse
-SERVO12_FUNCTION: Servo output function
+SERVO12_MIN: Minimum PWM  
+SERVO12_MAX: Maximum PWM  
+SERVO12_TRIM: Trim PWM  
+SERVO12_REVERSED: Servo reverse  
+SERVO12_FUNCTION: Servo output function  
 
 
 # SERVO13_ Parameters
 
-SERVO13_MIN: Minimum PWM
-SERVO13_MAX: Maximum PWM
-SERVO13_TRIM: Trim PWM
-SERVO13_REVERSED: Servo reverse
-SERVO13_FUNCTION: Servo output function
+SERVO13_MIN: Minimum PWM  
+SERVO13_MAX: Maximum PWM  
+SERVO13_TRIM: Trim PWM  
+SERVO13_REVERSED: Servo reverse  
+SERVO13_FUNCTION: Servo output function  
 
 
 # SERVO14_ Parameters
 
-SERVO14_MIN: Minimum PWM
-SERVO14_MAX: Maximum PWM
-SERVO14_TRIM: Trim PWM
-SERVO14_REVERSED: Servo reverse
-SERVO14_FUNCTION: Servo output function
+SERVO14_MIN: Minimum PWM  
+SERVO14_MAX: Maximum PWM  
+SERVO14_TRIM: Trim PWM  
+SERVO14_REVERSED: Servo reverse  
+SERVO14_FUNCTION: Servo output function  
 
 
 # SERVO15_ Parameters
 
-SERVO15_MIN: Minimum PWM
-SERVO15_MAX: Maximum PWM
-SERVO15_TRIM: Trim PWM
-SERVO15_REVERSED: Servo reverse
-SERVO15_FUNCTION: Servo output function
+SERVO15_MIN: Minimum PWM  
+SERVO15_MAX: Maximum PWM  
+SERVO15_TRIM: Trim PWM  
+SERVO15_REVERSED: Servo reverse  
+SERVO15_FUNCTION: Servo output function  
 
 
 # SERVO16_ Parameters
 
-SERVO16_MIN: Minimum PWM
-SERVO16_MAX: Maximum PWM
-SERVO16_TRIM: Trim PWM
-SERVO16_REVERSED: Servo reverse
-SERVO16_FUNCTION: Servo output function
+SERVO16_MIN: Minimum PWM  
+SERVO16_MAX: Maximum PWM  
+SERVO16_TRIM: Trim PWM  
+SERVO16_REVERSED: Servo reverse  
+SERVO16_FUNCTION: Servo output function  
 
 
 # SERVO1_ Parameters
 
-SERVO1_MIN: Minimum PWM
-SERVO1_MAX: Maximum PWM
-SERVO1_TRIM: Trim PWM
-SERVO1_REVERSED: Servo reverse
-SERVO1_FUNCTION: Servo output function
+SERVO1_MIN: Minimum PWM  
+SERVO1_MAX: Maximum PWM  
+SERVO1_TRIM: Trim PWM  
+SERVO1_REVERSED: Servo reverse  
+SERVO1_FUNCTION: Servo output function  
 
 
 # SERVO2_ Parameters
 
-SERVO2_MIN: Minimum PWM
-SERVO2_MAX: Maximum PWM
-SERVO2_TRIM: Trim PWM
-SERVO2_REVERSED: Servo reverse
-SERVO2_FUNCTION: Servo output function
+SERVO2_MIN: Minimum PWM  
+SERVO2_MAX: Maximum PWM  
+SERVO2_TRIM: Trim PWM  
+SERVO2_REVERSED: Servo reverse  
+SERVO2_FUNCTION: Servo output function  
 
 
 # SERVO3_ Parameters
 
-SERVO3_MIN: Minimum PWM
-SERVO3_MAX: Maximum PWM
-SERVO3_TRIM: Trim PWM
-SERVO3_REVERSED: Servo reverse
-SERVO3_FUNCTION: Servo output function
+SERVO3_MIN: Minimum PWM  
+SERVO3_MAX: Maximum PWM  
+SERVO3_TRIM: Trim PWM  
+SERVO3_REVERSED: Servo reverse  
+SERVO3_FUNCTION: Servo output function  
 
 
 # SERVO4_ Parameters
 
-SERVO4_MIN: Minimum PWM
-SERVO4_MAX: Maximum PWM
-SERVO4_TRIM: Trim PWM
-SERVO4_REVERSED: Servo reverse
-SERVO4_FUNCTION: Servo output function
+SERVO4_MIN: Minimum PWM  
+SERVO4_MAX: Maximum PWM  
+SERVO4_TRIM: Trim PWM  
+SERVO4_REVERSED: Servo reverse  
+SERVO4_FUNCTION: Servo output function  
 
 
 # SERVO5_ Parameters
 
-SERVO5_MIN: Minimum PWM
-SERVO5_MAX: Maximum PWM
-SERVO5_TRIM: Trim PWM
-SERVO5_REVERSED: Servo reverse
-SERVO5_FUNCTION: Servo output function
+SERVO5_MIN: Minimum PWM  
+SERVO5_MAX: Maximum PWM  
+SERVO5_TRIM: Trim PWM  
+SERVO5_REVERSED: Servo reverse  
+SERVO5_FUNCTION: Servo output function  
 
 
 # SERVO6_ Parameters
 
-SERVO6_MIN: Minimum PWM
-SERVO6_MAX: Maximum PWM
-SERVO6_TRIM: Trim PWM
-SERVO6_REVERSED: Servo reverse
-SERVO6_FUNCTION: Servo output function
+SERVO6_MIN: Minimum PWM  
+SERVO6_MAX: Maximum PWM  
+SERVO6_TRIM: Trim PWM  
+SERVO6_REVERSED: Servo reverse  
+SERVO6_FUNCTION: Servo output function  
 
 
 # SERVO7_ Parameters
 
-SERVO7_MIN: Minimum PWM
-SERVO7_MAX: Maximum PWM
-SERVO7_TRIM: Trim PWM
-SERVO7_REVERSED: Servo reverse
-SERVO7_FUNCTION: Servo output function
+SERVO7_MIN: Minimum PWM  
+SERVO7_MAX: Maximum PWM  
+SERVO7_TRIM: Trim PWM  
+SERVO7_REVERSED: Servo reverse  
+SERVO7_FUNCTION: Servo output function  
 
 
 # SERVO8_ Parameters
 
-SERVO8_MIN: Minimum PWM
-SERVO8_MAX: Maximum PWM
-SERVO8_TRIM: Trim PWM
-SERVO8_REVERSED: Servo reverse
-SERVO8_FUNCTION: Servo output function
+SERVO8_MIN: Minimum PWM  
+SERVO8_MAX: Maximum PWM  
+SERVO8_TRIM: Trim PWM  
+SERVO8_REVERSED: Servo reverse  
+SERVO8_FUNCTION: Servo output function  
 
 
 # SERVO9_ Parameters
 
-SERVO9_MIN: Minimum PWM
-SERVO9_MAX: Maximum PWM
-SERVO9_TRIM: Trim PWM
-SERVO9_REVERSED: Servo reverse
-SERVO9_FUNCTION: Servo output function
+SERVO9_MIN: Minimum PWM  
+SERVO9_MAX: Maximum PWM  
+SERVO9_TRIM: Trim PWM  
+SERVO9_REVERSED: Servo reverse  
+SERVO9_FUNCTION: Servo output function  
 
 
 # SERVO_BLH_ Parameters
 
-SERVO_BLH_MASK: BLHeli Channel Bitmask
-SERVO_BLH_AUTO: BLHeli auto-enable for multicopter motors
-SERVO_BLH_TEST: BLHeli internal interface test
-SERVO_BLH_TMOUT: BLHeli protocol timeout
-SERVO_BLH_TRATE: BLHeli telemetry rate
-SERVO_BLH_DEBUG: BLHeli debug level
-SERVO_BLH_OTYPE: BLHeli output type override
-SERVO_BLH_PORT: Control port
-SERVO_BLH_POLES: BLHeli Motor Poles
-SERVO_BLH_REMASK: BLHeli bitmask of reversible channels
+SERVO_BLH_MASK: BLHeli Channel Bitmask  
+SERVO_BLH_AUTO: BLHeli auto-enable for multicopter motors  
+SERVO_BLH_TEST: BLHeli internal interface test  
+SERVO_BLH_TMOUT: BLHeli protocol timeout  
+SERVO_BLH_TRATE: BLHeli telemetry rate  
+SERVO_BLH_DEBUG: BLHeli debug level  
+SERVO_BLH_OTYPE: BLHeli output type override  
+SERVO_BLH_PORT: Control port  
+SERVO_BLH_POLES: BLHeli Motor Poles  
+SERVO_BLH_REMASK: BLHeli bitmask of reversible channels  
 
 
 # SERVO_ROB_ Parameters
 
-SERVO_ROB_POSMIN: Robotis servo position min
-SERVO_ROB_POSMAX: Robotis servo position max
+SERVO_ROB_POSMIN: Robotis servo position min  
+SERVO_ROB_POSMAX: Robotis servo position max  
 
 
 # SERVO_SBUS_ Parameters
 
-SERVO_SBUS_RATE: SBUS default output rate
+SERVO_SBUS_RATE: SBUS default output rate  
 
 
 # SERVO_VOLZ_ Parameters
 
-SERVO_VOLZ_MASK: Channel Bitmask
+SERVO_VOLZ_MASK: Channel Bitmask  
 
 
 # SIM_GRPE_ Parameters
 
-SIM_GRPE_ENABLE: Gripper servo Sim enable/disable
-SIM_GRPE_PIN: Gripper emp pin
+SIM_GRPE_ENABLE: Gripper servo Sim enable/disable  
+SIM_GRPE_PIN: Gripper emp pin  
 
 
 # SIM_GRPS_ Parameters
 
-SIM_GRPS_ENABLE: Gripper servo Sim enable/disable
-SIM_GRPS_PIN: Gripper servo pin
-SIM_GRPS_GRAB: Gripper Grab PWM
-SIM_GRPS_RELEASE: Gripper Release PWM
-SIM_GRPS_REVERSE: Gripper close direction
+SIM_GRPS_ENABLE: Gripper servo Sim enable/disable  
+SIM_GRPS_PIN: Gripper servo pin  
+SIM_GRPS_GRAB: Gripper Grab PWM  
+SIM_GRPS_RELEASE: Gripper Release PWM  
+SIM_GRPS_REVERSE: Gripper close direction  
 
 
 # SIM_PLD_ Parameters
 
-SIM_PLD_ENABLE: Preland device Sim enable/disable
-SIM_PLD_LAT: Precland device origin’s latitude
-SIM_PLD_LON: Precland device origin’s longitude
-SIM_PLD_HEIGHT: Precland device origin’s height above sealevel
-SIM_PLD_YAW: Precland device systems rotation from north
-SIM_PLD_RATE: Precland device update rate
-SIM_PLD_TYPE: Precland device radiance type
-SIM_PLD_ALT_LIMIT: Precland device alt range
-SIM_PLD_DIST_LIMIT: Precland device lateral range
+SIM_PLD_ENABLE: Preland device Sim enable/disable  
+SIM_PLD_LAT: Precland device origin’s latitude  
+SIM_PLD_LON: Precland device origin’s longitude  
+SIM_PLD_HEIGHT: Precland device origin’s height above sealevel  
+SIM_PLD_YAW: Precland device systems rotation from north  
+SIM_PLD_RATE: Precland device update rate  
+SIM_PLD_TYPE: Precland device radiance type  
+SIM_PLD_ALT_LIMIT: Precland device alt range  
+SIM_PLD_DIST_LIMIT: Precland device lateral range  
 
 
 # SIM_SPR_ Parameters
 
-SIM_SPR_ENABLE: Gripper servo Sim enable/disable
-SIM_SPR_PUMP: Sprayer pump pin
-SIM_SPR_SPIN: Sprayer spinner servo pin
+SIM_SPR_ENABLE: Gripper servo Sim enable/disable  
+SIM_SPR_PUMP: Sprayer pump pin  
+SIM_SPR_SPIN: Sprayer spinner servo pin  
 
 
 # SOAR_ Parameters
 
-SOAR_ENABLE: Is the soaring mode enabled or not
-SOAR_VSPEED: Vertical v-speed
-SOAR_DIST_AHEAD: Distance to thermal center
-SOAR_MIN_THML_S: Minimum thermalling time
-SOAR_MIN_CRSE_S: Minimum cruising time
-SOAR_POLAR_K: Cl factor
-SOAR_ALT_MAX: Maximum soaring altitude, relative to the home location
-SOAR_ALT_MIN: Minimum soaring altitude, relative to the home location
-SOAR_ALT_CUTOFF: Maximum power altitude, relative to the home location
-SOAR_ENABLE_CH: (Optional) RC channel that toggles the soaring controller on and off
+SOAR_ENABLE: Is the soaring mode enabled or not  
+SOAR_VSPEED: Vertical v-speed  
+SOAR_DIST_AHEAD: Distance to thermal center  
+SOAR_MIN_THML_S: Minimum thermalling time  
+SOAR_MIN_CRSE_S: Minimum cruising time  
+SOAR_POLAR_K: Cl factor  
+SOAR_ALT_MAX: Maximum soaring altitude, relative to the home location  
+SOAR_ALT_MIN: Minimum soaring altitude, relative to the home location  
+SOAR_ALT_CUTOFF: Maximum power altitude, relative to the home location  
+SOAR_ENABLE_CH: (Optional) RC channel that toggles the soaring controller on and off  
 
 
 # SR0_ Parameters
 
-SR0_RAW_SENS: Raw sensor stream rate
-SR0_EXT_STAT: Extended status stream rate to ground station
-SR0_RC_CHAN: RC Channel stream rate to ground station
-SR0_RAW_CTRL: Raw Control stream rate to ground station
-SR0_POSITION: Position stream rate to ground station
-SR0_EXTRA1: Extra data type 1 stream rate to ground station
-SR0_EXTRA2: Extra data type 2 stream rate to ground station
-SR0_EXTRA3: Extra data type 3 stream rate to ground station
-SR0_PARAMS: Parameter stream rate to ground station
-SR0_ADSB: ADSB stream rate to ground station
+SR0_RAW_SENS: Raw sensor stream rate  
+SR0_EXT_STAT: Extended status stream rate to ground station  
+SR0_RC_CHAN: RC Channel stream rate to ground station  
+SR0_RAW_CTRL: Raw Control stream rate to ground station  
+SR0_POSITION: Position stream rate to ground station  
+SR0_EXTRA1: Extra data type 1 stream rate to ground station  
+SR0_EXTRA2: Extra data type 2 stream rate to ground station  
+SR0_EXTRA3: Extra data type 3 stream rate to ground station  
+SR0_PARAMS: Parameter stream rate to ground station  
+SR0_ADSB: ADSB stream rate to ground station  
 
 
 # SR1_ Parameters
 
-SR1_RAW_SENS: Raw sensor stream rate
-SR1_EXT_STAT: Extended status stream rate to ground station
-SR1_RC_CHAN: RC Channel stream rate to ground station
-SR1_RAW_CTRL: Raw Control stream rate to ground station
-SR1_POSITION: Position stream rate to ground station
-SR1_EXTRA1: Extra data type 1 stream rate to ground station
-SR1_EXTRA2: Extra data type 2 stream rate to ground station
-SR1_EXTRA3: Extra data type 3 stream rate to ground station
-SR1_PARAMS: Parameter stream rate to ground station
-SR1_ADSB: ADSB stream rate to ground station
+SR1_RAW_SENS: Raw sensor stream rate  
+SR1_EXT_STAT: Extended status stream rate to ground station  
+SR1_RC_CHAN: RC Channel stream rate to ground station  
+SR1_RAW_CTRL: Raw Control stream rate to ground station  
+SR1_POSITION: Position stream rate to ground station  
+SR1_EXTRA1: Extra data type 1 stream rate to ground station  
+SR1_EXTRA2: Extra data type 2 stream rate to ground station  
+SR1_EXTRA3: Extra data type 3 stream rate to ground station  
+SR1_PARAMS: Parameter stream rate to ground station  
+SR1_ADSB: ADSB stream rate to ground station  
 
 
 # SR2_ Parameters
 
-SR2_RAW_SENS: Raw sensor stream rate
-SR2_EXT_STAT: Extended status stream rate to ground station
-SR2_RC_CHAN: RC Channel stream rate to ground station
-SR2_RAW_CTRL: Raw Control stream rate to ground station
-SR2_POSITION: Position stream rate to ground station
-SR2_EXTRA1: Extra data type 1 stream rate to ground station
-SR2_EXTRA2: Extra data type 2 stream rate to ground station
-SR2_EXTRA3: Extra data type 3 stream rate to ground station
-SR2_PARAMS: Parameter stream rate to ground station
-SR2_ADSB: ADSB stream rate to ground station
+SR2_RAW_SENS: Raw sensor stream rate  
+SR2_EXT_STAT: Extended status stream rate to ground station  
+SR2_RC_CHAN: RC Channel stream rate to ground station  
+SR2_RAW_CTRL: Raw Control stream rate to ground station  
+SR2_POSITION: Position stream rate to ground station  
+SR2_EXTRA1: Extra data type 1 stream rate to ground station  
+SR2_EXTRA2: Extra data type 2 stream rate to ground station  
+SR2_EXTRA3: Extra data type 3 stream rate to ground station  
+SR2_PARAMS: Parameter stream rate to ground station  
+SR2_ADSB: ADSB stream rate to ground station  
 
 
 # SR3_ Parameters
 
-SR3_RAW_SENS: Raw sensor stream rate
-SR3_EXT_STAT: Extended status stream rate to ground station
-SR3_RC_CHAN: RC Channel stream rate to ground station
-SR3_RAW_CTRL: Raw Control stream rate to ground station
-SR3_POSITION: Position stream rate to ground station
-SR3_EXTRA1: Extra data type 1 stream rate to ground station
-SR3_EXTRA2: Extra data type 2 stream rate to ground station
-SR3_EXTRA3: Extra data type 3 stream rate to ground station
-SR3_PARAMS: Parameter stream rate to ground station
-SR3_ADSB: ADSB stream rate to ground station
+SR3_RAW_SENS: Raw sensor stream rate  
+SR3_EXT_STAT: Extended status stream rate to ground station  
+SR3_RC_CHAN: RC Channel stream rate to ground station  
+SR3_RAW_CTRL: Raw Control stream rate to ground station  
+SR3_POSITION: Position stream rate to ground station  
+SR3_EXTRA1: Extra data type 1 stream rate to ground station  
+SR3_EXTRA2: Extra data type 2 stream rate to ground station  
+SR3_EXTRA3: Extra data type 3 stream rate to ground station  
+SR3_PARAMS: Parameter stream rate to ground station  
+SR3_ADSB: ADSB stream rate to ground station  
 
 
 # STAT Parameters
 
-STAT_BOOTCNT: Boot Count
-STAT_FLTTIME: Total FlightTime
-STAT_RUNTIME: Total RunTime
-STAT_RESET: Statistics Reset Time
+STAT_BOOTCNT: Boot Count  
+STAT_FLTTIME: Total FlightTime  
+STAT_RUNTIME: Total RunTime  
+STAT_RESET: Statistics Reset Time  
 
 
 # STEER2SRV_ Parameters
 
-STEER2SRV_TCONST: Steering Time Constant
-STEER2SRV_P: Steering turning gain
-STEER2SRV_I: Integrator Gain
-STEER2SRV_D: Damping Gain
-STEER2SRV_IMAX: Integrator limit
-STEER2SRV_MINSPD: Minimum speed
-STEER2SRV_FF: Steering feed forward
-STEER2SRV_DRTSPD: Derating speed
-STEER2SRV_DRTFCT: Derating factor
-STEER2SRV_DRTMIN: Minimum angle of wheel
+STEER2SRV_TCONST: Steering Time Constant  
+STEER2SRV_P: Steering turning gain  
+STEER2SRV_I: Integrator Gain  
+STEER2SRV_D: Damping Gain  
+STEER2SRV_IMAX: Integrator limit  
+STEER2SRV_MINSPD: Minimum speed  
+STEER2SRV_FF: Steering feed forward  
+STEER2SRV_DRTSPD: Derating speed  
+STEER2SRV_DRTFCT: Derating factor  
+STEER2SRV_DRTMIN: Minimum angle of wheel  
 
 
 # TECS_ Parameters
 
-TECS_CLMB_MAX: Maximum Climb Rate (metres/sec)
-TECS_SINK_MIN: Minimum Sink Rate (metres/sec)
-TECS_TIME_CONST: Controller time constant (sec)
-TECS_THR_DAMP: Controller throttle damping
-TECS_INTEG_GAIN: Controller integrator
-TECS_VERT_ACC: Vertical Acceleration Limit (metres/sec^2)
-TECS_HGT_OMEGA: Height complementary filter frequency (radians/sec)
-TECS_SPD_OMEGA: Speed complementary filter frequency (radians/sec)
-TECS_RLL2THR: Bank angle compensation gain
-TECS_SPDWEIGHT: Weighting applied to speed control
-TECS_PTCH_DAMP: Controller pitch damping
-TECS_SINK_MAX: Maximum Descent Rate (metres/sec)
-TECS_LAND_ARSPD: Airspeed during landing approach (m/s)
-TECS_LAND_THR: Cruise throttle during landing approach (percentage)
-TECS_LAND_SPDWGT: Weighting applied to speed control during landing.
-TECS_PITCH_MAX: Maximum pitch in auto flight
-TECS_PITCH_MIN: Minimum pitch in auto flight
-TECS_LAND_SINK: Sink rate for final landing stage
-TECS_LAND_TCONST: Land controller time constant (sec)
-TECS_LAND_DAMP: Controller sink rate to pitch gain during flare
-TECS_LAND_PMAX: Maximum pitch during final stage of landing
-TECS_APPR_SMAX: Sink rate max for landing approach stage
-TECS_LAND_SRC: Land sink rate change
-TECS_LAND_TDAMP: Controller throttle damping when landing
-TECS_LAND_IGAIN: Controller integrator during landing
-TECS_TKOFF_IGAIN: Controller integrator during takeoff
-TECS_LAND_PDAMP: Pitch damping gain when landing
-TECS_SYNAIRSPEED: Enable the use of synthetic airspeed
-TECS_OPTIONS: Extra TECS options
+TECS_CLMB_MAX: Maximum Climb Rate (metres/sec)  
+TECS_SINK_MIN: Minimum Sink Rate (metres/sec)  
+TECS_TIME_CONST: Controller time constant (sec)  
+TECS_THR_DAMP: Controller throttle damping  
+TECS_INTEG_GAIN: Controller integrator  
+TECS_VERT_ACC: Vertical Acceleration Limit (metres/sec^2)  
+TECS_HGT_OMEGA: Height complementary filter frequency (radians/sec)  
+TECS_SPD_OMEGA: Speed complementary filter frequency (radians/sec)  
+TECS_RLL2THR: Bank angle compensation gain  
+TECS_SPDWEIGHT: Weighting applied to speed control  
+TECS_PTCH_DAMP: Controller pitch damping  
+TECS_SINK_MAX: Maximum Descent Rate (metres/sec)  
+TECS_LAND_ARSPD: Airspeed during landing approach (m/s)  
+TECS_LAND_THR: Cruise throttle during landing approach (percentage)  
+TECS_LAND_SPDWGT: Weighting applied to speed control during landing.  
+TECS_PITCH_MAX: Maximum pitch in auto flight  
+TECS_PITCH_MIN: Minimum pitch in auto flight  
+TECS_LAND_SINK: Sink rate for final landing stage  
+TECS_LAND_TCONST: Land controller time constant (sec)  
+TECS_LAND_DAMP: Controller sink rate to pitch gain during flare  
+TECS_LAND_PMAX: Maximum pitch during final stage of landing  
+TECS_APPR_SMAX: Sink rate max for landing approach stage  
+TECS_LAND_SRC: Land sink rate change  
+TECS_LAND_TDAMP: Controller throttle damping when landing  
+TECS_LAND_IGAIN: Controller integrator during landing  
+TECS_TKOFF_IGAIN: Controller integrator during takeoff  
+TECS_LAND_PDAMP: Pitch damping gain when landing  
+TECS_SYNAIRSPEED: Enable the use of synthetic airspeed  
+TECS_OPTIONS: Extra TECS options  
 
 
 # TERRAIN_ Parameters
 
-TERRAIN_ENABLE: Terrain data enable
-TERRAIN_SPACING: Terrain grid spacing
+TERRAIN_ENABLE: Terrain data enable  
+TERRAIN_SPACING: Terrain grid spacing  
 
 
 # TUNE_ Parameters
 
-TUNE_PARAM: Transmitter tuning parameter or set of parameters
-TUNE_CHAN: Transmitter tuning channel
-TUNE_CHAN_MIN: Transmitter tuning channel minimum pwm
-TUNE_CHAN_MAX: Transmitter tuning channel maximum pwm
-TUNE_SELECTOR: Transmitter tuning selector channel
-TUNE_RANGE: Transmitter tuning range
-TUNE_MODE_REVERT: Revert on mode change
-TUNE_ERR_THRESH: Controller error threshold
+TUNE_PARAM: Transmitter tuning parameter or set of parameters  
+TUNE_CHAN: Transmitter tuning channel  
+TUNE_CHAN_MIN: Transmitter tuning channel minimum pwm  
+TUNE_CHAN_MAX: Transmitter tuning channel maximum pwm  
+TUNE_SELECTOR: Transmitter tuning selector channel  
+TUNE_RANGE: Transmitter tuning range  
+TUNE_MODE_REVERT: Revert on mode change  
+TUNE_ERR_THRESH: Controller error threshold  
 
 
 # YAW2SRV_ Parameters
 
-YAW2SRV_SLIP: Sideslip control gain
-YAW2SRV_INT: Sideslip control integrator
-YAW2SRV_DAMP: Yaw damping
-YAW2SRV_RLL: Yaw coordination gain
-YAW2SRV_IMAX: Integrator limit
+YAW2SRV_SLIP: Sideslip control gain  
+YAW2SRV_INT: Sideslip control integrator  
+YAW2SRV_DAMP: Yaw damping  
+YAW2SRV_RLL: Yaw coordination gain  
+YAW2SRV_IMAX: Integrator limit  
 
