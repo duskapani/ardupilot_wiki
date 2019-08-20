@@ -12,6 +12,7 @@
 > track: uçağın uçtuğu yön
 > avoidance calculation: kaçınma hesaplaması
 > emitter: yayıcı
+> transceiver: alıcı-verici
 
 ## ArduPlane Parametreleri
 
@@ -315,7 +316,7 @@ Bu yarıçapın dışında tespit edilen araçlar tamamen göz ardı edilir.  SR
 
 **`ADSB_ICAO_ID: ICAO_ID araç kimlik numarası`**
 
-ICAO_ID bu uçağın özgün araç kimlik numarasıdır. Bu, 24 bit ile sınırlı bir sayıdır. Eğer 0 olarak ayarlanırsa, rastgele sayı üretilecektir. -1 olarak ayarlanırsa, statik bilgi gönderilmez, alıcı verici haberleşme cihazının önceden programlandığı varsayılır.
+ICAO_ID bu uçağın özgün araç kimlik numarasıdır. Bu, 24 bit ile sınırlı bir sayıdır. Eğer 0 olarak ayarlanırsa, rastgele sayı üretilecektir. -1 olarak ayarlanırsa, statik bilgi gönderilmez, alıcı-verici önceden programlandığı varsayılır.
 
 | Aralık |
 |:------:|
@@ -325,7 +326,7 @@ ICAO_ID bu uçağın özgün araç kimlik numarasıdır. Bu, 24 bit ile sınırl
 
 Transponder sinyalini yayan araç tipi için ADSB sınıflandırması. Varsayılan değer 14 (İHA).
 
-|Value|	Meaning|
+|Değer|	Anlamı|
 |:------:|:-----:|
 |0	| NoInfo| 
 |1	| Light| 
@@ -341,46 +342,98 @@ Transponder sinyalini yayan araç tipi için ADSB sınıflandırması. Varsayıl
 |11	| Parachute| 
 |12	| UltraLight| 
 |13	| RESERVED| 
-|14	| UAV| 
+|14	| İHA| 
 |15	| Space| 
 |16	| RESERVED| 
 |17	| EmergencySurface| 
 |18	| ServiceSurface| 
-|19	|PointObstacle|
+|19	| PointObstacle|
 
-**`ADSB_LEN_WIDTH: Aircraft length and width`**
+**`ADSB_LEN_WIDTH: Hava taşıtı uzunluğu ve genişliği`**
+
+Uçağın metre cinsinden uzunluk ve genişlik ölçü seçenekleri. Çoğu durumda, en küçük boyut için 1 değerini kullanın.
+
+|Değer|	Anlamı|
+|:------:|:-----:|
+|0	| NO_DATA| 
+|1	| L15W23| 
+|2	| L25W28P5| 
+|3	| L25W34| 
+|4	| L35W33| 
+|5	| L35W38| 
+|6	| L45W39P5| 
+|7	| L45W45| 
+|8	| L55W45| 
+|9	| L55W52| 
+|10	| L65W59P5| 
+|11	| L65W67| 
+|12	| L75W72P5| 
+|13	| L75W80| 
+|14	| L85W80| 
+|15	| L85W90| 
+
+**`ADSB_OFFSET_LAT: GPS anteni yanal dengeleme***`**
+
+GPS anteni yanal dengeleme. Bu, fiziksel konumun uçaktaki GPS antenininin merkezinden dengelenmesini tarif eder.
+
+|Değer|	Anlamı|
+|:------:|:-----:|
+|0	|NoData|
+|1	|Sol2m|
+|2	|Sol4m|
+|3	|Sol6m|
+|4	|Merkez|
+|5	|Sağ2m|
+|6	|Sağ4m|
+|7	|Sağ6m|
+
+**`ADSB_OFFSET_LON: GPS anteni boylamsal dengeleme***`** 
+
+GPS anteni uzunlamasına dengeleme. Bu genellikle 1 olarak ayarlanır, Sensör Tarafından Uygulanan.
+
+|Değer|	Anlamı|
+|:------:|:-----:|
+|0	|NO_DATA|
+|1	|SensörTarafındanUygulanan|
+
+**`ADSB_RF_SELECT: Alıcı-verici RF seçimi`**
+
+Rx etkin ve/veya Tx etkinleştirmek için alıcı-verici RF seçimi. Bu sadece Tx ve Rx yapabilen cihazları etkiler. Yalnızca Rx bulunan cihazlar, bunu her zaman yalnızca Rx olacak şekilde düzeltir.
+
+|Değer|	Anlamı|
+|:------:|:-----:|
+|0	|Disabled|
+|1	|Rx-Only|
+|2	|Tx-Only|
+|3	|Rx and Tx Enabled|
 
 
+**`ADSB_RF_CAPABLE: RF kabiliyetler`**
 
-**`ADSB_OFFSET_LAT: GPS antenna lateral offset`**
+Donanımınızın RF giriş/çıkış kabiliyetlerini açıklar.
 
+|Değer|	Anlamı|
+|:------:|:-----:|
+|0	|Bilinmeyen|
+|1	|Sadece Rx UAT|
+|3	|Rx UAT ve 1090ES|
+|7	|Rx&Tx UAT ve 1090ES|
 
+**`ADSB_LIST_ALT: ADSB araç listesi irtifa filtresi`**
 
-**`ADSB_OFFSET_LON: GPS antenna longitudinal offse`** 
+Bu irtifa üzerinde tespit edilen araçlar göz ardı edilir. SRx_ADSB akışında YKİ'ye görünmezler ve kaçınma hesaplamalarında dikkate alınmazlar. 0 değeri bu filtreyi devre dışı bırakır.
 
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
+**`ADSB_ICAO_SPECL: Özel araç ICAO_ID'si`**
 
-**`ADSB_RF_SELECT: Transceiver RF selection`**
+ADSB_LIST_RADIUS ve ADSB_LIST_ALT'yi gözardı eden özel aracın ICAO_ID'si. Araç her zaman izlenir. Devre dışı bırakmak için 0 kullanın.
 
+**`ADSB_LOG: ADS-B günlüğü tutma`**
 
-
-**`ADSB_SQUAWK: Squawk code`**
-
-
-
-**`ADSB_RF_CAPABLE: RF capabilities`**
-
-
-
-**`ADSB_LIST_ALT: ADSB vehicle list altitude filte`**
-
-
-
-**`ADSB_ICAO_SPECL: ICAO_ID of special vehicle`**
-
-
-
-**`ADSB_LOG: ADS-B loggin`**
+0: kayıt yok, 1: sadece özel ID kaydeder, 2:hepsini kaydeder
 
 
 
