@@ -355,7 +355,7 @@ Uçağın metre cinsinden uzunluk ve genişlik ölçü seçenekleri. Çoğu duru
 
 |Değer|	Anlamı|
 |:------:|:-----:|
-|0	| NO_DATA| 
+|0	| VERİ_YOK| 
 |1	| L15W23| 
 |2	| L25W28P5| 
 |3	| L25W34| 
@@ -378,7 +378,7 @@ GPS anteni yanal dengeleme. Bu, fiziksel konumun uçaktaki GPS antenininin merke
 
 |Değer|	Anlamı|
 |:------:|:-----:|
-|0	|NoData|
+|0	|VeriYok|
 |1	|Sol2m|
 |2	|Sol4m|
 |3	|Sol6m|
@@ -393,7 +393,7 @@ GPS anteni uzunlamasına dengeleme. Bu genellikle 1 olarak ayarlanır, Sensör T
 
 |Değer|	Anlamı|
 |:------:|:-----:|
-|0	|NO_DATA|
+|0	|VERİ_YOK|
 |1	|SensörTarafındanUygulanan|
 
 **`ADSB_RF_SELECT: Alıcı-verici RF seçimi`**
@@ -402,10 +402,10 @@ Rx etkin ve/veya Tx etkinleştirmek için alıcı-verici RF seçimi. Bu sadece T
 
 |Değer|	Anlamı|
 |:------:|:-----:|
-|0	|Disabled|
-|1	|Rx-Only|
-|2	|Tx-Only|
-|3	|Rx and Tx Enabled|
+|0	|Pasif|
+|1	|Sadece-Rx|
+|2	|Sadece-Tx|
+|3	|Rx ve Tx etkin|
 
 
 **`ADSB_RF_CAPABLE: RF kabiliyetler`**
