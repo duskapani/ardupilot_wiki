@@ -436,4 +436,8 @@ ADSB_LIST_RADIUS ve ADSB_LIST_ALT'yi gözardı eden özel aracın ICAO_ID'si. Ar
 0: kayıt yok, 1: sadece özel ID kaydeder, 2:hepsini kaydeder
 
 
-
+|Değer|	Anlamı|
+|:------:|:-----:|
+|0	|kayıt yok|
+|1	|sadece özel ID kaydeder|
+|2	|hepsini kaydeder|
