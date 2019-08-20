@@ -12,7 +12,7 @@
 
 **`AUTOTUNE_LEVEL: autotune düzeyi`**  
 
-~Pitch ve Roll PID'lerinin agresiflik seviyesi.~ Düşük değerler 'daha yumuşak' ayar sağlar. Çoğu uçak için Seviye 6 önerilir.
+Pitch ve Roll PID'lerinin agresiflik seviyesi. Düşük değerler 'daha yumuşak' ayar sağlar. Çoğu uçak için Seviye 6 önerilir.
 
 | Aralık | Artış |
 |:------:|:-----:|
