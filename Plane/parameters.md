@@ -8,6 +8,8 @@
 > ground speed: yer sürati  
 > airspeed: hava sürati  
 > slew rate: yetişme hızı  
+> heading: uçağın burun yönü (pusula yönü) derece olarak ifade edilir.
+> track: uçağın uçtuğu yön
 ## ArduPlane Parametreleri
 
 **`AUTOTUNE_LEVEL: autotune düzeyi`**  
@@ -277,3 +279,64 @@ Bu otomatik kalkış için zaman aşımıdır. Eğer bu sıfır değilse ve uça
 | Aralık | Artış | Birim |
 |:------:|:-----:|:-----:|
 |0-120   | 1     | saniye|
+
+
+
+## ADSB_ Parametreleri
+
+**`ADSB_ENABLE: Enable ADSB`**
+
+
+
+**`ADSB_LIST_MAX: ADSB vehicle list size`**
+
+
+
+**`ADSB_LIST_RADIUS: ADSB vehicle list radius filter`**
+
+
+
+**`ADSB_ICAO_ID: ICAO_ID vehicle identification number`**
+
+
+
+**`ADSB_EMIT_TYPE: Emitter type`**
+
+
+
+**`ADSB_LEN_WIDTH: Aircraft length and width`**
+
+
+
+**`ADSB_OFFSET_LAT: GPS antenna lateral offset`**
+
+
+
+**`ADSB_OFFSET_LON: GPS antenna longitudinal offse`** 
+
+
+
+**`ADSB_RF_SELECT: Transceiver RF selection`**
+
+
+
+**`ADSB_SQUAWK: Squawk code`**
+
+
+
+**`ADSB_RF_CAPABLE: RF capabilities`**
+
+
+
+**`ADSB_LIST_ALT: ADSB vehicle list altitude filte`**
+
+
+
+**`ADSB_ICAO_SPECL: ICAO_ID of special vehicle`**
+
+
+
+**`ADSB_LOG: ADS-B loggin`**
+
+
+
