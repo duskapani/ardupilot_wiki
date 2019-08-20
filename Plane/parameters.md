@@ -10,6 +10,9 @@
 > slew rate: yetişme hızı  
 > heading: uçağın burun yönü (pusula yönü) derece olarak ifade edilir.
 > track: uçağın uçtuğu yön
+> avoidance calculation: kaçınma hesaplaması
+> emitter: yayıcı
+
 ## ArduPlane Parametreleri
 
 **`AUTOTUNE_LEVEL: autotune düzeyi`**  
@@ -284,25 +287,66 @@ Bu otomatik kalkış için zaman aşımıdır. Eğer bu sıfır değilse ve uça
 
 ## ADSB_ Parametreleri
 
-**`ADSB_ENABLE: Enable ADSB`**
+**`ADSB_ENABLE: ADSB'yi etkinleştir`**
+
+ADSB'yi etkinleştirir.
+
+| Değer | Anlamı |
+|:------:|:-----:|
+|0   | Pasif     |
+|1   | Etkin     |
+
+**`ADSB_LIST_MAX: ADSB araç listesi büyüklüğü`**
+
+En yakın araçların ADSB araç listesi büyüklüğü. Uzun listelerin düşük SRx_ADSB değerleriyle yenilenmesi uzun sürer.
+
+| Aralık |
+|:------:|
+|  1-100 |
+
+**`ADSB_LIST_RADIUS: ADSB araç listesi yarıçap filtresi`**
+
+Bu yarıçapın dışında tespit edilen araçlar tamamen göz ardı edilir.  SRx_ADSB akışında YKİ'ye görünmezler ve kaçınma hesaplamalarında dikkate alınmazlar. 0 değeri bu filtreyi devre dışı bırakır.
+
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 100000	   | metre     |
 
 
+**`ADSB_ICAO_ID: ICAO_ID araç kimlik numarası`**
 
-**`ADSB_LIST_MAX: ADSB vehicle list size`**
+ICAO_ID bu uçağın özgün araç kimlik numarasıdır. Bu, 24 bit ile sınırlı bir sayıdır. Eğer 0 olarak ayarlanırsa, rastgele sayı üretilecektir. -1 olarak ayarlanırsa, statik bilgi gönderilmez, alıcı verici haberleşme cihazının önceden programlandığı varsayılır.
 
+| Aralık |
+|:------:|
+|-1 - 16777215|
 
+**`ADSB_EMIT_TYPE: Yayıcı türü`**
 
-**`ADSB_LIST_RADIUS: ADSB vehicle list radius filter`**
+Transponder sinyalini yayan araç tipi için ADSB sınıflandırması. Varsayılan değer 14 (İHA).
 
-
-
-**`ADSB_ICAO_ID: ICAO_ID vehicle identification number`**
-
-
-
-**`ADSB_EMIT_TYPE: Emitter type`**
-
-
+|Value|	Meaning|
+|:------:|:-----:|
+|0	| NoInfo| 
+|1	| Light| 
+|2	| Small| 
+|3	| Large| 
+|4	| HighVortexlarge| 
+|5	| Heavy| 
+|6	| HighlyManuv| 
+|7	| Rotocraft| 
+|8	| RESERVED| 
+|9	| Glider| 
+|10	| LightAir| 
+|11	| Parachute| 
+|12	| UltraLight| 
+|13	| RESERVED| 
+|14	| UAV| 
+|15	| Space| 
+|16	| RESERVED| 
+|17	| EmergencySurface| 
+|18	| ServiceSurface| 
+|19	|PointObstacle|
 
 **`ADSB_LEN_WIDTH: Aircraft length and width`**
 
