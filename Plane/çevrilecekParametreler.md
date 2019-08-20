@@ -1,37 +1,16 @@
 # ArduPlane Parameters
 
-FORMAT_VERSION: Eeprom format version number  
-SYSID_THISMAV: MAVLink system ID of this vehicle  
-SYSID_MYGCS: Ground station MAVLink system ID  
-AUTOTUNE_LEVEL: Autotune level  
-TELEM_DELAY: Telemetry startup delay  
 GCS_PID_MASK: GCS PID tuning mask  
-KFF_RDDRMIX: Rudder Mix  
 KFF_THR2PTCH: Throttle to Pitch Mix  
-STAB_PITCH_DOWN: Low throttle pitch down trim  
-GLIDE_SLOPE_MIN: Glide slope minimum  
-GLIDE_SLOPE_THR: Glide slope threshold  
+STAB_PITCH_DOWN: Low throttle pitch down trim    
 STICK_MIXING: Stick Mixing  
-AUTO_FBW_STEER: Use FBWA steering in AUTO  
-TKOFF_THR_MINSPD: Takeoff throttle min speed  
-TKOFF_THR_MINACC: Takeoff throttle min acceleration  
-TKOFF_THR_DELAY: Takeoff throttle delay  
-TKOFF_TDRAG_ELEV: Takeoff tail dragger elevator  
-TKOFF_TDRAG_SPD1: Takeoff tail dragger speed1  
-TKOFF_ROTATE_SPD: Takeoff rotate speed  
-TKOFF_THR_SLEW: Takeoff throttle slew rate  
-TKOFF_PLIM_SEC: Takeoff pitch limit reduction  
-TKOFF_FLAP_PCNT: Takeoff flap percentage  
+AUTO_FBW_STEER: Use FBWA steering in AUTO       
 FBWA_TDRAG_CHAN: FBWA taildragger channel  
-LEVEL_ROLL_LIMIT: Level flight roll limit  
 USE_REV_THRUST: Bitmask for when to allow negative reverse thrust  
 NAV_CONTROLLER: Navigation controller selection  
 ALT_CTRL_ALG: Altitude control algorithm  
 ALT_OFFSET: Altitude offset  
 WP_RADIUS: Waypoint Radius  
-WP_MAX_RADIUS: Waypoint Maximum Radius  
-WP_LOITER_RAD: Waypoint Loiter Radius  
-RTL_RADIUS: RTL loiter radius  
 FENCE_ACTION: Action on geofence breach  
 FENCE_TOTAL: Fence Total  
 FENCE_CHANNEL: Fence Channel  
@@ -41,17 +20,9 @@ FENCE_RETALT: Fence Return Altitude
 FENCE_AUTOENABLE: Fence automatic enable  
 FENCE_RET_RALLY: Fence Return to Rally  
 STALL_PREVENTION: Enable stall prevention  
-ARSPD_FBW_MIN: Minimum Airspeed  
-ARSPD_FBW_MAX: Maximum Airspeed  
 FBWB_ELEV_REV: Fly By Wire elevator reverse  
-TERRAIN_FOLLOW: Use terrain following  
 TERRAIN_LOOKAHD: Terrain lookahead  
-FBWB_CLIMB_RATE: Fly By Wire B altitude change rate  
-THR_MIN: Minimum Throttle  
-THR_MAX: Maximum Throttle  
-TKOFF_THR_MAX: Maximum Throttle for takeoff  
-THR_SLEWRATE: Throttle slew rate  
-FLAP_SLEWRATE: Flap slew rate  
+FBWB_CLIMB_RATE: Fly By Wire B altitude change rate   
 THR_SUPP_MAN: Throttle suppress manual passthru  
 THR_PASS_STAB: Throttle passthru in stabilize  
 THR_FAILSAFE: Throttle and RC Failsafe Enable  
@@ -71,14 +42,10 @@ FLTMODE4: FlightMode4
 FLTMODE5: FlightMode5  
 FLTMODE6: FlightMode6  
 INITIAL_MODE: Initial flight mode  
-LIM_ROLL_CD: Maximum Bank Angle  
-LIM_PITCH_MAX: Maximum Pitch Angle  
-LIM_PITCH_MIN: Minimum Pitch Angle  
 ACRO_ROLL_RATE: ACRO mode roll rate  
 ACRO_PITCH_RATE: ACRO mode pitch rate  
 ACRO_LOCKING: ACRO mode attitude locking  
 GROUND_STEER_ALT: Ground steer altitude  
-GROUND_STEER_DPS: Ground steer rate  
 TRIM_AUTO: Automatic trim adjustment  
 MIXING_GAIN: Mixing Gain  
 RUDDER_ONLY: Rudder only aircraft  
@@ -112,27 +79,15 @@ RNGFND_LANDING: Enable rangefinder for landing
 SYSID_ENFORCE: GCS sysid enforcement  
 RUDD_DT_GAIN: rudder differential thrust gain  
 MANUAL_RCMASK: Manual R/C pass-through mask  
-HOME_RESET_ALT: Home reset altitude threshold  
 FLIGHT_OPTIONS: Flight mode options  
-TKOFF_ACCEL_CNT: Takeoff throttle acceleration count  
 DSPOILER_CROW_W1: Differential spoiler crow flaps outer weight  
 DSPOILER_CROW_W2: Differential spoiler crow flaps inner weight  
-TKOFF_TIMEOUT: Takeoff timeout  
 DSPOILER_OPTS: Differential spoiler and crow flaps options  
 DSPOILER_AILMTCH: Differential spoiler aileron matching  
 
 
 # ADSB_ Parameters
-
-ADSB_ENABLE: Enable ADSB  
-ADSB_LIST_MAX: ADSB vehicle list size  
-ADSB_LIST_RADIUS: ADSB vehicle list radius filter  
-ADSB_ICAO_ID: ICAO_ID vehicle identification number  
-ADSB_EMIT_TYPE: Emitter type  
-ADSB_LEN_WIDTH: Aircraft length and width  
-ADSB_OFFSET_LAT: GPS antenna lateral offset  
-ADSB_OFFSET_LON: GPS antenna longitudinal offset  
-ADSB_RF_SELECT: Transceiver RF selection  
+ 
 ADSB_SQUAWK: Squawk code  
 ADSB_RF_CAPABLE: RF capabilities  
 ADSB_LIST_ALT: ADSB vehicle list altitude filter  
