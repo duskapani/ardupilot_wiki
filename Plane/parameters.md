@@ -584,3 +584,10 @@ AHRS_EKF_TYPE: Use NavEKF Kalman filter for attitude and position estimation
 AHRS_CUSTOM_ROLL: Board orientation roll offset  
 AHRS_CUSTOM_PIT: Board orientation pitch offset  
 AHRS_CUSTOM_YAW: Board orientation yaw offset  
+
+Some Markdown text with <span style="color:blue">some *blue* text</span>.  
+
+
+<p>Some Markdown text with <span style="color:blue">some <em>blue</em> text</span>.</p>
+
+
