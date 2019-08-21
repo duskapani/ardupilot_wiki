@@ -558,7 +558,10 @@ Bu parametre 1 ayarlanırsa, RC kaybı yalnızca uçağın manuel kontrol modlar
 
 AFS sisteminin çifte kayıp sonlandırma kısmını etkinleştirir. Bu parametre 1 ise ve hem GPS hem de YKİ aynı anda arızalanırsa, bu "çifte kayıp" olarak kabul edilir ve sonlandırmaya neden olur.
 
-**`AFS_RC_FAIL_TIME: RC arıza süresi`**
+**`AFS_RC_FAIL_TIME: RC arıza süre`**
+
+
+
 
 RC girişi kaybedilirse failsafe sonlandırmasının manuel modda devreye gireceği saniye cinsinden süre. OBC kuralları için bu (1.5) olmalıdır. Devre dışı bırakmak için 0 kullanın.
 
@@ -569,29 +572,63 @@ RC girişi kaybedilirse failsafe sonlandırmasının manuel modda devreye girece
 
 ## AHRS_ Parametreleri
 
-AHRS_GPS_GAIN: AHRS GPS gain  
-AHRS_GPS_USE: AHRS use GPS for navigation  
-AHRS_YAW_P: Yaw P  
-AHRS_RP_P: AHRS RP_P  
-AHRS_WIND_MAX: Maximum wind  
-AHRS_TRIM_X: AHRS Trim Roll  
-AHRS_TRIM_Y: AHRS Trim Pitch  
-AHRS_TRIM_Z: AHRS Trim Yaw  
-AHRS_ORIENTATION: Board Orientation  
-AHRS_COMP_BETA: AHRS Velocity Complementary Filter Beta Coefficient  
-AHRS_GPS_MINSATS: AHRS GPS Minimum satellites  
-AHRS_EKF_TYPE: Use NavEKF Kalman filter for attitude and position estimation  
-AHRS_CUSTOM_ROLL: Board orientation roll offset  
-AHRS_CUSTOM_PIT: Board orientation pitch offset  
-AHRS_CUSTOM_YAW: Board orientation yaw offset  
+**`AHRS_GPS_GAIN: AHRS GPS gain`**
 
 
 
-<html>
-   <span style="color:orange;">Word up</span>
-   <p style='color:red'>This is some red text.</p>
-   <font color="red">This is some text!</font>
-   These are <b style='color:red'>red words</b>.
-   <font size="5">your_text_here</font>
-</html>
+**`AHRS_GPS_USE: AHRS use GPS for navigation`**
+
+
+
+**`AHRS_YAW_P: Yaw P`**
+
+
+
+**`AHRS_RP_P: AHRS RP_P`**
+
+
+
+**`AHRS_WIND_MAX: Maximum wind`**
+
+
+
+**`AHRS_TRIM_X: AHRS Trim Roll`**
+
+
+
+**`AHRS_TRIM_Y: AHRS Trim Pitch`**
+
+
+
+**`AHRS_TRIM_Z: AHRS Trim Yaw`**
+
+
+
+**`AHRS_ORIENTATION: Board Orientation`**
+
+
+
+**`AHRS_COMP_BETA: AHRS Velocity Complementary Filter Beta Coefficient`**
+
+
+
+**`AHRS_GPS_MINSATS: AHRS GPS Minimum satellites`**
+
+
+
+**`AHRS_EKF_TYPE: Use NavEKF Kalman filter for attitude and position estimation`**
+
+
+
+**`AHRS_CUSTOM_ROLL: Board orientation roll offset`**
+
+
+
+**`AHRS_CUSTOM_PIT: Board orientation pitch offset`**
+
+
+
+**`AHRS_CUSTOM_YAW: Board orientation yaw offset`**
+
+
 
