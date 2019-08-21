@@ -13,6 +13,7 @@
 > avoidance calculation: kaçınma hesaplaması
 > emitter: yayıcı
 > transceiver: alıcı-verici
+> geofence: coğrafi sınırlama
 
 ## ArduPlane Parametreleri
 
@@ -372,9 +373,9 @@ Uçağın metre cinsinden uzunluk ve genişlik ölçü seçenekleri. Çoğu duru
 |14	| L85W80| 
 |15	| L85W90| 
 
-**`ADSB_OFFSET_LAT: GPS anteni yanal dengeleme***`**
+**`ADSB_OFFSET_LAT: GPS anteni yanal offset***`**
 
-GPS anteni yanal dengeleme. Bu, fiziksel konumun uçaktaki GPS antenininin merkezinden dengelenmesini tarif eder.
+GPS anteni yanal offset. Bu, fiziksel konumun uçaktaki GPS antenininin merkezinden dengelenmesini tarif eder.
 
 |Değer|	Anlamı|
 |:------:|:-----:|
@@ -387,14 +388,15 @@ GPS anteni yanal dengeleme. Bu, fiziksel konumun uçaktaki GPS antenininin merke
 |6	|Sağ4m|
 |7	|Sağ6m|
 
-**`ADSB_OFFSET_LON: GPS anteni boylamsal dengeleme***`** 
+**`ADSB_OFFSET_LON: GPS anteni boylamsal offset***`** 
 
-GPS anteni uzunlamasına dengeleme. Bu genellikle 1 olarak ayarlanır, Sensör Tarafından Uygulanan.
+GPS anteni uzunlamasına offset. Bu genellikle 1 olarak ayarlanır, Sensör Tarafından Uygulanan.
 
 |Değer|	Anlamı|
 |:------:|:-----:|
 |0	|VERİ_YOK|
 |1	|SensörTarafındanUygulanan|
+
 
 **`ADSB_RF_SELECT: Alıcı-verici RF seçimi`**
 
@@ -419,6 +421,7 @@ Donanımınızın RF giriş/çıkış kabiliyetlerini açıklar.
 |3	|Rx UAT ve 1090ES|
 |7	|Rx&Tx UAT ve 1090ES|
 
+
 **`ADSB_LIST_ALT: ADSB araç listesi irtifa filtresi`**
 
 Bu irtifa üzerinde tespit edilen araçlar göz ardı edilir. SRx_ADSB akışında YKİ'ye görünmezler ve kaçınma hesaplamalarında dikkate alınmazlar. 0 değeri bu filtreyi devre dışı bırakır.
@@ -427,17 +430,138 @@ Bu irtifa üzerinde tespit edilen araçlar göz ardı edilir. SRx_ADSB akışın
 |:------:|:-----:|
 |0 - 32767	   | metre     |
 
+
 **`ADSB_ICAO_SPECL: Özel araç ICAO_ID'si`**
 
 ADSB_LIST_RADIUS ve ADSB_LIST_ALT'yi gözardı eden özel aracın ICAO_ID'si. Araç her zaman izlenir. Devre dışı bırakmak için 0 kullanın.
 
+
 **`ADSB_LOG: ADS-B günlüğü tutma`**
 
 0: kayıt yok, 1: sadece özel ID kaydeder, 2:hepsini kaydeder
-
 
 |Değer|	Anlamı|
 |:------:|:-----:|
 |0	|kayıt yok|
 |1	|sadece özel ID kaydeder|
 |2	|hepsini kaydeder|
+
+
+## AFS_ Parametreleri
+
+**`AFS_ENABLE: Gelişmiş Failsafe'i etkinleştirme`**
+
+Gelişmiş failsafe sistemini mümkün kılar. Sıfıra ayarlanırsa (devre dışı bırakılırsa) diğer AFS seçeneklerinin etkisi olmaz.
+
+**`AFS_MAN_PIN: Manuel pin`**
+
+Manuel moddayken high ayarlamak için dijital çıkış pini ayarlar.
+
+**`AFS_HB_PIN: Heartbeat Pin***`**
+> termination: sonlandırma
+
+Bu, sonlandırma etkinleştirilmediğinde 10Hz'de çevrilen bir dijital çıkış pinini ayarlar. Bir FS_TERM_PIN ayarlanmışsa, heartbeat pini, sonlandırma etkinleştirildiğinde sonlandırma kartının, sonlandırma ve otopilotun çökmesi arasındaki ayrım yapmasını sağlamak için 10Hz'de dönmeye devam edeceğini unutmayın.
+
+|Değer|	Anlamı|
+|:------:|:-----:|
+|-1	| Pasif|
+|49	| BB Blue GP0 pin 4|
+|50	| AUXOUT1|
+|51	| AUXOUT2|
+|52	| AUXOUT3|
+|53	| AUXOUT4|
+|54	| AUXOUT5|
+|55 | AUXOUT6|
+|57	| BB Blue GP0 pin 3|
+|113	| BB Blue GP0 pin 6|
+|116	| BB Blue GP0 pin 5|
+
+**`AFS_WP_COMMS: İletişim kaybı waypoint'i`**
+
+İletişim kaybında gidilecek waypoint numarası.
+
+**`AFS_GPS_LOSS: GPS kaybı waypoint'i`**
+
+GPS kilidi kaybında gidilecek waypoint numarası.
+
+**`AFS_TERMINATE: Zorla sonlandırma`**
+
+Heartbeat sinyalinin sonlandırmaya zorlamak için uçuşta ayarlanabilir.
+
+**`AFS_TERM_ACTION: Sonlandırma eylemi`**
+
+Uçuş sonlandırmasında eyleme zorlamak için kullanılabilir. Normalde bu harici failsafe kartı tarafından gerçekleştirilir, ancak APM'yi bunu gerçekleştirmek üzere ayarlayabilirsiniz. Parametrenin olası değerleri hakkında daha fazla bilgi için lütfen vikiye danışın.
+
+**`AFS_TERM_PIN: Sonlandırma pini`**
+
+Uçuş sonlandırmayı high yapmak içini dijital çıkış pini ayarlar.
+
+|Değer|	Anlamı|
+|:------:|:-----:|
+|-1	| Pasif|
+|49	| BB Blue GP0 pin 4|
+|50	| AUXOUT1|
+|51	| AUXOUT2|
+|52	| AUXOUT3|
+|53	| AUXOUT4|
+|54	| AUXOUT5|
+|55 | AUXOUT6|
+|57	| BB Blue GP0 pin 3|
+|113	| BB Blue GP0 pin 6|
+|116	| BB Blue GP0 pin 5|
+
+**`AFS_AMSL_LIMIT: Ortalama deniz seviyesi üzeri sınırı`**
+
+AMSL(above mean sea level) irtifa sınırını belirler. QNH tarafından belirlenen basınç irtifası bu sınırı aşarsa, uçuş sonlandırmaya zorlanır. Bu sınırın metre cinsinden olduğunu, basınç yükseklik irtifasının genellikle feet cinsinden verildiğini unutmayın. Sıfır değeri basınç irtifa sınırını devre dışı bırakır.
+
+|Birim|
+|:------:|
+| metre |
+
+**`AFS_AMSL_ERR_GPS: GPS tabanlı AMSL sınırı için hata payı***`**
+
+GPS kaynaklı irtifa sınırındaki hata için payı belirler. Bu hata payı yalnızca barometre arızalandığında kullanılır. Barometre arızalanırsa, GPS, AMSL_LIMIT'i zorla uygulayacaktır, ancak verilen pay miktarında bile basınç irtifasının ihlal edilmemesini sağlamak için bu pay ilk önce AMSL_LIMIT'den düşülecektir. OBC kullanıcıları bunu D2 güvenlik durumlarına uyacak şekilde ayarlamalıdır. -1 değeri, barometre arızasının derhal sonlandırılmasına neden olacağı anlamına gelir.
+
+|Birim|
+|:------:|
+| metre |
+
+**`AFS_QNH_PRESSURE: QNH basıncı`**
+
+İrtifa sınırında basınç irtifası için kullanılacak olan QNH basıncını milibar olarak ayarlar. 0 değeri, irtifa sınırını devre dışı bırakır.
+
+|Birim|
+|:------:|
+| milibar |
+
+**`AFS_MAX_GPS_LOSS: Maksimum GPS kaybı olayı sayısı`**
+
+Uçağın GPS kurtarma görevine geri dönmeyi bırakmadan önceki maksimum GPS kaybı olayı sayısı. Herhangi bir sayıda GPS kaybına izin vermek için 0 kullanın.
+
+**`AFS_MAX_COM_LOSS: Maksimum iletişim kaybı olayı sayısı`**
+
+Uçağın iletişimi kurtarma görevine geri dönmeyi bırakmadan önceki maksimum iletişim kaybı olayı sayısı. Herhangi bir sayıda iletişim kaybı olayına izin vermek için 0 kullanın.
+
+**`AFS_GEOFENCE: Gelişmiş failsafe coğrafi sınırlamayı etkinleştirir`**
+
+AFS'nin coğrafi sınırlama kısmını etkinleştirir. Yalnızca AFS_ENABLE 1 ise etkili olur.
+
+**`AFS_RC: Gelişmiş failsafe RC etkinleştirir`**
+
+AFS'nin RC kısmını etkinleştirir. Yalnızca AFS_ENABLE 1 ise etkili olur.
+
+**`AFS_RC_MAN_ONLY: Yalnızca manuel kontrol modlarında RC sonlandırma etkinleştirme***`**
+
+Bu parametre 1 ayarlanırsa, RC kaybı yalnızca uçağın manuel kontrol modlarında sonlandırılmasına neden olur. Eğer 0 ise, uçak herhangi bir uçuş modunda sonlandırılacaktır.
+
+**`AFS_DUAL_LOSS: Aynı anda GPS ve YKİ arızalanması nedeniyle çifte kayıp sonlandırmayı etkinleştirme`**
+
+AFS sisteminin çifte kayıp sonlandırma kısmını etkinleştirir. Bu parametre 1 ise ve hem GPS hem de YKİ aynı anda arızalanırsa, bu "çifte kayıp" olarak kabul edilir ve sonlandırmaya neden olur.
+
+**`AFS_RC_FAIL_TIME: RC failure ti`**
+
+RC girdisi kaybedilirse failsafe sonlandırmasının devreye gireceği manuel modda saniye cinsinden süre. OBC kuralları için bu (1.5) olmalıdır. Devre dışı bırakmak için 0 kullanın.
+
+|Birim|
+|:------:|
+| saniye |
