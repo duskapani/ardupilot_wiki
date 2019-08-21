@@ -558,9 +558,9 @@ Bu parametre 1 ayarlanırsa, RC kaybı yalnızca uçağın manuel kontrol modlar
 
 AFS sisteminin çifte kayıp sonlandırma kısmını etkinleştirir. Bu parametre 1 ise ve hem GPS hem de YKİ aynı anda arızalanırsa, bu "çifte kayıp" olarak kabul edilir ve sonlandırmaya neden olur.
 
-**`AFS_RC_FAIL_TIME: RC failure ti`**
+**`AFS_RC_FAIL_TIME: RC arıza süresi`**
 
-RC girdisi kaybedilirse failsafe sonlandırmasının devreye gireceği manuel modda saniye cinsinden süre. OBC kuralları için bu (1.5) olmalıdır. Devre dışı bırakmak için 0 kullanın.
+RC girişi kaybedilirse failsafe sonlandırmasının manuel modda devreye gireceği saniye cinsinden süre. OBC kuralları için bu (1.5) olmalıdır. Devre dışı bırakmak için 0 kullanın.
 
 |Birim|
 |:------:|
