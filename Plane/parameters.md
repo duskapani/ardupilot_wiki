@@ -585,9 +585,13 @@ AHRS_CUSTOM_ROLL: Board orientation roll offset
 AHRS_CUSTOM_PIT: Board orientation pitch offset  
 AHRS_CUSTOM_YAW: Board orientation yaw offset  
 
-Some Markdown text with <span style="color:blue">some *blue* text</span>.  
+<span style="color:blue">some *This is Blue italic.* text</span>
 
 
-<p>Some Markdown text with <span style="color:blue">some <em>blue</em> text</span>.</p>
+<span style="color:red">some **This is Red Bold.** text</span>
 
 
+<font color='red'>test blue color font</font>
+
+
+<span style="color:red">text in red</span>
