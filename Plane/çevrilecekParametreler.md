@@ -85,37 +85,11 @@ DSPOILER_CROW_W2: Differential spoiler crow flaps inner weight
 DSPOILER_OPTS: Differential spoiler and crow flaps options  
 DSPOILER_AILMTCH: Differential spoiler aileron matching  
 
-
 # ADSB_ Parameters
  
 ADSB_SQUAWK: Squawk code  
-ADSB_RF_CAPABLE: RF capabilities  
-ADSB_LIST_ALT: ADSB vehicle list altitude filter  
-ADSB_ICAO_SPECL: ICAO_ID of special vehicle  
-ADSB_LOG: ADS-B logging  
- 
- 
+
 # AFS_ Parameters
-
-AFS_ENABLE: Enable Advanced Failsafe  
-AFS_MAN_PIN: Manual Pin  
-AFS_HB_PIN: Heartbeat Pin  
-AFS_WP_COMMS: Comms Waypoint  
-AFS_GPS_LOSS: GPS Loss Waypoint  
-AFS_TERMINATE: Force Terminate  
-AFS_TERM_ACTION: Terminate action  
-AFS_TERM_PIN: Terminate Pin  
-AFS_AMSL_LIMIT: AMSL limit  
-AFS_AMSL_ERR_GPS: Error margin for GPS based AMSL limit  
-AFS_QNH_PRESSURE: QNH pressure  
-AFS_MAX_GPS_LOSS: Maximum number of GPS loss events  
-AFS_MAX_COM_LOSS: Maximum number of comms loss events  
-AFS_GEOFENCE: Enable geofence Advanced Failsafe  
-AFS_RC: Enable RC Advanced Failsafe  
-AFS_RC_MAN_ONLY: Enable RC Termination only in manual control modes  
-AFS_DUAL_LOSS: Enable dual loss terminate due to failure of both GCS and GPS simultaneously  
-AFS_RC_FAIL_TIME: RC failure time  
-
 
 # AHRS_ Parameters
 
