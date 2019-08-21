@@ -585,16 +585,15 @@ AHRS_CUSTOM_ROLL: Board orientation roll offset
 AHRS_CUSTOM_PIT: Board orientation pitch offset  
 AHRS_CUSTOM_YAW: Board orientation yaw offset  
 
-<span style="color:orange;">Word up</span>
 
 
-<p style='color:red'>This is some red text.</p>
+<html>
+      <head>
+        <span style="color:orange;">Word up</span>
+        <p style='color:red'>This is some red text.</p>
+        <font color="red">This is some text!</font>
+        These are <b style='color:red'>red words</b>.
+        <font size="5">your_text_here</font>
+      </head>
+</html>
 
-
-<font color="red">This is some text!</font>
-
-
-These are <b style='color:red'>red words</b>.
-
-
-<font size="5">your_text_here</font>
