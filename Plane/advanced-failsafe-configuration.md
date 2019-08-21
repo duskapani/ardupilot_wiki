@@ -26,7 +26,7 @@ AFS failsafe sistemini etkinleştirmek için [AFS_ENABLE]() parametresini 1 olar
 AFS sisteminin yalnızca PX4 ve Pixhawk gibi daha yüksek teknolojili  otopilot kartlarında varsayılan olarak içine konulduğuna dikkat edin.
 
 
-## AFS Termination
+## AFS Sonlandırma
 
 "Uçuş sonlandırma" kavramı, AFS failsafe sistemini anlamanın anahtar noktasıdır. Sonlandırma, tüm kontrol yüzeylerini maksimuma ve dönüşe girmek için throttle'ı 0 ayarlayarak uçağın bilinçli şekilde yere daldığı yerdir.
 
@@ -50,35 +50,40 @@ AFS failsafe sistemi beş tip failsafe olayını destekler:
 
 Bu tip arızaların her birinin, aşağıda açıklanan kendine özgü çözüm şekli vardır.
 
+
 ### Coğrafi sınırlandırma ihlali
 
 Coğrafi sınırlandırma etkinleştirilirse, AFS failsafe modülü, uçakları coğrafi sınır ihlali (ve eğer ayarlanmışsa coğrafi sınırlandırma alt ve üst irtifalarını) için izler. İhlal olursa, AFS sistemi derhal uçuşu sonlandırır (yukarıdaki sonlandırma konusuna bakın).
 
-### Maximum pressure altitude breach
-When sharing airspace with other aircraft it is usual practice to define the available flight altitudes in terms of a common reference pressure, typically QNH (a reference to “nautical height”). The QNH reference pressure, measured in millibar, is distributed to all aircraft either via a radio message or through aviation internet and weather sites.
 
-Aircraft then use their barometer to measure the pressure relative to that QNH pressure, which gives them an altitude reference which all aircraft in the area should be using.
+### Maksimum basınç irtifası ihlali
 
-The AFS system is able to enforce a pressure altitude limit by setting the QNH pressure in the AFS_QNH_PRESSURE parameter, as a value in millibars. The pilot should then also set a pressure altitude limit using the AFS_AMSL_LIMIT parameter (in meters). Note that this pressure altitude limit is relative to sea level (AMSL stands for “above mean sea level”).
+Hava sahasını diğer uçaklarla paylaşırken, mevcut uçuş irtifalarını ortak bir referans basıncı, genelde QNH (referans olarak “deniz yüksekliği"), olarak tanımlamak olağan bir uygulamadır. Milibar cinsinden ölçülen QNH referans basıncı, bir radyo mesajı ya da havacılık internet ve hava durumu siteleri aracılığıyla tüm uçaklara dağıtılmaktadır.
 
-If both of these parameters are set then the AFS system fill monitor pressure altitude and will initiate a termination if the pressure altitude rises above the AFS_AMSL_LIMIT.
+Hava aracı daha sonra bu QNH basıncına göre basıncı ölçmek için barometreleri kullanır ve bu, bölgedeki tüm uçakların kullanması gereken bir irtifa referansı verir.
 
-You need to be very careful to set the right AFS_QNH_PRESSURE for your local conditions on the day of your flight, as the QNH pressure can be very different on different days.
+AFS sistemi, [AFS_QNH_PRESSURE]() parametresindeki QNH basıncını milibar cinsinden bir değer olarak ayarlayarak bir basınç irtifa limiti uygulayabilir. Pilot daha sonra AFS_AMSL_LIMIT parametresini (metre cinsinden) kullanarak bir basınç yükseklik limiti belirlemelidir. Bu basınç yükseklik sınırının deniz seviyesine göre olduğuna dikkat edin (AMSL, “ortalama deniz seviyesinin üstünde” anlamına gelir).
 
-In addition to the QNH pressure limit, the AFS system also monitors the health of your barometer. If the barometer is unhealthy for 5 seconds then the AFS system will check the AFS_AMSL_ERR_GPS parameter. If it is -1 (the default) then the aircraft will terminate immediately. If it is not -1 then the AFS system will use the AFS_AMSL_ERR_GPS value as a margin to add to the GPS height, and will allow the flight to continue if the GPS altitude plus the AFS_AMSL_ERR_GPS value (in meters) is below the AFS_AMSL_LIMIT value. The purpose of this margin is to account for the inaccuracy of GPS altitudes. A value of 200 is reasonable for safety to ensure the AFS_AMSL_LIMIT pressure altitude is not breached.
+Bu parametrelerin her ikisi de ayarlanmışsa, AFS sistemi basınç irtifasını izler ve [AFS_AMSL_LIMIT]()'in üstüne çıkarsa bir sonlandırma başlatır.
 
-### GPS Loss
-The AFS system monitors the health of your GPS receivers throughout the flight. If all of your available GPS receivers lose position lock then this initiates a GPS failure failsafe.
+QNH basıncı farklı günlerde çok farklı olabileceğinden, uçuş gününüzdeki yerel hava şartları için doğru [AFS_QNH_PRESSURE]() ayarını yaparken çok dikkatli olmanız gerekir.
 
-When a GPS failure occurs (which is defined as loss of GPS lock for 3 seconds) the AFS system will look at the AFS_WP_GPS_LOSS parameter. This parameter species a waypoint number in your mission to use when a GPS failure occurs. If AFS_WP_GPS_LOSS is non-zero the aircraft will change current waypoint to the waypoint number specified in AFS_WP_GPS_LOSS. You should setup your mission so that the aircraft will perform whatever actions you want on GPS loss. For example, you could have a set of waypoints starting at number 10 which first loiter on the spot for 30 seconds, and then proceed back to the airfield. You would then set AFS_WP_GPS_LOSS to 10 to enable that part of the mission on loss of GPS lock.
+QNH basınç sınırına ek olarak, AFS sistemi barometrenizin sağlığını da izler. Barometre 5 saniyeliğine sağlıksızsa AFS sistemi [AFS_AMSL_ERR_GPS]() parametresini kontrol eder. Eğer -1 ise (varsayılan) uçak derhal sonlandırılır. -1 değilse, AFS sistemi AFS_AMSL_ERR_GPS değerini tolerans olarak GPS yüksekliğine eklemek için kullanır ve GPS irtifası artı AFS_AMSL_ERR_GPS değeri (metre cinsinden) AFS_AMSL_LIMIT değerinin altında olması durumunda uçuşun devam etmesine izin verir. Bu toleransın amacı GPS irtifalarının yanlışlığını hesaba katmaktır. AFS_AMSL_LIMIT basınç irtifasının ihlal edilmemesini sağlamak için güvenlik değeri olarak 200 makuldur.
+ 
 
-When setting up mission items for GPS lock it is sometimes useful to include “loiter at the current location” waypoints. That is achieved by setting both the latitude and longitude of LOITER mission commands to zero.
+### GPS kaybı
 
-If the GPS recovers after a GPS failsafe has started, then the aircraft will automatically resume its mission where it left off.
+AFS sistemi, uçuş boyunca GPS alıcılarınızın sağlığını izler. Kullanılabilir tüm GPS alıcılarınız konum kilidini kaybederse, bu GPS arıza failsafe'ini başlatır.
 
-If during a period of GPS loss the aircraft also loses communications with the ground station then this is termed a “dual loss”, and the aircraft will terminate.
+GPS arızası meydana geldiğinde (3 saniye boyunca GPS kilidinin kaybı olarak tanımlanır) AFS sistemi [AFS_WP_GPS_LOSS]() parametresine bakar. Bu parametre, bir GPS arızası meydana geldiğinde kullanmak için görevinizde bir waypoint numarası belirtir. AFS_WP_GPS_LOSS sıfır değilse, uçak mevcut waypointi AFS_WP_GPS_LOSS içinde belirtilen waypoint numarasıyla değiştirir. Görevinizi, uçağın GPS kaybında ne tür bir eylem eylem gerçekleştireceğine ayarlamalısınız. Örneğin, 10 numaradan başlayan, önce 30 saniye loiter yapan daha sonra hava alanına doğru ilerleyen bir waypoint olabilir. Daha sonra GPS kilidi kaybı görevinin bu kısmını etkinleştirmek için AFS_WP_GPS_LOSS değerini 10 ayarlayın.
 
-If AFS_MAX_GPS_LOSS is set to a non-zero number, then it is used as a maximum count of the number of GPS failures that will be allowed while returning to the mission after GPS lock is re-established. This counter is only incremented if the 2nd GPS failure happens at least 30 seconds after the previous one (to account for a short period of GPS failure).
+GPS kilidi için görev öğeleri ayarlarken bazen "geçerli konumda loiter" waypointlerini dahil etmek yararlı olabilir. LOITER görev komutlarınını hem enlem hem boylamlarını sıfıra ayarlayarak elde edilir.
+
+Eğer bir GPS arızası başladıktan sonra GPS kurtarılırsa, uçak otomatik olarak bıraktığı yerdeki görevine devam eder.
+
+GPS kaybı süresince yer istasyonuyla olan haberleşmede kaybedilirse, buna "çifte kayıp" denir ve uçak sonlandırılır.
+
+AFS_MAX_GPS_LOSS sıfır harici bir sayıya ayarlanırsa, GPS kilidi yeniden tesis edildikten sonra göreve dönerken izin verilecek maksimum GPS arıza sayısı olarak kullanılır. Bu sayaç yalnızca 2. GPS arızasını öncekinden en az 30 saniye sonra meydana gelirse artar.
 
 ### Ground station communications loss
 The AFS system monitors the health of the link between your ground station and your aircraft. It does this by looking for HEARTBEAT MAVLink messages coming from the ground station.
