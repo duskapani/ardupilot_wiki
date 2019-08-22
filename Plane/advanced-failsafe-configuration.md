@@ -85,59 +85,81 @@ GPS kaybı süresince yer istasyonuyla olan haberleşmede kaybedilirse, buna "ç
 
 AFS_MAX_GPS_LOSS sıfır harici bir sayıya ayarlanırsa, GPS kilidi yeniden tesis edildikten sonra göreve dönerken izin verilecek maksimum GPS arıza sayısı olarak kullanılır. Bu sayaç yalnızca 2. GPS arızasını öncekinden en az 30 saniye sonra meydana gelirse artar.
 
-### Ground station communications loss
-The AFS system monitors the health of the link between your ground station and your aircraft. It does this by looking for HEARTBEAT MAVLink messages coming from the ground station.
 
-If the aircraft does not receive a HEARTBEAT message for a period of 10 seconds then it enters a GCS failsafe state. It then looks for a AFS_WP_COMMS parameter, and if that is non-zero it will change the current target waypoint to the one given in AFS_WP_COMMS. You should set up a section of your mission with whatever actions you want to take on loss of communications.
+### Yer kontrol istasyonu iletişim kaybı
 
-If GPS lock is lost at the same time as GCS communications is lost then that is considered a “dual loss”, and the aircraft will immediately terminate.
+AFS sistemi, yer istasyonunuz ile uçağınız arasındaki bağlantının sağlığını izler. Bunu, yer istasyonundan gelen HEARTBEAT MAVLink mesajlarına bakarak yapar.
 
-Note that the monitoring of HEARTBEAT messages only tells the autopilot that it can see messages from the ground station. It does not mean the ground station can see messages from the aircraft. So it is quite possible for your ground station to be reporting loss of communication while the aircraft is still receiving HEARTBEAT messages.
+Uçak 10 saniyeliğine HEARTBEAT mesajı almazsa, YKİ failsafe durumuna girer. Daha sonra AFS_WP_COMMS parametresine bakar, sıfır değilse, mevcut hedef waypointi AFS_WP_COMMS'da verilenle değiştirir. İletişim kaybı konusunda hangi işlemleri yapmak istediğinizle ilgili olarak görevinizin bir bölümünü oluşturmalısınız.
 
-If AFS_MAX_COM_LOSS is set to a non-zero number, then it is used as a maximum count of the number of communication failures that will be allowed while returning to the mission after communications is re-established. This counter is only incremented if the 2nd comms failure happens at least 30 seconds after the previous one (to account for a short period of communications failure).
+GPS kilidi YKİ iletişimiyle aynı anda kaybedilirse, o zaman "ikili kayıp" olarak kabul edilir ve uçuş sonlandırılır.
 
-### RC Loss
-If RC control is lost in a manual control mode for more than AFS_RC_FAIL_MS milliseconds, flight termination is activated. This termination mode is only enabled if AFS_RC_FAIL_MS is non-zero. For the OBC rules it should be set to 1500 (giving 1.5 seconds).
+Unutmayın ki HEARTBEAT mesajlarının izlenmesi sadece otomatik pilota yer istasyonundan gelen mesajları görebileceğini söyler. Bu, yer istasyonunun uçaktan gelen mesajları görebileceği anlamına gelmez. Bu nedenle, yer istasyonunuz uçaktan hala HEARTBEAT mesajlarını alırken iletişim kaybını rapor etmesi oldukça muhtemeldir.
 
-Monitoring the AFS system
-The AFS system provides some additional parameters to make it easier to monitor the health of the failsafe system using external electronics (such as an external failsafe board).
+[AFS_MAX_COM_LOSS]() sıfır olmayan bir sayıya ayarlanırsa, iletişim yeniden kurulduktan sonra göreve dönmesine izin verilecek maksimum iletişim hatası sayısı olarak kullanılır. Bu sayaç sadece 2. haberleşme hatası öncekinden en az 30 saniye içinde meydana gelirse artar (kısa süreli iletişim kesintisi için).
 
-The key parameters are:
 
-AFS_TERM_PIN: This is a digital pin which is set to a high voltage if termination is started. Note that this pin will go high on termination even if the AFS_TERM_ACTION parameter is not set to 42.
-AFS_HB_PIN: This is a digital pin number for a pin which is toggled at a rate of 10Hz by the failsafe system. If termination occurs and a AFS_TERM_PIN value is not set then the heartbeat pin will stop toggling.
-AFS_MAN_PIN: This is a digital pin number for a pin which goes high when the aircraft is in MANUAL mode. It may be useful with some external failsafe boards to detect manual mode and behave differently.
-Manual Termination
-Apart from automatic termination it is also important for the aircrafts operator to be able to terminate the aircraft immediately if they think the aircraft is a danger to people or other aircraft. To force an immediate termination you should use the AFS_TERMINATION parameter. By setting that parameter to 1 the aircraft will immediately terminate.
+### RC kaybı
 
-Example AFS failsafe mission
-Setting up a AFS failsafe mission takes time, and needs to be done very carefully. To help you understand what is possible you may find the following example files useful
+RC kontrolü manuel kontrol modunda [AFS_RC_FAIL_MS]() milisaniyeden daha fazla bir süre boyunca kaybolursa, uçuş sonlandırma etkinleştirilir. Bu sonlandırma modu yalnızca [AFS_RC_FAIL_MS]() sıfır olmadığında etkindir. OBC kuralları için 1500'e (1,5 saniye vererek) ayarlanmalıdır. 
 
-A waypoint mission for the 2014 Outback Challenge with waypoints for different AFS failures commented in the file
-A geofence file for the 2014 Outback Challenge
-Testing the AFS system in SITL
-It is highly recommended that you extensively test the AFS system using the SITL simulation system before using it on a real aircraft. You can simulate all types of in-flight failures using the SIM_ parameters. To start SITL in Kingaroy ready for OBC testing you would use:
 
-sim_vehicle.py -L Kingaroy --console --map
-The key parameters for failsafe testing in SITL are:
+## AFS sisteminin izlenmesi
 
-Test GPS failure: param set SIM_GPS_DISABLE 1
-Test RC failure: param set SIM_RC_FAIL 1
-Test comms failure: set heartbeat 0
-Test fence failure: switch to CRUISE mode and fly across boundary
-Test QNH failure: param set AFS_AMSL_LIMIT 100
-Additional tips for AFS failsafe users
-You need to ensure that your geofence is enabled before takeoff. This can either be done as part of your preflight checklist, or you could set a FENCE_CHANNEL and enable it from within your transmitter. This ensures that if your transmitter is out of range that the fence remains enabled.
+AFS sistemi, harici elektronik aksamlar (harici bir failsafe kartı gibi) kullanarak failsafe sisteminin sağlığını izlemeyi kolaylaştırmak için bazı ek parametreler sunar.
 
-Settings for Outback Challenge 2014
-To be compliant with the OBC 2014 rules you should have the following settings:
+Anahtar parametreler:
+
+- **AFS_TERM_PIN**: Sonlandırma başlatıldığında high voltaja ayarlanan dijital pindir. [AFS_TERM_ACTION]() parametresi 42 olarak ayarlanmamış olsa bile, bu pinin sonlandırma sırasında high olacağını unutmayın.
+
+- **AFS_HB_PIN**: Failsafe sistemi tarafından 10Hz hızında değiştirilen pin için dijital pin numarasıdır. Sonlandırma meydana gelirse ve bir AFS_TERM_PIN değeri ayarlanmamışsa, heartbeat pini geçişi durduracaktır.
+
+- **AFS_MAN_PIN**: Uçak MANUEL moddayken high olan pin için dijital pin numarasıdır. Manuel modu algılamak ve farklı davranmak bazı harici güvenli olmayan kartlarda yararlı olabilir.
+
+
+## Manuel Sonlandırma
+
+Otomatik sonlandırma dışında, hava taşıtı operatörünün, hava taşıtının insanlar veya diğer hava taşıtları için tehlike oluşturduğunu düşünmeleri durumunda, hava aracını derhal sonlandırabilmesi de önemlidir. Anında sonlandırmaya zorlamak için [AFS_TERMINATION]() parametresini kullanmanız gerekir. Bu parametreyi 1 olarak ayarlayarak uçak derhal sonlandırabilirsiniz.
+
+
+## Örnek AFS Failsafe Görevi
+
+AFS failsafe görevi oluşturmak zaman alır ve çok dikkat edilmesi gerekir. Neyin mümkün olduğunu anlamak için aşağıdaki örnek dosyaları bakmanız yararlı olabilir:
+
+- Dosyada yorumlanmış farklı AFS hataları için waypointler içeren 2014 Outback Challenge için bir [waypoint görevi](https://github.com/tridge/cuav/blob/master/cuav/data/way.txt)
+- 2014 Outback Challenge için bir [coğrafi sınırlandırma dosyası](https://github.com/tridge/cuav/blob/master/cuav/data/fence.txt)
+
+
+## AFS Sistemini SITL’de Test Etme
+
+Gerçek bir uçakta kullanmadan önce SITL simülasyon sistemini kullanarak AFS sistemini kapsamlı bir şekilde test etmeniz önerilir. SIM_ parametrelerini kullanarak tüm uçuş hatalarını simüle edebilirsiniz. Kingaroy'da SITL'i OBC testine hazır hale getirmek için kullanacağınız:
+
+> sim_vehicle.py -L Kingaroy --console --map
+
+SITL’de failsafe testi için anahtar parametreler şunlardır:
+ 
+- Test GPS arızası: SIM_GPS_DISABLE 1 ayarla
+- Test RC arızası: SIM_RC_FAIL 1 ayarla
+- Test iletişim arızası: heartbeat 0 ayarla
+- Test çit arızası: CRUISE moda geç ve sınırın içine uç
+- Test QNH arızası: AFS_AMSL_LIMIT 100 ayarla
+
+
+## AFS Failsafe Kullananlar için Ek İpuçları
+
+Kalkıştan önce coğrafi sınırlandırmanızın etkin olduğundan emin olmalısınız. Önuçuş kontrol listenizin bir parçası olarak yapılabilir veya bir FENCE_CHANNEL ayarlayabilir ve vericinizin içinden etkinleştirebilirsiniz. Bu, vericinizin menzil dışında kalması durumunda çitin etkin kalmasını sağlar.
+ 
+
+## Outback Challenge 2014 için Ayarlar
+ 
+OBC 2014 kurallarına göre aşağıdaki ayarlara sahip olmalısınız:
 
 AFS_ENABLE: 1
 AFS_WP_COMMS: waypoint number for OBC comms hold followed by two minute loiter, then return to airfield home
 AFS_WP_GPS_LOSS: waypoint number to loiter in place for 30 seconds, followed by return to airfield home
 AFS_TERM_ACTION: 42
 AFS_AMSL_LIMIT: 914
-AFS_QNH_PRESSURE: correct QNH pressure for the day
+AFS_QNH_PRESSURE: o gün için uygun QNH basıncı
 AFS_RC_FAIL_MS: 1500
 AFS_MAX_GPS_LOSS: 2
 AFS_MAX_COM_LOSS: 2
