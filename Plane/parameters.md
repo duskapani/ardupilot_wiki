@@ -14,6 +14,7 @@
 > emitter: yayıcı
 > transceiver: alıcı-verici
 > geofence: coğrafi sınırlama
+> attitude: durum
 
 ## ArduPlane Parametreleri
 
@@ -560,9 +561,6 @@ AFS sisteminin çifte kayıp sonlandırma kısmını etkinleştirir. Bu parametr
 
 **`AFS_RC_FAIL_TIME: RC arıza süre`**
 
-
-
-
 RC girişi kaybedilirse failsafe sonlandırmasının manuel modda devreye gireceği saniye cinsinden süre. OBC kuralları için bu (1.5) olmalıdır. Devre dışı bırakmak için 0 kullanın.
 
 |Birim|
@@ -572,63 +570,98 @@ RC girişi kaybedilirse failsafe sonlandırmasının manuel modda devreye girece
 
 ## AHRS_ Parametreleri
 
-**`AHRS_GPS_GAIN: AHRS GPS gain`**
+**`AHRS_GPS_GAIN: AHRS GPS kazancı`**
 
+Uçağın durumunu düzeltmek için GPS'in ne kadar kullanılacağını ifade eder. Uçaklar için hiçbir zaman 0 ayarlanmamalıdır, çünkü bu dönüşte uçağın kontrolü kaybetmesine neden olur. Lütfen 1.0 varsayılan değerini kullanın.
 
+| Değer | Artış |
+|:------:|:-----:|
+|0.0-1.0 | .01   |
 
 **`AHRS_GPS_USE: AHRS use GPS for navigation`**
 
 
 
+| Değer  | Anlamı|
+|:------:|:-----:|
+|0 | Pasif|
+|1 | Etkin|
+
 **`AHRS_YAW_P: Yaw P`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_RP_P: AHRS RP_P`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_WIND_MAX: Maximum wind`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_TRIM_X: AHRS Trim Roll`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_TRIM_Y: AHRS Trim Pitch`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_TRIM_Z: AHRS Trim Yaw`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_ORIENTATION: Board Orientation`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_COMP_BETA: AHRS Velocity Complementary Filter Beta Coefficient`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_GPS_MINSATS: AHRS GPS Minimum satellites`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_EKF_TYPE: Use NavEKF Kalman filter for attitude and position estimation`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_CUSTOM_ROLL: Board orientation roll offset`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_CUSTOM_PIT: Board orientation pitch offset`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
 **`AHRS_CUSTOM_YAW: Board orientation yaw offset`**
 
-
+| Aralık | Birim |
+|:------:|:-----:|
+|0 - 32767	   | metre     |
 
