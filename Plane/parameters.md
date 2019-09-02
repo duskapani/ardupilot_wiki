@@ -780,8 +780,8 @@ Motoru arm etmeden önce kontrol eder. Bu, arm etmeye izin vermeden önce yapıl
 
 
 ## STEER2SRV_ Parametreleri
-> steering angle: direksiyon açısı
-> ground handling: yer taşıması
+> steering angle: direksiyon açısı   
+> ground handling: yer taşıması   
 
 **`STEER2SRV_TCONST: Direksiyon Süre Sabiti`**
 İstenenden erişilen direksiyon açısına saniye cinsinden zaman sabitini kontrol eder. Hava araçlarındaki zemin yönlendirme için küçük değer önerilir, sabit kanatlı hava taşıtlarında en iyi zemin taşıma için 0.5 değeri önerilir. 0.75 değeri, kontrolcünün istenen ve gerçek seyir açısı arasındaki sapmayı 0.75 saniye içinde düzeltmeye çalışacağı anlamına gelir.
@@ -816,7 +816,6 @@ Direksiyon için oransal kazanç. Düşük hızda ve maksimum direksiyon açıs�
 
 
 **`STEER2SRV_DRTMIN: Minimum angle of whe`**
-Direksiyon
 
 
 # TECS_ Parametreleri
