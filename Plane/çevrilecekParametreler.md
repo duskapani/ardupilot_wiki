@@ -93,31 +93,7 @@ ADSB_SQUAWK: Squawk code
 
 # AHRS_ Parameters
 
-AHRS_GPS_GAIN: AHRS GPS gain  
-AHRS_GPS_USE: AHRS use GPS for navigation  
-AHRS_YAW_P: Yaw P  
-AHRS_RP_P: AHRS RP_P  
-AHRS_WIND_MAX: Maximum wind  
-AHRS_TRIM_X: AHRS Trim Roll  
-AHRS_TRIM_Y: AHRS Trim Pitch  
-AHRS_TRIM_Z: AHRS Trim Yaw  
-AHRS_ORIENTATION: Board Orientation  
-AHRS_COMP_BETA: AHRS Velocity Complementary Filter Beta Coefficient  
-AHRS_GPS_MINSATS: AHRS GPS Minimum satellites  
-AHRS_EKF_TYPE: Use NavEKF Kalman filter for attitude and position estimation  
-AHRS_CUSTOM_ROLL: Board orientation roll offset  
-AHRS_CUSTOM_PIT: Board orientation pitch offset  
-AHRS_CUSTOM_YAW: Board orientation yaw offset  
-
-
 # ARMING_ Parameters
-
-ARMING_REQUIRE: Require Arming Motors  
-ARMING_ACCTHRESH: Accelerometer error threshold  
-ARMING_RUDDER: Arming with Rudder enable/disable  
-ARMING_MIS_ITEMS: Required mission items  
-ARMING_CHECK: Arm Checks to Peform (bitmask)  
-
 
 # ARSPD Parameters
 
