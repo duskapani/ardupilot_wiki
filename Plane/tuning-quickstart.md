@@ -34,7 +34,7 @@ Uçağın kontrol yüzeyine uygulanan son kontrol, üç kazanç değerinin etkil
 
 - Oransal kazanç (P) en basit kontrol formudur, "mevcut" hatadır. Otopilot 10 derecelik pitch istiyor, 5 dereceye sahip, yani 5 derece hata: bir miktar elevator uygula (hata miktarı için uygulanan miktar P numarası tarafından belirlenir -ölçeklenir-.
 - İntegral kazanç (I) önceki hataları dikkate alır ve istikrarlı hataları telafi edebilir. Otomatik trim ayarı olarak düşünülebilir. "I" kazancının dezavantajı, her zaman geçmiş hatalara tepki göstermesi nedeniyle, her zaman "yakalamaya" çalıştığı için kontrol döngüsünü sönümünü azaltır.
-- Türev kazancı (D) açının değişme oranını geri beslediği için sönüm ekler. Ayrıca, açıdaki gelecekteki değişiklikleri tahimn etmeye çalışmak olarak da düşünülebilir. "D" kazancının dezavantajı, servoyu kullanan gürültü miktarını arttırmasıdır ve çok yüksek olursa, bazı durumşarda uçağa zarar verebilecek hızlı pitch veya roll salınımına neden olur.
+- Türev kazancı (D) açının değişme oranını geri beslediği için sönüm ekler. Ayrıca, açıdaki gelecekteki değişiklikleri tahimn etmeye çalışmak olarak da düşünülebilir. "D" kazancının dezavantajı, servoyu kullanan gürültü miktarını arttırmasıdır ve çok yüksek olursa, bazı durumlarda uçağa zarar verebilecek hızlı pitch veya roll salınımına neden olur.
 
 
 P, PI veya PID değerlerinin ayarlanması, istenen attitude (pitch, hız, rulman, her neyse) ile gerçek davranış arasında gözlenen hatanın, aşırı salınım olmadan ne kadar çabuk bir şekilde iptal edilebileceğini iyileştirebilir.
