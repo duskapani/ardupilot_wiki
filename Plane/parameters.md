@@ -734,3 +734,47 @@ Otopilot montaj pozisyonu yaw offseti. Pozitif değerler = sağ yaw, negatif de�
 |:-------:|:-----:|:-----:|
 |-180 - 180	| 1     | derece|
 
+
+## ARMING_ Parametreleri
+
+**`ARMING_REQUIRE: Motor arm etme gereksinimi`**
+Gereksinimler yerine getirilinceye kadar arm etme devre dışı. 0 ise herhangi gereksinim yok (anında arm). 1 ise, motorları çalıştırmadan önce rudder stick veya YKİ arm etme gerektirir ve devre dışı bırakıldığındaa mininum gaz PWM değerini throttle kanalına gönderir. 2 ise, rudder çubuğu veya YKİ arm etme gerektirir ve devre dışı bırakıldığında throttle kanalına 0 PWM gönderir. Arm etmeden önce hangi kontrollerin yapıldığını görmek için ARMING_CHECK_* parametrelerine bakın. Bu parametrenin 0 olarak ayarlanması durumunda, uçağı arm etmek için yeniden başlatma gerektirir. Ayrıca, bu parametre 0 olduğunda, ARMING_CHECK parametresi sıfır değilse, ön arm kontrol arızası nedeniyle uçak throttle arm ederken önyüklemede başarısız olabilir.
+
+| Değer | Anlamı |
+|:------:|:-----:|
+|0	   | Devre dışı    |
+|1	   | Disarm edildiğinde THR_MIN PWM     |
+|2    | Disarm edildiğinde 0 PWM     |
+
+**`ARMING_ACCTHRESH: İvmeölçer hata eşiği`**
+Tutarsız ivmeölçer belirlemek için kullanılan ivmeölçer eşiği. Donanım hatası veya kalibrasyon hatasını tespit etmek için bu hata aralığını diğer ivmeölçerlerle karşılaştırır. Düşük değer, daha sıkı kontrol ve arm kontrolünden geçişin zorlaşması demektir. Tüm ivmeölçerler eşit yaratılmamıştır.
+
+| Aralık | Birim |
+|:------:|:-----:|
+|0.25-3.0| m/s2  |
+
+**`ARMING_RUDDER: Rudder ile arm etme etkinleştirme/devre dışı bırakma`**
+Rudder girişiyle arm/disarm'a izin verir. Etkinleştirildiğinde, sağ rudder ile arm yapılabilir, sol rudder ile disarm yapılabilir. Rudder ile arm etme sadece throttle sıfır +- deadzone(RCx_DZ) konumunda olan manuel throttle modlarında çalışır. 
+
+| Değer  | Anlamı |
+|:------:|:-----:|
+|0| Devre Dışı  |
+|1| Sadece Arm  |
+|2| Arm veya Disarm  |
+
+**`ARMING_MIS_ITEMS: Gerekli görev öğeleri`**
+Hava aracını arm etmek için planlanması gereken görev öğelerinin bit maskesi.
+
+| Değer  | Anlamı |
+|:------:|:-----:|
+|0| Land  |
+|1| VTOL Land  |
+|2| DO_LAND_START  |
+|3| Takeoff  |
+|4| VTOL Takeoff  |
+|5| Rallypoint  |
+
+
+**`ARMING_CHECK: Gerçekleştirilmesi gereken arm kontrolleri (bitmask)`**
+Motoru arm etmeden önce kontrol eder. Bu, arm etmeye izin vermeden önce yapılacak olan kontrollerin bitmaskesidir. Varsayılan ayarda kontrol edilmez ve herhangi bir zamanda devreye alınmasına izin verir. Bu parametreyi ayarlamak için her bir kontrol tipinin değerlerini bir araya getirerek tercih ettiğiniz kontrolleri seçebilirsiniz. Örneğin, sadece GPS kilidiniz varsa ve RC failsafe değilse, ARMING_CHECK değerini 72 olarak ayarlamalısınız. Tüm kontrolleri etkinleştirmek için 1 olarak ayarlamanız önerilir.
+
