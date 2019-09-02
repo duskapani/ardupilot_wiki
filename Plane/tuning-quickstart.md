@@ -38,4 +38,4 @@ Uçağın kontrol yüzeyine uygulanan son kontrol, üç kazanç değerinin etkil
 
 
 P, PI veya PID değerlerinin ayarlanması, istenen attitude (pitch, hız, rulman, her neyse) ile gerçek davranış arasında gözlenen hatanın, aşırı salınım olmadan ne kadar çabuk bir şekilde iptal edilebileceğini iyileştirebilir.
--
+
