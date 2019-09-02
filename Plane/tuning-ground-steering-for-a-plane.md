@@ -70,7 +70,7 @@ Zemin direksiyonunu otomatik kalkış için ayarlamak üzere FBWA modunda ayar y
 
 FBWA modundayken oto kalkışta kullanılanla aynı otomatik elevator davranışını ayarlamak için FBWA_TDRAG_CHAN seçeneğini kullanmak da çok yararlı olabilir. Bu, taildragger uçakta kuyruk tekerleğini (tricycle da ise burun tekerleğini) zeminde tutmaya yardımcı olur.
 
-## Kanatta 
+## Limiting the steering to prevent a roll on a wing 
 
 
 * __DRTSPD__ - bu hızdan sonra direksiyon açısı azalır.
