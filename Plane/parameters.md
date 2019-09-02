@@ -578,9 +578,9 @@ Uçağın durumunu düzeltmek için GPS'in ne kadar kullanılacağını ifade ed
 |:------:|:-----:|
 |0.0-1.0 | .01   |
 
-**`AHRS_GPS_USE: AHRS use GPS for navigation`**
+**`AHRS_GPS_USE: AHRS seyrüsefer için GPS kullanma`**
 
-
+Bu, konum tahmini veya GPS tabanlı seyrüsefer kullanılıp kullanılmayacağını kontrol eder. 0'a ayarlanırsa, GPS seyrüsefer için kullanılmaz ve sadece konum tahmini kullanılır. Normal uçuş için hiçbir zaman sıfır değeri kullanılmamalıdır. Şu anda bu sadece DCM-tabanlı AHRS'yi etkiler: EKF, mümkün olduğunda GPS kullanır.
 
 | Değer  | Anlamı|
 |:------:|:-----:|
@@ -589,79 +589,148 @@ Uçağın durumunu düzeltmek için GPS'in ne kadar kullanılacağını ifade ed
 
 **`AHRS_YAW_P: Yaw P`**
 
-| Aralık | Birim |
+GPS veya pusulanın burun yönü üzerindeki etkisini kontrol eder. Daha yüksek bir değer, rotanın yaw kaynağını (GPS veya pusula) daha hızlı takip edeceği anlamına gelir.
+
+| Aralık | Artış |
 |:------:|:-----:|
-|0 - 32767	   | metre     |
+|0.1 - 0.4	   | .01     |
 
 **`AHRS_RP_P: AHRS RP_P`**
 
-| Aralık | Birim |
-|:------:|:-----:|
-|0 - 32767	   | metre     |
+İvmeölçerin attitude'u ne kadar hızlı düzelteceğini kontrol eder.
 
-**`AHRS_WIND_MAX: Maximum wind`**
-
-| Aralık | Birim |
+| Aralık | Artış |
 |:------:|:-----:|
-|0 - 32767	   | metre     |
+|0.1 - 0.4	   | .01     |
+
+**`AHRS_WIND_MAX: Maksimum rüzgar`**
+
+Yer sürati ve hava sürati arasındaki izin verilen maksimum farkı belirler. Uçağın arızalı bir hava sürati sensörü ile idare etmesini sağlar. 0 değeri, hava süratinin olduğu gibi kullanılacağı anlamına gelir.
+
+| Aralık  | Artış | Birim |
+|:-------:|:-----:|:-----:|
+|0 - 127			| 1     | m/s|
 
 **`AHRS_TRIM_X: AHRS Trim Roll`**
 
-| Aralık | Birim |
-|:------:|:-----:|
-|0 - 32767	   | metre     |
+Kontrol kartı ve frame arasındaki roll açısı farkını telafi eder. Pozitif değerler aracın doğru roll yapmasını sağlar.
+
+| Aralık  | Artış | Birim |
+|:-------:|:-----:|:-----:|
+|-0.1745 - +0.1745		| 0.01     | radyan|
 
 **`AHRS_TRIM_Y: AHRS Trim Pitch`**
 
-| Aralık | Birim |
-|:------:|:-----:|
-|0 - 32767	   | metre     |
+Kontrol kartı ve frame arasındaki pitch açısı farkını telafi eder. Pozitif değerler aracın yukarı/aşağı pitch yapmasını sağlar.
+
+| Aralık  | Artış | Birim |
+|:-------:|:-----:|:-----:|
+|-0.1745 - +0.1745		| 0.01     | radyan|
 
 **`AHRS_TRIM_Z: AHRS Trim Yaw`**
 
-| Aralık | Birim |
+---
+
+| Aralık  | Artış | Birim |
+|:-------:|:-----:|:-----:|
+|-0.1745 - +0.1745		| 0.01     | radyan|
+
+  **`AHRS_ORIENTATION: kart oryantasyonu`**
+
+Kart tipi için oryantasyonu açısı. Kartın aracınızda 90 veya 45 derecelik bir açıyla yönelmesini sağlamak için IMU ve pusula okumalarını çevirir. Bu seçenek bir sonraki başlangıçta etkili olur. Değiştirdikten sonra aracınızı re-level etmeniz gerekecektir.
+
+| Değer | Anlamı |
 |:------:|:-----:|
-|0 - 32767	   | metre     |
+|0	|Yok|
+|1	|Yaw45|
+|2	|Yaw90|
+|3	|Yaw135|
+|4	|Yaw180|
+|5	|Yaw225|
+|6	|Yaw270|
+|7	|Yaw315|
+|8	|Roll180|
+|9	|Roll180Yaw45|
+|10	|Roll180Yaw90|
+|11	|Roll180Yaw135|
+|12	|Pitch180|
+|13	|Roll180Yaw225|
+|14	|Roll180Yaw270|
+|15	|Roll180Yaw315|
+|16	|Roll90|
+|17	|Roll90Yaw45|
+|18	|Roll90Yaw90|
+|19	|Roll90Yaw135|
+|20	|Roll270|
+|21	|Roll270Yaw45|
+|22	|Roll270Yaw90|
+|23	|Roll270Yaw135|
+|24	|Pitch90|
+|25	|Pitch270|
+|26	|Pitch180Yaw90|
+|27	|Pitch180Yaw270|
+|28	|Roll90Pitch90|
+|29	|Roll180Pitch90|
+|30	|Roll270Pitch90|
+|31	|Roll90Pitch180|
+|32	|Roll270Pitch180|
+|33	|Roll90Pitch270|
+|34	|Roll180Pitch270|
+|35	|Roll270Pitch270|
+|36	|Roll90Pitch180Yaw90|
+|37	|Roll90Yaw270|
+|38	|Yaw293Pitch68Roll180|
+|39	|Pitch315|
+|40	|Roll90Pitch315|
+|100	|Özel|
 
-**`AHRS_ORIENTATION: Board Orientation`**
+**`AHRS_COMP_BETA: AHRS hız tamamlayıcı filtre beta katsayısı`**
 
-| Aralık | Birim |
+AHRS'yi (hava sürati ve burun yönü) sigortalamak için kullanılan geçiş frekansı ve yer hızını tahmin etmek üzere GPS verileri için zaman sabitini kontrol eder. Zaman sabiti 0.1/beta'dır. Daha büyük bir zaman sabiti daha az GPS verisi kullanır, küçük zaman sabiti ise daha az hava verisi kullanır.
+
+| Aralık | Artış |
 |:------:|:-----:|
-|0 - 32767	   | metre     |
+|0.001 - 0.5	   | .01     |
 
-**`AHRS_COMP_BETA: AHRS Velocity Complementary Filter Beta Coefficient`**
+**`AHRS_GPS_MINSATS: AHRS GPS minimum uydu`**
 
-| Aralık | Birim |
+Hız temelli attitude düzeltmesi için GPS kullanmak üzere görünür minimum uydu sayısı. Bu, varsayılan değer olarak 6'dır; GPS'den gelen hız sayılarının, ivmeölçerlerin doğruluğunun düzeltilmesi için fazla güvenilmez hale geldiği nokta ile ilgilidir.
+
+| Aralık | Artış |
 |:------:|:-----:|
-|0 - 32767	   | metre     |
+|0 - 10	   | 1     |
 
-**`AHRS_GPS_MINSATS: AHRS GPS Minimum satellites`**
+**`AHRS_EKF_TYPE: durum ve konum tahmini için NavEKF Kalman filtresi kullan`**
 
-| Aralık | Birim |
+Hangi NavEKF Kalman filtre versiyonunun durum ve pozisyon tahmini için kullanıldığını kontrol eder.
+
+| Değer | Anlamı |
 |:------:|:-----:|
-|0 - 32767	   | metre     |
+|0 | Pasif     |
+|1 | EKF2 etkin     |
+|2 | EKF3 etkin     |
 
-**`AHRS_EKF_TYPE: Use NavEKF Kalman filter for attitude and position estimation`**
+**`AHRS_CUSTOM_ROLL: Kart oryantasyonu roll offseti`**
+Otopilot montaj pozisyonu roll offseti. Pozitif değerler = sağ roll, negatif değerler = sol roll. Bu parametre yalnızca AHRS_ORIENTATION, CUSTOM olarak ayarlandığında kullanılır.
 
-| Aralık | Birim |
-|:------:|:-----:|
-|0 - 32767	   | metre     |
 
-**`AHRS_CUSTOM_ROLL: Board orientation roll offset`**
+| Aralık  | Artış | Birim |
+|:-------:|:-----:|:-----:|
+|-180 - 180	| 1     | derece|
 
-| Aralık | Birim |
-|:------:|:-----:|
-|0 - 32767	   | metre     |
+**`AHRS_CUSTOM_PIT: Kart oryantasyonu pitch offseti`**
 
-**`AHRS_CUSTOM_PIT: Board orientation pitch offset`**
+Otopilot montaj pozisyonu pitch offseti. Pozitif değerler = yukarı pitch, negatif değerler = aşağı pitch. Bu parametre yalnızca AHRS_ORIENTATION, CUSTOM olarak ayarlandığında kullanılır.
 
-| Aralık | Birim |
-|:------:|:-----:|
-|0 - 32767	   | metre     |
+| Aralık  | Artış | Birim |
+|:-------:|:-----:|:-----:|
+|-180 - 180	| 1     | derece|
 
-**`AHRS_CUSTOM_YAW: Board orientation yaw offset`**
+**`AHRS_CUSTOM_YAW: Kart oryantasyonu yaw offseti`**
 
-| Aralık | Birim |
-|:------:|:-----:|
-|0 - 32767	   | metre     |
+Otopilot montaj pozisyonu yaw offseti. Pozitif değerler = sağ yaw, negatif değerler = sol yaw. Bu parametre yalnızca AHRS_ORIENTATION, CUSTOM olarak ayarlandığında kullanılır.
+
+| Aralık  | Artış | Birim |
+|:-------:|:-----:|:-----:|
+|-180 - 180	| 1     | derece|
 
