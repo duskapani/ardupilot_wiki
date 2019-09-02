@@ -72,6 +72,7 @@ FBWA modundayken oto kalkışta kullanılanla aynı otomatik elevator davranış
 
 ## Limiting the steering to prevent a roll on a wing 
 
+~On a large fast planes, especially with large wingspan, there is a chance on rolling on the wing if the steering is too aggressive. To coupe with this problem steering limiting can be setup that will derate steering angles with increasing speed. When the speed is lower than the set derating speed, no limit occurs and the angle for steering is passed through without changes. When the speed increase, the steering angle starts to decrease at a setup rate until the minimum steering angle is reached.~
 
 * __DRTSPD__ - bu hızdan sonra direksiyon açısı azalır.
 * __DRTFCT__ - her bir m/s hız artışı başına azaltılacak derece miktarı
