@@ -32,8 +32,22 @@ Coğrafi çit oluşturmak için birkaç şey yapılandırmanız gerekir:
 6. sınırlandırmayı otokalkıştan sonra otomatik olarak etkinleştirecek ve otoiniş sonrası otomatik olarak devre dışı bırakacak şekilde yapılandırmak istediğinizde isteğe bağlı bir ayar (FENCE_AUTOENABLE)
 7. sınır ihlali sırasında kontrolün nasıl geri alınacağı
 
-Çit sınırızı oluştururken uymanız gereken birkaç kural vardır:
+Çit sınırınızı oluştururken uymanız gereken birkaç kural vardır:
 
-1.
-2.
-3.
+1. dönüş noktası çit sınırı içerisinde olmalı
+2. çit sınırı tamamen kapalı olmalı. yani 4 noktanın ilk ve son noktası aynı yerde olmalı.
+3. sınır içerisinde en fazla 18 nokta olabilir.
+
+Çitinizi oluştururken uçağınızın çite çarptığında momentum göstereceğini ve dönüş noktasına geri dönmesinin zaman alacağını unutmayın.
+SkyWalker gibi bir uçak için uçmak istediğiniz gerçek sınırın içinde yaklaşık 30 metre ek güvenlik yapı öneririz. Aynısı irtifa içinde geçerli.
+
+Çit sınırından ayrı olarak, aşağıdaki MAVLink parametreleri coğrafi sınırlandırma davranışını kontrol eder:
+1. FENCE_ACTION - çit ihlalinde yapmak için eylem. Varsayılan olarak coğrafi sınırlandırmayı devre dışı bırakan 0 ayarlanır. Coğrafi sınır özelliğini etkinleştirmek için 1 olarak ayarlayın ve sınır ihlali durumunda dönüş noktasına uçun. YKİ'ye ihlali bildirmek için 2 olarak ayarlayın, ancak başka işlem yapma. Uçağın başının ihlal noktasından dönüş noktasına gelmesi için 3 e ayarlayın, ancak pilot bu durumda manuel gaz kontrolü sağlayacaktır.
+2. FENCE_MINALT  - metre cinsinden minimum irtifa. Eğer bu 0 ise, minimum irtifa olmayacak.
+3. FENCE_MAXALT  - metre cinsinden maksimum irtifa. Eğer bu 0 ise, maksimum irtifa olmayacak.
+4. FENCE_CHANNEL - coğrafi sınırı etkinleştirmek için RC giriş kanalı. Bu, coğrafi çitleri devre dışı bırakan varsayılan olarak 0 ayarlanır. Vericinizdeki iki konum anahtarına bağlı yedek bir RC giriş kanalına ayarlamanız gerekir. Bu kanal 1750 PWM değerinin üzerinde çıktığında çit etkin olacaktır. Eğer vericiniz destekliyorsa, bu kanal etkin olduğunda sesli geri bildirimi etkinleştirmekde iyi bir fikirdir.
+5. FENCE_TOTAL - çitinizin içindeki nokta sayısı (geri dönüş noktası artı kapalı sınır). Çit oluştururken planlayıcı tarafından sizin için ayarlanmalıdır. 
+6. FENCE_RETALT - dönüş noktasına uçarken ve dönüş noktasında loiter yaparken uçağın uçacağı irtifa (metre cinsinden). FENCE_RET_RALLY 1 olarak ayarlandığında, bu parametrenin yok sayıldığını ve bunun yerine en yakın Rally noktasının loiter irtifasının kullanıldığını unutmayın. Bu parametre 0 ise ve FENCE_RET_RALLY de 0 ise, FENCE_MAXALT ve FENCE_MINALT parametrelerinin orta noktası dönüş yüksekliği olarak kullanılır.
+7. FENCE_AUTOENABLE - 1 ayarlanırsa, uçak çit devre dışı bırakılmış olarak açılır. Otokalkış tamamlandıktan sonra çit otomatik devreye girer. Oto iniş noktasına gelince çit otomatik olarak devre dışı kalır.
+8. FENCE_RET_RALLY - 1 olarak ayarlanırsa, çite çarptığı zaman çit dönüş noktası yerine en yakın Rally noktasına gidecektir. Rally noktasının loiter irtifasının dönüş rakımı olarak kullanıldığına dikkat edin.
+
