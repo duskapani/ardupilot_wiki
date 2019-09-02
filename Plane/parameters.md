@@ -778,3 +778,108 @@ Hava aracını arm etmek için planlanması gereken görev öğelerinin bit mask
 **`ARMING_CHECK: Gerçekleştirilmesi gereken arm kontrolleri (bitmask)`**
 Motoru arm etmeden önce kontrol eder. Bu, arm etmeye izin vermeden önce yapılacak olan kontrollerin bitmaskesidir. Varsayılan ayarda kontrol edilmez ve herhangi bir zamanda devreye alınmasına izin verir. Bu parametreyi ayarlamak için her bir kontrol tipinin değerlerini bir araya getirerek tercih ettiğiniz kontrolleri seçebilirsiniz. Örneğin, sadece GPS kilidiniz varsa ve RC failsafe değilse, ARMING_CHECK değerini 72 olarak ayarlamalısınız. Tüm kontrolleri etkinleştirmek için 1 olarak ayarlamanız önerilir.
 
+
+## STEER2SRV_ Parametreleri
+> steering angle: direksiyon açısı
+> ground handling: yer taşıması
+
+**`STEER2SRV_TCONST: Direksiyon Süre Sabiti`**
+İstenenden erişilen direksiyon açısına saniye cinsinden zaman sabitini kontrol eder. Hava araçlarındaki zemin yönlendirme için küçük değer önerilir, sabit kanatlı hava taşıtlarında en iyi zemin taşıma için 0.5 değeri önerilir. 0.75 değeri, kontrolcünün istenen ve gerçek seyir açısı arasındaki sapmayı 0.75 saniye içinde düzeltmeye çalışacağı anlamına gelir.
+
+| Aralık  | Artış | Birim |
+|:-------:|:-----:|:-----:|
+|0.4 - 1.0		| 0.1     | saniye|
+
+**`STEER2SRV_P: Direksiyon dönüş kazancı`**
+Direksiyon için oransal kazanç. Düşük hızda ve maksimum direksiyon açısında aracın dönüş dairesinin çapına yaklaşık olarak eşit olmalıdır.
+
+| Aralık  | Artış |
+|:-------:|:-----:|
+|0.1 - 10.0		| 0.1     |
+
+**`STEER2SRV_D: Sönüm kazancı`**
+
+
+**`STEER2SRV_IMAX: Integrator limit`**
+
+
+**`STEER2SRV_MINSPD: Minimum speed`**
+
+
+**`STEER2SRV_FF: Steering feed forward`**
+
+
+**`STEER2SRV_DRTSPD: Derating speed`**
+
+
+**`STEER2SRV_DRTFCT: Derating factor`**
+
+
+**`STEER2SRV_DRTMIN: Minimum angle of whe`**
+Direksiyon
+
+
+# TECS_ Parametreleri
+
+**`TECS_CLMB_MAX: Maksimum tırmanış hızı (metre/saniye)`**
+Talep edilen maksimum tırmanma oranı. Batarya düşük voltajda iken, THR_MAX'ta TRIM_ARSPD_CM'de tırmanma hızından daha yükseğe ayar yapmayın. Hava sürati yükselişte muhafaa edilemiyorsa değeri azaltın. Throttle yükselmek için önemli ölçüde artmıyorsa değeri arttırın.
+
+| Aralık  | Artış |
+|:-------:|:-----:|
+|0.1 - 20.0		| 0.1     |
+
+**`TECS_SINK_MIN: Minimum alçalma hızı (metre/saniye)`**
+THR_MIN ve TRIM_ARSPD_CM'de iken minimum alçalma hızı.
+
+| Aralık  | Artış |
+|:-------:|:-----:|
+|0.1 - 10.0		| 0.1     |
+
+**`TECS_TIME_CONST: Kontrolcü zaman sabiti (saniye)`**
+TECS kontrol algoritmasının zaman sabiti. Küçük değerler, daha hızlı irtifa düzeltmeleri yapar, ancak pistten dışarı çıkmaya ve agresif davranışa neden olabilir.
+
+| Aralık  | Artış |
+|:-------:|:-----:|
+|3.0 - 10.0			| 0.2     |
+
+**`TECS_THR_DAMP: Kontrolcü throttle sönümü`**
+Throttle talep döngüsü için sönüm kazancı. Hız ve yüseklik salınımlarını düzeltmek için throttle tepkisini yavaşlatır.
+
+| Aralık  | Artış |
+|:-------:|:-----:|
+|0.1 - 10.0		| 0.1     |
+
+**`TECS_INTEG_GAIN: Controller integrator`**
+Uzun vadeli hız ve yükseklik hatalarını düzeltmek için integratör kazancı.
+
+| Aralık  | Artış |
+|:-------:|:-----:|
+|0.0 - 0.5		| 0.02     |
+
+**`TECS_VERT_ACC: Dikey ivme limiti (metre/saniye^2)`**
+Hız ve yükseklik hatalarını düzeltmek için kullanılan maksimum dikey ivme.
+
+| Aralık  | Artış |
+|:-------:|:-----:|
+|1.0 - 10.0			| 0.5     |
+
+**`TECS_SPD_OMEGA: Speed complementary filter frequency (radians/sec)`**
+**`TECS_RLL2THR: Bank angle compensation gain`**
+**`TECS_SPDWEIGHT: Weighting applied to speed control`**
+**`TECS_PTCH_DAMP: Controller pitch damping`**
+**`TECS_SINK_MAX: Maximum Descent Rate (metres/sec)`**
+**`TECS_LAND_ARSPD: Airspeed during landing approach (m/s)`**
+**`TECS_LAND_THR: Cruise throttle during landing approach (percentage)`**
+**`TECS_LAND_SPDWGT: Weighting applied to speed control during landing.`**
+**`TECS_PITCH_MAX: Maximum pitch in auto flight`**
+**`TECS_PITCH_MIN: Minimum pitch in auto flight`**
+**`TECS_LAND_SINK: Sink rate for final landing stage`**
+**`TECS_LAND_TCONST: Land controller time constant (sec)`**
+**`TECS_LAND_DAMP: Controller sink rate to pitch gain during flare`**
+**`TECS_LAND_PMAX: Maximum pitch during final stage of landing`**
+**`TECS_APPR_SMAX: Sink rate max for landing approach stage`**
+**`TECS_LAND_SRC: Land sink rate change`**
+**`TECS_LAND_TDAMP: Controller throttle damping when landing`**
+**`TECS_LAND_IGAIN: Controller integrator during landing`**
+**`TECS_TKOFF_IGAIN: Controller integrator during takeoff`**
+**`TECS_LAND_PDAMP: Pitch damping gain when landing`**
