@@ -1,8 +1,8 @@
-# Tuning QuickStart
+# HIZLI BAŞLANGIÇ AYARLAMA
 
 Bu makale, uçak gövdesini ayarlamaya başlamanıza yardımcı olacak bilgiler sağlar. Ana adımlara, araçlara ve kavramlara genel bir bakış içerir.
 
-## How to tune the airframe
+## Uçak Gövdesi Nasıl Ayarlanır
 
 Plane varsayılan PID ayarlarıyla, hafif RC uçak gövdelerinin (tam boyutlu değil, çoğunu güvenle uçuracaktır. İyi uçmak için, sık sık navigasyon ve rüzgarda güvenilir performans ile otopilotunuzu ayarlamak isteyeceksiniz.
 
@@ -14,7 +14,7 @@ Roll, Pitch (ve isteğe bağlı olarak Yaw) ayarladıktan sonra, [TECS ayarlama 
 
 Uçağın diğer yönlerinin nasıl ayarlanacağına ilişkin bilgiler [Ayarlama başlangıç sayfasına](http://ardupilot.org/plane/docs/common-tuning.html#common-tuning) linklenmiştir.
 
-## Mission Planner konfigürasyon ekranı
+## Mission Planner Konfigürasyon Ekranı
 
 Mission Planner, tüm konfigürasyon ve ayarlama parametrelerine CONFIG / TUNING bölümünden erişim sağlar. Soldaki sütun tam parametre setine bağlanır. Sağdaki ekran, daha sık değiştirilen parametrelerin bazılarını (tümünü değil) listeler. Parametre değişikliğini yapmak için her iki tarafı da kullanabilirsiniz. Parametre güncellemeleri, “write params” tuşuna basar basmaz bağlı karta gönderilir, çoğu mevcut uçuşu (varsa) hemen etkiler ve kalıcı hafizaya yazılır, böylece güç döngüsünden kurtulurlar.
 
@@ -25,3 +25,17 @@ Uçağı ayarlamak için başlangıç noktası, yukarıda gösterilen Uçak PID 
 Ayrıca, Advanced Parameters ekranından yapılandırma dosyalarını (bilgisayarınıza) kaydedebilir ve ordan yükleyebilirsiniz. Konfigürasyon dosyaları versiyonlanmıştır - eğer parametre versiyon numarası güncel değilse, Uçak tarafından bulunan daha eski parametre dosyası yoksayılır.
 
 Bu parametrelerden birkaçının bir sonraki bölümde açıklanan PID (Proportional, Integral, Differantial) ayarları olduğunu unutmayın.
+
+## PID kazanç değerleri
+
+Roll veya pitch açısının kontrolü, [Oransal-İntegral-Türev (PID) Kontrolör](https://en.wikipedia.org/wiki/PID_controller) kullanılarak ayarlanır. 
+
+Uçağın kontrol yüzeyine uygulanan son kontrol, üç kazanç değerinin etkilerinin birleşimidir:
+
+- Oransal kazanç (P) en basit kontrol formudur, "mevcut" hatadır. Otopilot 10 derecelik pitch istiyor, 5 dereceye sahip, yani 5 derece hata: bir miktar elevator uygula (hata miktarı için uygulanan miktar P numarası tarafından belirlenir -ölçeklenir-.
+- İntegral kazanç (I) önceki hataları dikkate alır ve istikrarlı hataları telafi edebilir. Otomatik trim ayarı olarak düşünülebilir. "I" kazancının dezavantajı, her zaman geçmiş hatalara tepki göstermesi nedeniyle, her zaman "yakalamaya" çalıştığı için kontrol döngüsünü sönümünü azaltır.
+- Türev kazancı (D) açının değişme oranını geri beslediği için sönüm ekler. Ayrıca, açıdaki gelecekteki değişiklikleri tahimn etmeye çalışmak olarak da düşünülebilir. "D" kazancının dezavantajı, servoyu kullanan gürültü miktarını arttırmasıdır ve çok yüksek olursa, bazı durumşarda uçağa zarar verebilecek hızlı pitch veya roll salınımına neden olur.
+
+
+P, PI veya PID değerlerinin ayarlanması, istenen attitude (pitch, hız, rulman, her neyse) ile gerçek davranış arasında gözlenen hatanın, aşırı salınım olmadan ne kadar çabuk bir şekilde iptal edilebileceğini iyileştirebilir.
+-
