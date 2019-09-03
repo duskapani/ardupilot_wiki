@@ -88,4 +88,5 @@ Tam otonom uçmuyorsanız kalkışta ve inişte coğrafi sınırlandırmayı dev
 
 SkyWalker ile coğrafi sınırlandırmayla uçarken uçağın izleri. Beyaz çizgiler çit sınırını gösterir, dönüş noktasını ortada görebilirsiniz.
 
-![](resimler\geofence-CMAC1.jpg)
+![](resimler/geofence-CMAC1.jpg)
+
