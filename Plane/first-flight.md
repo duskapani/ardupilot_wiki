@@ -61,3 +61,5 @@ Uçağınız FBWA'da uçarken bir yere dönme eğiliminde olduğunu ve/veya veri
 ![](http://ardupilot.org/plane/_images/CheckFBWADemands.jpg)
 
 Sıfır iseler, düz ve dengeli uçarken otopilot kartı ve uçak durumu arasındaki açı farkı için <mark>AHRS_TRIM_X</mark> (roll) ve <mark>AHRS_TRIM_Y</mark> (pitch) ayarlamanız gerekir. Bunlar için __CONFIG/TUNING | Full Parameter List__ gidin ve parametreleri aşağıdaki ekran görüntüsünde gösterildiği gibi ayarlayın.
+
+![](http://ardupilot.org/plane/_images/AdjustRollPitchTrims.png)
