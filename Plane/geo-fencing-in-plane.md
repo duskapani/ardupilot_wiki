@@ -68,4 +68,24 @@ Sınırı belirlemek için tıklamaya devam edin ve poligonu görün. Ayarlamak 
 Bittiğinde coğrafi sınırlandırmayı yükleyin.
 ![](resimler/MPRightClickGeofenceUpload.jpg)
 
+## Dönüş Noktasının İrtifası
 
+FENCE_RET_RALLY parametresini 1 olarak ayarlarsanız, dönüş yüksekliği __en yakın Rally noktasının loiter yüksekliği ile aynı__ olacaktır. FENCE_RET_RALLY 0 olarak ayarlanmışsa, dönüş yüksekliğini FENCE_RETALT parametresiyle ev konumunun üzerinde metre cinsinden ayarlayabilirsiniz.
+
+Eğer ayarlamazsanız FENCE_MINALT ve FENCE_MAXALT fonk. 0 dan farklı bir değere ayarlanmışsa irtifa bunların tam arasında olacaktır.
+
+FENCE_MINALT ve FENCE_MAXALT ayarını yapmazsanız (örn. sıfırda bırakırsanız), dönüş noktası yüksekliği, RTL modu için de kullanılan ALT_HOLD_RTL parametresi tarafından verilir. ALT_HOLD_RTL'nin santimetre cinsinden olduğunu, FENCE_MINALT ve FENCE_MAXALT'ın metre cinsinden olduğunu unutmayın.
+
+Uçuş kurallarınız maksimum irtifayı belirtmiyorsa, en fazla 122 metre ayarlamanızı öneririz.
+
+FENCE_MINALT 30 metreye ve FENCE_MAXALT 122 metreye ayarlıyken, dönüş noktası 76 metrede olacak ve bu da başka bir noktaya gitmeye hazırlanırken uçağın loiter yapması için oldukça iyi bir irtifa.
+
+## Coğrafi Sınırlandırma ile Uçmanın Püf Noktaları
+
+Tam otonom uçmuyorsanız kalkışta ve inişte coğrafi sınırlandırmayı devre dışı bırakın. Bu uçağın düzgün uçmasını engeller.
+
+## Örnek Uçuş
+
+SkyWalker ile coğrafi sınırlandırmayla uçarken uçağın izleri. Beyaz çizgiler çit sınırını gösterir, dönüş noktasını ortada görebilirsiniz.
+
+![](resimler\geofence-CMAC1.jpg)
