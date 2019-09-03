@@ -4,30 +4,30 @@ Bu makale, ana LED'in renklerinin ve flaş sıralamasının nasıl yorumlanacağ
 
 ## LEDlerin Anlamları
 
-_Yanıp sönen kırmızı ve mavi: Jiroskopun kullanıma hazırlanması. Sensörler değerleri alırken aracı sabit ve düz tutun.
+__Yanıp sönen kırmızı ve mavi__: Jiroskopun kullanıma hazırlanması. Sensörler değerleri alırken aracı sabit ve düz tutun.
 
-_Yanıp sönen mavi: Disarm edildi, GPS kilidi bulunamadı. Otopilot, loiter ve rtl modları GPS kilidi gerektirir.
+__Yanıp sönen mavi__: Disarm edildi, GPS kilidi bulunamadı. Otopilot, loiter ve rtl modları GPS kilidi gerektirir.
 
-_Sabit mavi: GPS kilidi yokken arm edildi.
+__Sabit mavi__: GPS kilidi yokken arm edildi.
 
-_Yanıp sönen yeşil: Disarm edildi (arm'a hazır), GPS kilidi kazanıldı. Arm edili durumdan disarm edilirken hızlı çift ton.
+__Yanıp sönen yeşil__: Disarm edildi (arm'a hazır), GPS kilidi kazanıldı. Arm edili durumdan disarm edilirken hızlı çift ton.
 
-_Hızlı yanıp sönen yeşil: Yukarıdakiyle aynı, ancak GPS SBAS kullanıyor (bu nedenle daha iyi konum ahmininde bulunmalı).
+__Hızlı yanıp sönen yeşil__: Yukarıdakiyle aynı, ancak GPS SBAS kullanıyor (bu nedenle daha iyi konum ahmininde bulunmalı).
 
-_Sabit yeşil - arm edilirken uzun tek bir tonla: Arm edildi, GPS kilidi kazanıldı. Uçuşa hazır!
+__Sabit yeşil - arm edilirken uzun tek bir tonla__: Arm edildi, GPS kilidi kazanıldı. Uçuşa hazır!
 
-_Çift yanıp sönen sarı: Arm öncesi kontroller başarısız (sistem arm edilmeyi reddediyor).
+__Çift yanıp sönen sarı__: Arm öncesi kontroller başarısız (sistem arm edilmeyi reddediyor).
 
-_Tek yanıp sönen sarı: Radyo failsafe aktif.
+__Tek yanıp sönen sarı__: Radyo failsafe aktif.
 
-_Yanıp sönen sarı - hızlı bip sesiyle: Batarya failsafe aktif.
+__Yanıp sönen sarı - hızlı bip sesiyle__: Batarya failsafe aktif.
 
-_Yanıp sönen sarı ve mavi - yüksek-yüksek-yüksek-düşük ton dizisiyle:  GPS arızalı veya GPS failsafe aktif.
+__Yanıp sönen sarı ve mavi - yüksek-yüksek-yüksek-düşük ton dizisiyle__:  GPS arızalı veya GPS failsafe aktif.
 
-_Yanıp sönen kırmızı ve sarı - yükselen ton: EKF veya Atalet Nav hatası.
+__Yanıp sönen kırmızı ve sarı - yükselen ton__: EKF veya Atalet Nav hatası.
 
 __Yanıp sönen mor ve sarı__: Barometre arızası.
 
-_Sabit kırmızı_: Hata
+__Sabit kırmızı_: Hata
 
-_Sabit kırmızı - SOS ton dizisiyle_: SD Kart kayıp.
+__Sabit kırmızı - SOS ton dizisiyle_: SD Kart kayıp.
