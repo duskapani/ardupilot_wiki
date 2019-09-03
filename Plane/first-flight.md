@@ -19,7 +19,7 @@ Uçuş kontrol cihazına bağlı bir güvenlik switchi varsa, araç arm edilmede
   
 ### Hava sürati sensörünü (varsa) kalibre edin ve kontrol edin
 Araçta hava sürati sensörü varsa, burada açıklanan uçuş öncesi kontrolleri her uçuştan önce gerçekleştirilmelidir.
-1[](http://ardupilot.org/plane/_images/preflight.jpg)
+![](http://ardupilot.org/plane/_images/preflight.jpg)
 
 ###
 ###
