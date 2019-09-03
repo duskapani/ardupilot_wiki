@@ -65,3 +65,6 @@ Sıfır iseler, düz ve dengeli uçarken otopilot kartı ve uçak durumu arasın
 ![](http://ardupilot.org/plane/_images/AdjustRollPitchTrims.png)
 
 Bu parametreler radyan cinsindendir, bu nedenle başlangıçta 0.01'lik artışlarla ayarlayın. Uçak sola dönerse, AHRS_TRIM_X arttırılmalıdır. Uçak orta gaz ile irtifa kaybederse, AHRS_TRIM_Y artırılmalıdır.
+
+## Uçağı Kalibre Etme ve Çalıştırma
+
