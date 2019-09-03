@@ -9,7 +9,7 @@ __Yanıp sönen mavi__: Disarm edildi, GPS kilidi bulunamadı. Otopilot, loiter 
 __Sabit mavi__: GPS kilidi yokken arm edildi.  
 __Yanıp sönen yeşil__: Disarm edildi (arm'a hazır), GPS kilidi kazanıldı. Arm edili durumdan disarm edilirken hızlı çift ton.  
 __Hızlı yanıp sönen yeşil__: Yukarıdakiyle aynı, ancak GPS SBAS kullanıyor (bu nedenle daha iyi konum ahmininde bulunmalı).  
-__Sabit yeşil - arm edilirken uzun tek bir tonla__: Arm edildi, GPS kilidi kazanıldı. Uçuşa hazır!
+__Sabit yeşil - arm edilirken uzun tek bir tonla__: Arm edildi, GPS kilidi kazanıldı. Uçuşa hazır!  
 __Çift yanıp sönen sarı__: Arm öncesi kontroller başarısız (sistem arm edilmeyi reddediyor).  
 __Tek yanıp sönen sarı__: Radyo failsafe aktif.  
 __Yanıp sönen sarı - hızlı bip sesiyle__: Batarya failsafe aktif.  
