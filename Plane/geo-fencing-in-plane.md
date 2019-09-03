@@ -51,3 +51,21 @@ SkyWalker gibi bir uçak için uçmak istediğiniz gerçek sınırın içinde ya
 7. FENCE_AUTOENABLE - 1 ayarlanırsa, uçak çit devre dışı bırakılmış olarak açılır. Otokalkış tamamlandıktan sonra çit otomatik devreye girer. Oto iniş noktasına gelince çit otomatik olarak devre dışı kalır.
 8. FENCE_RET_RALLY - 1 olarak ayarlanırsa, çite çarptığı zaman çit dönüş noktası yerine en yakın Rally noktasına gidecektir. Rally noktasının loiter irtifasının dönüş rakımı olarak kullanıldığına dikkat edin.
 
+Çite çarptığınızda, uçak GUIDED moduna geçer ve geri dönüş noktasına (veya FENCE_RET_RALLY 1 olarak ayarlanmışsa en yakın Rally notkasına) geri döner. Çit sınırına geri döndüğünde tekrar kontrol altına almak istediğinizi belirtmelisiniz. Bunu 3 şekilde yapabilirsiniz:
+
+1. vericinizdeki APM mod switch kullanarak mod değiştirebilirsiniz, ya da YKİ ile mod değiştirebilirsiniz (örn. GUIDED moddan AUTO moda değiştirme).
+2. FENCE_CHANNEL kanalı kullanılarak coğrafi sınırlandırmayı devre dışı bırakmak ve yeniden etkinleştirmek
+3. RST_SWITCH_CH MAVLink parametresini iki konumlu bir switch kanalına atayın. RST_SWITCH_CH parametresi varsayılan olarak sıfırlanır ve bu devre dışı bırakır. Bir kanala ayarladıysanız, çit ihlalinden sonra kontrolü geri almak için bu kanal switch'ini kullanabilirsiniz.
+
+(RST_SWITCH_CH, son uçuş moduna döndürmek için kullanılacak RC kanalı.)
+
+## Çit Sınırı Ayarlama
+
+Çit sınırını başlatmak istediğiniz yere sağ tıklayın.
+![](resimler/MPRightClickDrawPolygon.jpg)
+Sınırı belirlemek için tıklamaya devam edin ve poligonu görün. Ayarlamak istediğiniz noktaları sürükleyebilirsiniz. Ardından, ihlalden sorna uçağın dönmesini istediğinizi yere haritada sağ tıklayın.
+![](resimler/MPRightClickGeofenceSetRTL.jpg)
+Bittiğinde coğrafi sınırlandırmayı yükleyin.
+![](resimler/MPRightClickGeofenceUpload.jpg)
+
+
