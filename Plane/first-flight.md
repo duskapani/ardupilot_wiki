@@ -66,5 +66,14 @@ Sıfır iseler, düz ve dengeli uçarken otopilot kartı ve uçak durumu arasın
 
 Bu parametreler radyan cinsindendir, bu nedenle başlangıçta 0.01'lik artışlarla ayarlayın. Uçak sola dönerse, AHRS_TRIM_X arttırılmalıdır. Uçak orta gaz ile irtifa kaybederse, AHRS_TRIM_Y artırılmalıdır.
 
-## Uçağı Kalibre Etme ve Çalıştırma
+## Uçağı Arm Etme
+
+Uçağı uçurabilmeniz için önce arm etmeniz gerekir. Bunun iki amacı vardır:
+* pilot uçmaya hazır değilken motorun çalışmasını önler (güvenlik özelliği)
+* otopilot tamamen yapılandırılmadan ve uçmaya hazır olmadan takeoff yapmasını önler
+
+
+Arming'in yaptığı en önemli şey, motoru etkinleştirmektir. Uçak arm edilene kadar motoru çalıştıramazsınız (örneğin, throttle kontrol edemezsiniz). 
+
+NOT: AHRS_EKF_USE etkinse (EKF kullanıyorsanız), etkinleştirme denetimleri 
 
