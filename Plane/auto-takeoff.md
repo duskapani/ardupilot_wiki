@@ -1,5 +1,5 @@
 # OTOMATİK TAKEOFF
-Plane, otomatik kalkış başlatabilir. Aşağıdaki talimatlar ile nasıl yapılacağı öğretilecektir.
+ArduPlane, otomatik kalkış başlatabilir. Aşağıdaki talimatlar ile nasıl yapılacağı öğretilecektir.
 
 ## Temel Talimatlar
 Temel fikir otopilotun throttle ı maksimuma getirmesi ve belirlenen irtifaya ulaşana kadar tırmanmasıdır. Uçağın takeoff yapmasını sağlamak için, görevinize [**NAV_TAKEOFF**]() komutu ekleyin. Bu komutun iki parametresi vardır - miminum pitch ve takeoff irtifası. Minimum pitch takeoff sırasında uçağın ne kadar dik tırmanacağını kontrol eder. Çoğu uçak için 10 ila 15 derece arası bir değer önerilir. Takeoff irtifası, takeoff eksiksiz olduğu kabul edildiğinde evden yüksekliği kontrol eder. Bunun uçağın kalkıştan sonra güvenle dönebileceği kadar yüksek olduğundna emin olun. 40 metre irtifa çoğu uçak için iyidir.
