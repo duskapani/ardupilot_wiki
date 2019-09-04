@@ -35,7 +35,7 @@ Takeoff başladığında, otopilot uçak saniyede [**TKOFF_TDRAG_SPD1**]() metre
 
 [**TKOFF_ROTATE_SPD**]() parametresi, otopilotun zemini terk etmek için ne zaman burnu kaldırmaya (pitch up) çalışacağını kontrol eder. Bunun, uçağın tırmanışı sürdürebileceği bir hız olması gerekir, bu nedenle uçağın stall hızının üstünde, en az 2 m/s tercihen ise daha fazla olmalıdır. Daha yüksek bir değer daha uzun bir takeoff anlamına gelir (ve bu nedenle daha uzun pist gerektirir).
 
-[**TKOFF_THR_SLEW**]() parametresi, takeoff sırasında throttle değişim hızını (saniye olarak yüzde olarak) kontrol eder. Bu, uçağınıza throttle'ı uygun bir hızda arttırmaya izin vermek için kullanılır. 20 değeri (saniyede %20 throtte değişimi) birçok taildragger için iyidir. Tricycle undercarriage uçağı, daha büyük bir throttle değişim hızının üstesinden gelebilir.
+[**TKOFF_THR_SLEW**]() parametresi, takeoff sırasında throttle değişim hızını (saniye başına yüzde olarak) kontrol eder. Bu, uçağınıza throttle'ı uygun bir hızda arttırmaya izin vermek için kullanılır. 20 değeri (saniyede %20 throtte değişimi) birçok taildragger için iyidir. Tricycle undercarriage uçağı, daha büyük bir throttle değişim hızının üstesinden gelebilir.
 
 [**TECS_PITCH_MAX**]() parametresi takeoff sırasında tırmanırken kullanılan maksimum pitch'i kontrol eder. Uçağın tam gazda tırmanmak için kullanabileceği bir değerle sınırlı olduğundan emin olun. 20 derecelik bir değer, çeşitli uçaklar için iyidir.
 
