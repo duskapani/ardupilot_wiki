@@ -2,6 +2,8 @@
 
 Bu makale, Plane'da uçağın güvenli olarak indirilmesini sağlayacak bilgiler içerir.
 
+![](https://discuss.ardupilot.org/uploads/default/original/3X/9/2/920025f45e4e7c64079f6abcce914f5b1e1f6c4f.JPG)
+
 ## Otomatik İniş Yapılandırması
 
 Plane, görev planının bir parçası olarak uçağı otomatik olarak indirebilir.
