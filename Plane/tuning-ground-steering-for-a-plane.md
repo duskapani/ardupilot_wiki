@@ -46,7 +46,7 @@ Bunlar, çoğu UÇAK için size makul davranışlar verecek optimal değerlerdir
 
 ## Adım 2: STEER2SRV_P AYARLANMASI
 
-STEER2SRV_P parametrenizi ayarlamak için uçağınızın dönüş dairesinin çağını ölçmeniz gerekir.
+STEER2SRV_P parametrenizi ayarlamak için uçağınızın dönüş dairesinin çapını ölçmeniz gerekir.
 
 Motor kapalıyken uçağı MANUAL moduna getirin ve rudderi bir tarafa sabitleyin. Ardından uçağınızı yavaşça bir daire şeklinde itin. Bu dairenin çapını ölçmek için bir şerit metre kullanın ve STEER2SRV_P'yi metre cinsinden bu değere ayarlayın. Uçakların çoğu 4 metre çapında bir dönme çapına sahiptir. Dönme çapınız 4'ten uzunsa, oranları ruddera yanlış atmış olabilirsiniz.
 
