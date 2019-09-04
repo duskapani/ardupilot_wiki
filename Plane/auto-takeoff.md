@@ -33,7 +33,7 @@ Bu parametrelere ek olarak, zemin yönlendirme(ground steering) ayarını yapman
 
 Takeoff başladığında, otopilot uçak saniyede [**TKOFF_TDRAG_SPD1**]() metre hıza ulaşana kadar [**TKOFF_TDRAG_ELEV**]() elevator (yüzde olarak) uygulayacak. [**TKOFF_TDRAG_SPD1**]()'i takeoff hızının altındaki bir hıza, ancak uçak dümen kullanarak yönlendirilebileceği hızın üzerinde bir hıza ayarlamanız gerekir. Uçak [**TKOFF_TDRAG_SPD1**]()'e ulaştığında, elevatorü serbest bırakacak ve pitch seviyesini tutmaya çalışmak için normal flight pitch controller kullanacaktır. Bu, taildragger uçakta kuyruğu yükseltme etkisine sahip olacaktır.
 
-[**TKOFF_ROTATE_SPD**]() parametresi, otopilotun zemini terk etmek için ne zaman burnu kaldırmaya (pitch up) çalışacağını kontrol eder. Bunun, uçağın tırmanışı sürdürebileceği bir hız olması gerekir, bu nedenle uçağın durma hızının üstünde, en az 2 m/s tercihen ise daha fazla olmalıdır. Daha yüksek bir değer daha uzun bir takeoff anlamına gelir (ve bu nedenle daha uzun pist gerektirir).
+[**TKOFF_ROTATE_SPD**]() parametresi, otopilotun zemini terk etmek için ne zaman burnu kaldırmaya (pitch up) çalışacağını kontrol eder. Bunun, uçağın tırmanışı sürdürebileceği bir hız olması gerekir, bu nedenle uçağın stall hızının üstünde, en az 2 m/s tercihen ise daha fazla olmalıdır. Daha yüksek bir değer daha uzun bir takeoff anlamına gelir (ve bu nedenle daha uzun pist gerektirir).
 
 [**TKOFF_THR_SLEW**]() parametresi, takeoff sırasında throttle değişim hızını (saniye olarak yüzde olarak) kontrol eder. Bu, uçağınıza throttle'ı uygun bir hızda arttırmaya izin vermek için kullanılır. 20 değeri (saniyede %20 throtte değişimi) birçok taildragger için iyidir. Tricycle undercarriage uçağı, daha büyük bir throttle değişim hızının üstesinden gelebilir.
 
