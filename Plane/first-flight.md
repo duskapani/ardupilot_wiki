@@ -144,7 +144,7 @@ Autotune ile makul roll ve pitch ayar parametrelerini öğrendikten sonra, diğe
 
 Çoğu uçak şekli için gereken parametreler şunlardır:
 
-__NAVL1_PERIOD:__ Varsayılan olarak 25tir, kötü ayarlanmış uçaklarla baş etmek için tasarlanmış aşırıya kaçmayan bir değerdir. Uçağın otomatik modlarda (AUTO, RTL ve LOITER gibi) ne kadar keskin döneceğini kontrol eder. Çoğu uçak çok daha düşük bir değer kullanmalıdır. Başarılı bir roll ve pitch değeri ayarlama işlemini tamamladığınızda, henüz yapmadıysanız NAVL1_PERIOD değerini 18'e düşürmelisiniz. Bu seviyenin ötesine geçmek için AUTO modda dikdörtgen gridde uçurmalı ve uçaktan memnun olduğunuz bir hızda dönene ve uçuş sırasında "wag its tail" olmayıncaya kadar NAVL1_PERIOD'u her seferde 1 düşürmelisiniz.
+__NAVL1_PERIOD:__ Varsayılan olarak 25'tir, kötü ayarlanmış uçaklarla baş etmek için tasarlanmış aşırıya kaçmayan bir değerdir. Uçağın otomatik modlarda (AUTO, RTL ve LOITER gibi) ne kadar keskin döneceğini kontrol eder. Çoğu uçak çok daha düşük bir değer kullanmalıdır. Başarılı bir roll ve pitch değeri ayarlama işlemini tamamladığınızda, henüz yapmadıysanız NAVL1_PERIOD değerini 18'e düşürmelisiniz. Bu seviyenin ötesine geçmek için AUTO modda dikdörtgen gridde uçurmalı ve uçaktan memnun olduğunuz bir hızda dönene ve uçuş sırasında "wag its tail" olmayıncaya kadar NAVL1_PERIOD'u her seferde 1 düşürmelisiniz.
 
 __PTCH2SRV_RLL:__ Bu parametre, burun seviyesini korumak için dönüşte ne kadar elevator ekleyeceğini kontrol eder. Pek çok uçak, varsayılan olarak 1.0 olan bu parametrede küçük bir değişiklik gerektirir. Bu değeri ayarlamanız gerekip gerekmediğini görmek için FBWA modunda, herhangi bir elevator girişi yapmazken, aileron çubuğunu sertçe tutarak sabit bir daire çizmelisiniz. Uçak irtifa kazanıyorsa, PTCH2SRV_RLL değerini az miktarda azaltmanız gerekir (başlangıçta 0,95'e düşürmeyi deneyin). Uçak daire çizerken irtifa kaybederse, PTCH2SRV_RLL değerini az miktarda yükseltin (başlangıçta 1,05'i deneyin). Eğer 1.3'ün üzerinde veya 0.8'in altına inmeniz gerekiyorsa, kurulumunuzla ilgili bir sorun vardır 
 
@@ -153,3 +153,10 @@ Uçağınızın performansını artırabilecek birçok başka parametre var, anc
 
 ### Manuel tuning vs AUTOTUNE
 
+En iyi performans için autotune ile başlayıp sonrasında manuel ayar yapmalısınız. Autotune sistemi, çoğu uçak için makul değerler elde etmek için muhafazakar bir sistem olarak tasarlanmıştır, "mükkemmel ayarlayıcı" değildir ve manuel ayarlama daha iyi performansa neden olabilir. Autotune P kazancını doğrudan ayarlar, ancak D ve I kazancını AUTOTUNE_LEVEL değerine ve P kazancının değerini temel alarak ayarlar.
+
+Yine de herkesin AUTOTUNE ile başlaması tavsiye edilir. Uçağı doğru şekilde ayarlamak kolay değildir, AUTOTUNE çoğu kullanıcıdan iyi ayarlar.
+
+D kazancını manuel olarak arttırmak, roll ve pitch tepkisinin doğruluğunu artırabilir ve uçağın ani rüzgar ve turbülanstan daha az etkilenmesini sağlayabilir. Yüksek performans için D kazancı için optimum değer, uçak sallanmaya başlayana kadar küçük artışlarla kazancı artırarak bulunabilir. Daha sonra kazanç sallanmaya neden olan değerden yarı yarıya azaltılmalıdır. D kazanç ayarının daha düşük throtte ayarlarında ve hava hızlarında yapılması önerilir.
+
+I kazancını manuel ayarlarsanız, bu aynı zamanda doğru yanıtı korumak için gereken P değerini de değiştirir, bu nedenle I kazancını ayarlamak iler düzey kullanıcılar için önerilir.
