@@ -75,5 +75,50 @@ Uçağı uçurabilmeniz için önce arm etmeniz gerekir. Bunun iki amacı vardı
 
 Arming'in yaptığı en önemli şey, motoru etkinleştirmektir. Uçak arm edilene kadar motoru çalıştıramazsınız (örneğin, throttle kontrol edemezsiniz). 
 
-NOT: AHRS_EKF_USE etkinse (EKF kullanıyorsanız), etkinleştirme denetimleri 
+### Armı reddetme nedenleri
 
+Otopilotun arm etmeyi reddetmesinin olası nedenleri şunlardır:
+
+* __barometer not healthy.__ Çok nadir görülür. Tekrar tekrar meydana gelirse, barometre donanım arızası olabilir.
+* __airspeed not healthy.__ Hava hızı sensörünüz takılıysa ve otopilot hava hızı okuması almıyorsa, armı reddedecektir.
+* __logging not available.__ MicroSD kart arızalandığında veya başarısız olduğunda arm yapılamaz.
+* __gyros not healthy.__ Jiroskop başarısız olursa otopilot armı reddeder. Bu nadir görülür ve tekrar tekrar gerçekleşirse, bir donanım arızası olabilir.
+* __gyros not calibrated.__ Başlangıçta otomatik gyro kalibrasyonu yapılmadığında gerçekleşir. Uçak hareketsiz dururken otopilotu yeniden başlatmayı deneyin.
+* __accels not healthy.__ İvmeölçer arızalandığında otopilot armı reddeder. İvmeölçeri yeniden kalibre etmeyi deneyin.
+
+* __GPS accuracy errors.__ Bildirilecek 4 tip GPS arm hatası vardır. Bunlar “GPS vert vel error”, “GPS speed error”, “GPS horiz error”, “GPS numsats”. Daha iyi GPS alımı için uçağı taşımayı ve GPS engelleyici şeyleri kapatmayı deneyin.
+* __Mag yaw error.__ Pusulanız hizalanmıl olmadığında ortaya çıkar. Pusula yönünüzü kontrol edin ve kalibrasyonu tekrar yapın veya manyetik malzemeleri uçaktan uzaklaştırın.
+* __EKF warmup.__ Bu, EKF hala hazırlanıyorsa olur. 10 saniye daha bekleyin ve tekrar deneyin.
+* __AHRS not healthy.__ EKFnin sağlıklı olmadığı anlamına gelir. Hata devam ederse kartınızı yeniden başlatın.
+* __3D accel cal needed.__ 3B ivmeölçer kalibrasyonu yapmadığınızda meydana gelir.
+
+
+## AUTOTUNE ile Otomatik Ayarlama
+
+Uçağınız için iyi roll/pitch ayar parametre seti almak, dengeli ve doğru bir uçuş için çok önemlidir. Bunu yapmanıza yardımcı olması için aşağıda belirtilen AUTOTUNE sistemini kullanmanız şiddetle tavsiye edilir.
+
+### AUTOTUNE ne yapar
+
+AUTOTUNE modu, FBWA ile aynı şekilde uçan bir uçuş modudur, ancak roll ve pitch ayarları için temel değerleri öğrenmek üzere pilot tarafından kullanılan girdi değişikliklerini kullanır. Pilot AUTOTUNE moduna geçer ve uçağı birkaç dakika uçurur. Pilot, uçağın autotune koduna nasıl tepki vereceğini öğrenebilmesi için olabildiğince keskin attitude değişikliğine girmeniz gerekir.
+
+### AUTOTUNE için ayarlama
+
+Uçağınızı AUTOTUNE'a ayarlamak için vericinizdeki uçuş modu switchi ile AUTOTUNE modunu seçmeniz gerekir.
+
+Ayrıca, YKİ gelişmiş parametre ekranında AUTOTUNE_LEVEL parametresini ayarlayarak ayarlayarak tuning seviyesi seçmelisiniz. AUTOTUNE_LEVEL parametresi, ne kadar agresif olmasını istediğinizi kontrol eder. Varsayılan olarak seviye 6, orta düzey ayar üretir acemi ve orta seviye pilotlara uygundur. Daha deneyimli pilotsanız seviye 7'yi seçebilirsiniz; bu biraz daha keskin ayarlara neden olur (daha hızlı attitude değişiklikleri). 7'nin üzerindeki seviyeler, başlangıç için düşük seviyeli bir ayar yapana kadar önerilmez.
+
+Ayrıca gövde için tüm temel ayarların doğru olduğundan emin olmanız gerekir. Özellikle, tüm yüzey yönlerinin doğru olduğundan ve minimum hava sürati için makul bir değere sahip olduğunuzdan emin olun. Autotune, ARSPD_FBW_MIN parametresinde ayarladığınız minimum hava hızının üzerine çıkana kadar hiçbir şey yapmaz. Hava hızı sensörünüz yoksa, yine de diğer sensörlerden alınan hava hızı tahmini ile birlikte bu değer hala kullanılır. Ayrıca, RC kalibrasyonunu yaptığınızdan emin olun, çünkü AUTOTUNE sadece verici çubuklarınızla tam kontrol hareketleriniz varsa işe yarar.
+
+Diğer kontrol edilecekler:
+* uygun hava hızı sensörünüz varsa, kalibre etmiş olursunuz. 
+* ağırlık merkezinizin doğru olduğundan emin olun. Genelde burun ağırlığının kuyruk ağırlığından biraz daha fazla olması daha güvenlidir.
+* yüzey trimlerinizi kontrol edin. Bu ayarın belgelerini okuduktan sonra TRIM_AUTO kullanmak isteyebilirsiniz.
+* failsafe ayarlarınızın yapıldığından emin olun. Vericinizi uçağınız yerdeyken (pervane sökülmüş veya güvenli hale getirilmiş) kapatmayı deneyin ve uçağın tepkisini kontrol edin.
+* gerekiyorsa RTL için güvenli bir yere rally noktası ayarlayın.
+
+### AUTOTUNE'da uçuş
+
+Tüm ayarlar tamamlandığında AUTOTUNE modunda uçmaya başlayabilirsiniz. AUTOTUNE modunda takeoff yapabilir, diğer modda takeoff yapabilir ve irtifa kazanınca AUTOTUNE'a geçiş yapabilirsiniz. 
+
+AUTOTUNE moduna girdiğinizde birkaç şey olur:
+* 
