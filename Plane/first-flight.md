@@ -121,4 +121,35 @@ Diğer kontrol edilecekler:
 Tüm ayarlar tamamlandığında AUTOTUNE modunda uçmaya başlayabilirsiniz. AUTOTUNE modunda takeoff yapabilir, diğer modda takeoff yapabilir ve irtifa kazanınca AUTOTUNE'a geçiş yapabilirsiniz. 
 
 AUTOTUNE moduna girdiğinizde birkaç şey olur:
-* 
+* autotune sistemi, roll ve pitch I ve D kazançlarınız ve maksimum roll ve pich dereceleriniz için varsayılan değerler ayarlayacaktır. Bu değerler AUTOTUNE_LEVEL bağlıdır.
+* autotune sistemi, istenen roll ve pitch derecenizi izler(vericinin stcik hareketlerinin belirlediği şekilde). İstenen roll ve pitch derecesi maksimum derecenin %80'ini aştığında, autotune sistemi roll ve pitch ayar değerlerini öğrenmek için uçağın tepkisini kullanır.
+* autotune sistemi her 10 saniyede 10 saniye önce sahip olduğunuz parametreleri kaydeder. Bu, eğer uçak dengesizleşmesine neden olursa başma moda geçmek ve kurtarmak için 10 saniyeniz var demektir. AUTOTUNE modundan çıktığınızda, kaydedilen son parametreler geri yüklenir.
+* eğer roll ve pitch için varsayılan parametrelerle başlıyorsanız, AUTOTUNE'a ilk girdiğinizde uçağın oldukça ağır ilerliyor olduğunu görebilirsiniz. Tuning aşaması ilerledikçe bunun iyileşeceğini göreceksiniz. Uçuş alanınızın uzun ve yavaş dönüşler için bol alanı olduğundan emin olun.
+
+Başarılı bir auotune için anahtar şey, verici sticklerinizle hızlı roll veya pitch hareketleri yapmaktır. Tek seferde roll veya pitch hareketlerinden birini yapmalı ve çubuğu hızlıca maksimum sapmaya kaydırmalısınız.
+
+Bu nedenle, önce aileron çubuklarıyla roll yönünde sertçe sağa dönmelisiniz, ardından kısa bir süre sonra aileron çubuğunu sola döndürmek için diğer tarafa sertçe ittirin. Her bir çubuk hareketinden sonra uçağın yana yatmasını beklemeniz gerketiğini unutmayın. Tek bir yönde 2 saniye çubuk hareketinden sonra hızlıca tersin çevirebilirsiniz. Uçak sağa yatacak, daha sonra aileron çubuğunu hareket ettirirken sertçe sola doğru yönlendirilir. Her geri dönüş ile tuning değerlerini yaklaşık %5 artıracaktır. Bu yüzden makul bir tuning değeri öğrenmek için en az 20 tam (sağ sol) çubuk hareketine ihtiyacınız var.
+
+Pitch ayarları için uçağı inişli çıkışlı bir yolculuğa çıkarmak üzere verici pitch çubuğunu kullanmak gerekir. Çubuğu sertçe yukarı çekin ve ardından kısa bir süre sonra aşağıya doğru bastırın. Bunu en az 20 kez tekrarlayın.
+
+Başlangıç tuning değerlerleriniz çok düşükse, AUTOTUNE modunda uçarken uçağın giderek daha duyarlı hale geldiğiniz fark etmelisiniz. Uçak uçmaya devam etmenin tehlikeli olduğunu düşündürecek kadar kararsız hale gelirse, AUTOTUNE modundan çıkmalısınız. Bu, 10 saniye öncesinde sahip olduğunuz parametreleri geri yükler.
+
+### Çok erken durdurmayın
+
+En az 20 hızlı roll hareketi ve en az 20 hızlı pitch hareketi yapmalısınız, tercihen çok daha fazla tavsiye edilir. Uçağın iyi uçtuğunu düşündüğünüz noktadan sonra AUTOTUNE modunda uçmaya devam edin.
+
+### Ayarlamayı tamamlama
+
+Autotune ile makul roll ve pitch ayar parametrelerini öğrendikten sonra, diğer bazı temel parametreleri elle ayarlayarak tuningi tamamlamanız gerekir.
+
+Çoğu uçak şekli için gereken parametreler şunlardır:
+
+__NAVL1_PERIOD:__ Varsayılan olarak 25tir, kötü ayarlanmış uçaklarla baş etmek için tasarlanmış aşırıya kaçmayan bir değerdir. Uçağın otomatik modlarda (AUTO, RTL ve LOITER gibi) ne kadar keskin döneceğini kontrol eder. Çoğu uçak çok daha düşük bir değer kullanmalıdır. Başarılı bir roll ve pitch değeri ayarlama işlemini tamamladığınızda, henüz yapmadıysanız NAVL1_PERIOD değerini 18'e düşürmelisiniz. Bu seviyenin ötesine geçmek için AUTO modda dikdörtgen gridde uçurmalı ve uçaktan memnun olduğunuz bir hızda dönene ve uçuş sırasında "wag its tail" olmayıncaya kadar NAVL1_PERIOD'u her seferde 1 düşürmelisiniz.
+
+__PTCH2SRV_RLL:__ Bu parametre, burun seviyesini korumak için dönüşte ne kadar elevator ekleyeceğini kontrol eder. Pek çok uçak, varsayılan olarak 1.0 olan bu parametrede küçük bir değişiklik gerektirir. Bu değeri ayarlamanız gerekip gerekmediğini görmek için FBWA modunda, herhangi bir elevator girişi yapmazken, aileron çubuğunu sertçe tutarak sabit bir daire çizmelisiniz. Uçak irtifa kazanıyorsa, PTCH2SRV_RLL değerini az miktarda azaltmanız gerekir (başlangıçta 0,95'e düşürmeyi deneyin). Uçak daire çizerken irtifa kaybederse, PTCH2SRV_RLL değerini az miktarda yükseltin (başlangıçta 1,05'i deneyin). Eğer 1.3'ün üzerinde veya 0.8'in altına inmeniz gerekiyorsa, kurulumunuzla ilgili bir sorun vardır 
+
+
+Uçağınızın performansını artırabilecek birçok başka parametre var, ancak bunlar çoğu kişinin ihtiyaç duyduğu parametreler. Lütfen daha fazla bilgi için normal manuel tuning belgelerini okuyun.
+
+### Manuel tuning vs AUTOTUNE
+
