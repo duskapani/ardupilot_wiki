@@ -47,3 +47,55 @@ RC kalibrasyonu, her RC giriş kanalının minimum, maksimum ve "trim" değerler
   * Kırmızı veya yanıp sönen bir LED, RC vericinizin/alıcınızın bağlı olmadığını gerektiğini gösterebilir. Talimatlar için RC ekipmanınızla birlikte verilen kılavuza bakın.
   
 ![](http://ardupilot.org/plane/_images/mp_radio_calibration.png)
+
+* Vericideki kanal eşlemesini kontrol edin, yeşil barları gözlemleyin (hangi kanalları ne kontrol ediyor). 
+ * Vericinizin Mod 1 veya Mod 2 olup olmadığını belirleyin.
+ * Roll çubuğu kontrol etmeli: kanal 1
+ * Pitch çubuğu kontrol etmeli: kanal 2
+ * Throttle çubuğu kontrol etmeli: kanal 3
+ * Yaw çubuğu kontrol etmeli: kanal 4
+ * 3 konumlu switch (uçuş modlarını kontrol etmek için) Kanal 8'e ayarlanmalı.
+* Yeşil barların doğru hareket ettiğini kontrol edin:
+ * roll, throttle ve yaw kanalları için, yeşil barlar fiziksel verici çubuğuyla aynı yönde hareket etmelidir.
+ * pitch kanalı için, yeşil bar fiziksel verici çubuğuyla ters yönde hareket etmelidir.
+ * yanlış yönde hareket eden çubuk varsa, vericideki kanalı ters çevirin. Vericideki kanalı ters çevirmek mümkün değilse, "Reversed" onay kutusunu işaretleyerek ters çevirebilirsiniz. Onay kutusu görünmüyorsa, doğrudan RCx_REVERSED parametresini değiştirerek kanalı tersine çevirebilirsiniz (x 1 ve 4 arasında).
+
+![](http://ardupilot.org/plane/_images/mp_radio_calibration.png)
+
+#### kalibrasyon
+
+* __INITIAL SETUP | Mandatory Hardware | Radio Calibration__ ekranını açın.
+* Sağ alttaki "Calibrate radio" düğmesine tıklayın.
+* RC cihazın açık olduğunu, bataryanın bağlı olmadığını ve pervanelerin çıkık olduğunu kontrol etmeniz istendiğinde "OK" tıklayın.
+
+![](http://ardupilot.org/plane/_images/mp_calibrate_radio.jpg)
+
+* Limitlerini belirlemek için verici kontrol çubuklarını, düğmelerini ve switchlerini hareket ettirin. Şimdiye kadar belirlenen min ve maks değerleri göstermek için kalibrasyon çubuklarında kırmızı çizgiler gözükecektirtir.
+
+![](http://ardupilot.org/plane/_images/mp_radio_calibration_click_when_done.jpg)
+
+* __Click when Done__ seçin.
+* "Tüm çubuklarınızın ortalandığından ve throttle kapalı olduğundan emin olun ve devam etmek için tamam tıklayın." yazılı pencere açılacaktır. Throttle sıfır ayarlayıp "OK" tıklayın.
+* MP kalibrasyon verilerinin özeini gösterecektir. Nomral değerler min için 1100, maks için 1900 civarındadır.
+
+![](http://ardupilot.org/plane/_images/radi-calib-results.png)
+
+#### mod1 ve mod2 vericiler
+
+İki ana verici konfigürasyonu vardır:
+* Mod 1: sol çubuk pitch ve yaw, sağ çubuk throttle ve roll
+* Mod 2: sol çubuk throttle ve yaw, sağ çubuk pitch ve roll
+
+![](http://ardupilot.org/plane/_images/radio_setup_mode_1.png)
+
+#### kanal eşleşmeleri
+
+Varsayılan uçak kanal eşleşmeleri:
+
+* Kanal 1: Roll
+* Kanal 2: Pitch
+* Kanal 3: Throttle
+* Kanal 4: Yaw
+* Kanal 8 (varsayılan): uçuş modları
+
+### 
