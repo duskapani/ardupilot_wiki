@@ -131,9 +131,34 @@ Kalibrasyon hatalı olursa:
 ### Failsafe işlevi
 
 Uçak üç şey yapacak şekilde tasarlanmış kısa süreli bir arızaya karşı koruma fonksiyonuna sahiptir:
-1. RC sinyalinin tamamen kaybolduğunu tespit edin ve AUTO mod yanıtı tanımlayın. Bazı RC ekipmanları bunu yapabilir bazıları ise yapamaz.
-2. Telemetrei kaybını FS_LONG_TIMEOUT saniyeden daha uzun bir süre boyunca tespit edin ve RTL moda geçin.
-3. GPS kaybını 20 saniyeden uzun süre tespit edin ve GPS sinyali tekrar kazanılana kadar Dead Reckoning moda geçin.
+1. RC sinyalinin tamamen kaybolduğunu tespit edin ve AUTO mod yanıtı tanımlama. Bazı RC ekipmanları bunu yapabilir bazıları ise yapamaz.
+2. Telemetrei kaybını FS_LONG_TIMEOUT saniyeden daha uzun bir süre boyunca tespit etme ve RTL moda geçme.
+3. GPS kaybını 20 saniyeden uzun süre tespit etme ve GPS sinyali tekrar kazanılana kadar Dead Reckoning moda geçme.
+
+#### throttle failsafe
+
+Nasıl çalışır. RC, vericiniz alıcınızda  yakalanan ve otopilota aktarılan PWM sinyali üretir. Her kanalın aralığı genellikle 1100-1900 arasında, 1500 nötr konumdur. Otopilot, throttle kanalınızı izler ve THR_FS_VALUE'den (varsayılan 950) daha az PWM tespit ederse, failsafe moda geçer.
+
+
+RC vericileri genelde -100% ve 100% arasında değişsede çoğu verici bunları -150% ve 150% aralığına uzatmanıza izin verir.
+
+* RC iletişimini kaybederse, alıcı doğru kurulmuşsa, bilinen en düşük throttle ~900 değerine düşecektir. Bu değer THR_FS_VALUE değerinin altına düşerse failsafe moda girmeye zorlar.
+* Otopilot önce, FS_SHORT_TIMEOUT saniyeden daha fazla sinyal kaybı tespit ettiğinde kısa failsafe'e (FS_SHORT_ACTN, 0=Devre dışı, 1=Etkin) girecektir. Kısa arıza için varsayılan mod Circle modudur.
+
+
+      Ext. Range       Normal Range       Ext. Range
+  |-----------------|-----------------|-----------------|
+-150%             -100%              100%              150%
+
+  |_________________|
+           |
+        Failsafe
+        
+
+
+
+
+
 
 
 
