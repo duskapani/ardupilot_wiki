@@ -98,4 +98,48 @@ Varsayılan uçak kanal eşleşmeleri:
 * Kanal 4: Yaw
 * Kanal 8 (varsayılan): uçuş modları
 
-### 
+### Pusula kalibrasyonu
+
+*  __Initial Setup | Mandatory Hardware__ altında __Compass__ seçin.
+* Kartınız için en önemli konfigürasyon bilgilerini otomatik olarak girmesi için uçuş kontrol cihazınızın konfigürasyonunu seçin:
+ * Modern uçuş kontro cihazları için __Pixhawk/PX4__ seçin.
+ 
+![](http://ardupilot.org/plane/_images/MissionPlanner_CompassCalibration_MainScreen.png)
+
+Normalde "Genel Pusula Ayarları"nı veya belirli pusula değerlerini (örn. "Compass #1" kısmı) değiştirmeniz gerekmez, ancak __Enbale compasses__ ve __Obtain declination automatically__ kutularının işaretli olduğunu onaylamak isteyebilirsiniz.
+
+Sık sık "inconsistent compasses" pre-arm mesajını görüyorsanız ve harici pusulanın oryantasyonunun doğru olduğundan eminseniz, Compass #2 (dahili pusula) devre dışı bırakmak isteyebilirsiniz.
+
+#### yerleşik (onboard) kalibrasyon
+
+Bu yöntem, yer istasyonundaki eski “Offboard Calibration” dan (yani “Live Calibration”) daha doğrudur çünkü ofsetlere ek olarak ölçeklendirme de hesaplanır.
+
+Bu kalibrasyonu gerçekleştirmek için:
+* "Onboard Mag Calibration" bölümündeki "Start" düğmesine tıklayın.
+* aracı havada tutun ve her bir tarafı (ön, arka, sol, sağ, üst ve alt) sırasıyla birkaç saniye boyunca yere bakacak şekilde döndürün.
+
+![](http://ardupilot.org/plane/_images/accel-calib-positions-e1376083327116.jpg)
+
+* araç döndürülürken yeşil barlar kalibrasyon tamamlanana kadar sağa doğru ilerlemelidir.
+* başarılı bir şekilde tamamlandığında, “Please reboot the autopilot” penceresi görünecek ve aracı kullanabilmeniz için otopilotu yeniden başlatmanız gerekecektir.
+
+Kalibrasyon hatalı olursa:
+
+* birden fazla denemeden sonra kalibre edemiyorsanız, "Cancel" düğmesine tıklayın ve "Fitness" açılır menüsünü Relaxed ayara getirin ve tekrar deneyin.
+* pusula kalibrasyonu hala başarısız olursa, COMPASS_OFFS_MAX 850'den 2000'e ve hatta 3000'e yükseltimesi yardımcı olabilir.
+
+### Failsafe işlevi
+
+Uçak üç şey yapacak şekilde tasarlanmış kısa süreli bir arızaya karşı koruma fonksiyonuna sahiptir:
+1. RC sinyalinin tamamen kaybolduğunu tespit edin ve AUTO mod yanıtı tanımlayın. Bazı RC ekipmanları bunu yapabilir bazıları ise yapamaz.
+2. Telemetrei kaybını FS_LONG_TIMEOUT saniyeden daha uzun bir süre boyunca tespit edin ve RTL moda geçin.
+3. GPS kaybını 20 saniyeden uzun süre tespit edin ve GPS sinyali tekrar kazanılana kadar Dead Reckoning moda geçin.
+
+
+
+
+
+
+
+
+
