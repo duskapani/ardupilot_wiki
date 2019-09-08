@@ -146,14 +146,6 @@ RC vericileri genelde -100% ve 100% arasında değişsede çoğu verici bunları
 * Otopilot önce, FS_SHORT_TIMEOUT saniyeden daha fazla sinyal kaybı tespit ettiğinde kısa failsafe'e (FS_SHORT_ACTN, 0=Devre dışı, 1=Etkin) girecektir. Kısa arıza için varsayılan mod Circle modudur.
 
 
-      Ext. Range       Normal Range       Ext. Range
-  |-----------------|-----------------|-----------------|
--150%             -100%              100%              150%
-
-  |_________________|
-           |
-        Failsafe
-        
 
 
 
