@@ -13,7 +13,7 @@ Mümkün olduğunca rüzgara doğru fırlatmalısınız.
 
 ## Pist kalkışı (CTOL)
 
-Tekerlekli kalkışta veya konvansiyonel kalkış da denir.
+Tekerlekli kalkış veya konvansiyonel kalkış da denir.
 
 Pist kalkışıyla ilgili önemli bir husus uçağın taildragger(kuyruk tekerlekli yönlendirme) veya tricycle undercarriage(burun tekerlekli yönlendirme) olmasıdır. Tricycle undercarriage ototakeoff daha kolaydır.
 
