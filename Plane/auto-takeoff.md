@@ -15,7 +15,7 @@ Mümkün olduğunca rüzgara doğru fırlatmalısınız.
 
 Tekerlekli kalkış veya konvansiyonel kalkış da denir.
 
-Pist kalkışıyla ilgili önemli bir husus uçağın taildragger(kuyruk tekerlekli yönlendirme) veya tricycle undercarriage(burun tekerlekli yönlendirme) olmasıdır. Tricycle undercarriage ototakeoff daha kolaydır.
+Pist kalkışıyla ilgili önemli bir husus uçağın taildragger(kuyruk tekerlekli yönlendirme) veya tricycle undercarriage(burun tekerlekli yönlendirme) olmasıdır. Tricycle undercarriage autotakeoff daha kolaydır.
 
 Anahtar parametreler ise:
 * [**TKOFF_TDRAG_ELEV**]()
